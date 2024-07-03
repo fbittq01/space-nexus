@@ -48,9 +48,9 @@ const EmblaCarousel = ({ slides, options }) => {
                 py={4}
               >
                 <Box component={"img"} src={data.image} height={"200px"}></Box>
-                <Stack>
-                  <Typography>{data.title}</Typography>
-                  <Typography>{data.description}</Typography>
+                <Stack spacing={2}>
+                  <Typography fontWeight={700}>{data.title}</Typography>
+                  <Typography fontSize={12}>{data.description}</Typography>
                 </Stack>
               </Stack>
             </Stack>

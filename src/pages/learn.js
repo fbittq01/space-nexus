@@ -114,8 +114,10 @@ const Learn = () => {
                 alignItems={"center"}
                 justifyContent={"center"}
               >
-                {aboutUs.map((item) => (
-                  <Typography fontSize={12}>{item}</Typography>
+                {aboutUs.map((item, index) => (
+                  <Typography fontSize={12} key={index}>
+                    {item}
+                  </Typography>
                 ))}
               </Stack>
               <Typography fontSize={12}>
@@ -153,12 +155,13 @@ const Learn = () => {
             FREQUENTLY ASKED QUESTIONS (FAQs)
           </Typography>
           <Stack>
-            {askQuestions.map((question) => (
+            {askQuestions.map((question, index) => (
               <Accordion
                 sx={{
                   bgcolor: "rgb(23, 23, 23)",
                   color: "rgb(187, 187, 187)",
                 }}
+                key={index}
               >
                 <AccordionSummary
                   expandIcon={

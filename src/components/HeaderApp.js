@@ -166,6 +166,7 @@ function HeaderApp() {
                   onMouseLeave={() => handleClear()}
                   onMouseEnter={() => handleChange(index)}
                   position={"relative"}
+                  key={index}
                 >
                   <Stack
                     direction={"row"}
@@ -193,7 +194,7 @@ function HeaderApp() {
                         borderRadius={"4px"}
                         bgcolor={"rgb(23, 23, 23)"}
                       >
-                        {page.items.map((item) => (
+                        {page.items.map((item, index) => (
                           <Stack
                             p={1}
                             borderRadius={"4px"}
@@ -204,6 +205,7 @@ function HeaderApp() {
                                 color: "white",
                               },
                             }}
+                            key={index}
                           >
                             <Typography fontSize={12}>
                               {item.itemTitle}

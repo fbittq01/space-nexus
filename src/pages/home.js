@@ -121,7 +121,7 @@ const Home = () => {
         </Stack>
         <Grid container gap={2} px={16}>
           {nexusBenifit.map((benifit, index) => (
-            <Grid xs={2.4 - 0.2}>
+            <Grid xs={2.4 - 0.2} key={index}>
               <Stack
                 alignItems={"center"}
                 spacing={2}
@@ -134,6 +134,7 @@ const Home = () => {
                     bgcolor: "rgb(23, 23, 23)",
                   },
                 }}
+                height={'100%'}
               >
                 <Stack
                   position={"relative"}
@@ -190,10 +191,10 @@ const Home = () => {
             fontWeight={600}
             color={"rgb(178, 178, 178)"}
           >
-            DURING PHASE 1
+            {`DURING PHASE 1
             <br />
             (AS WE COMPLETE THE DATABASE TO PROVIDE THE SPECIAL "NEXUS" SERVICE
-            IN PHASE 2), WE ARE READY TO OFFER THE FOLLOWING KEY SERVICES:
+            IN PHASE 2), WE ARE READY TO OFFER THE FOLLOWING KEY SERVICES:`}
           </Typography>
           <Stack
             direction={"row"}
@@ -203,8 +204,8 @@ const Home = () => {
             borderRadius={"8px"}
             color={"rgb(178, 178, 178)"}
           >
-            {services.map((service) => (
-              <Typography fontSize={12}>{service}</Typography>
+            {services.map((service, index) => (
+              <Typography fontSize={12} key={index}>{service}</Typography>
             ))}
           </Stack>
           <ButtonCustom
@@ -272,11 +273,11 @@ const Home = () => {
         spacing={4}
       >
         <Typography fontSize={26} fontWeight={700}>
-          LET'S BUILD A ROBUST NETWORK IN WEB3 TOGETHER
+          {`LET'S BUILD A ROBUST NETWORK IN WEB3 TOGETHER`}
         </Typography>
         <Stack direction={"row"} spacing={6}>
-          {partners.map((partner) => (
-            <Box component={"img"} src={partner} width={32}></Box>
+          {partners.map((partner, index) => (
+            <Box key={index} component={"img"} src={partner} width={32}></Box>
           ))}
         </Stack>
         <Grid container gap={4}>
@@ -289,10 +290,10 @@ const Home = () => {
             >
               <Box component={"img"} src="image-21.png" width={32}></Box>
               <Typography fontSize={12} color={"rgb(212, 212, 212)"}>
-                I think you guys are great and am genuinely impressed with your
+                {`I think you guys are great and am genuinely impressed with your
                 work. I'm also curious to know what areas you're focusing on to
                 improve, as I'm sure any enhancements will only make the
-                experience even better.
+                experience even better.`}
               </Typography>
               <Stack direction={"row"} alignItems={"center"} spacing={1}>
                 <Box
@@ -321,10 +322,10 @@ const Home = () => {
             >
               <Box component={"img"} src="image-21.png" width={32}></Box>
               <Typography fontSize={12} color={"rgb(212, 212, 212)"}>
-                I think you guys are great and am genuinely impressed with your
+                {`I think you guys are great and am genuinely impressed with your
                 work. I'm also curious to know what areas you're focusing on to
                 improve, as I'm sure any enhancements will only make the
-                experience even better.
+                experience even better.`}
               </Typography>
               <Stack direction={"row"} alignItems={"center"} spacing={1}>
                 <Box
@@ -353,10 +354,10 @@ const Home = () => {
             >
               <Box component={"img"} src="image-21.png" width={32}></Box>
               <Typography fontSize={12} color={"rgb(212, 212, 212)"}>
-                I think you guys are great and am genuinely impressed with your
+                {`I think you guys are great and am genuinely impressed with your
                 work. I'm also curious to know what areas you're focusing on to
                 improve, as I'm sure any enhancements will only make the
-                experience even better.
+                experience even better.`}
               </Typography>
               <Stack direction={"row"} alignItems={"center"} spacing={1}>
                 <Box
