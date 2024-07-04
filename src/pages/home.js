@@ -78,11 +78,12 @@ const Home = () => {
           </Typography>
           <ButtonCustom
             sx={{
-              bgcolor: "transparent",
+              background: 'url("button-icon.svg")',
               mt: 2,
-              width: "fit-content",
+              width: "274px",
+              height: '56px',
               borderRadius: "30px",
-              px: "32px",
+              
             }}
           >
             NEXUS NOW

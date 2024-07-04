@@ -85,6 +85,9 @@ body {
   overflow-x: hidden;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  background-color: 'rgb(0, 0, 0)';
+  color-scheme: dark;
+
 }
 
 html::-webkit-scrollbar { /* WebKit, Blink */
@@ -92,13 +95,13 @@ html::-webkit-scrollbar { /* WebKit, Blink */
 }
 
 body {
-  color: "rgb(221, 221, 221)";
-  background: linear-gradient(
+  /* color: "rgb(221, 221, 221)"; */
+  /* background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
 }
 
 a {
