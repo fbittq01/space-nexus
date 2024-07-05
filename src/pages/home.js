@@ -1,4 +1,5 @@
 import ButtonCustom from "@/components/Button";
+import Footer from "@/components/Footer";
 import HeaderApp from "@/components/HeaderApp";
 import { Close } from "@mui/icons-material";
 import {
@@ -485,6 +486,7 @@ const Home = () => {
           <ButtonCustom>ACKNOWLEDGE</ButtonCustom>
         </Stack>
       </Dialog>
+      <Footer></Footer>
     </Stack>
   );
 };

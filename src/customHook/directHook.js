@@ -24,9 +24,16 @@ const useDirect = () => {
     });
   };
 
+  const handleDirectToBuild = () => [
+    handleDirect({
+      destination: '/build'
+    })
+  ]
+
   return {
     handleBack,
     handleDirectToLearn,
+    handleDirectToBuild
   };
 };
 

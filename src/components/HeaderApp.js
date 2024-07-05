@@ -6,6 +6,7 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { Collapse, Icon, Stack } from "@mui/material";
 import { ColorLens, KeyboardArrowDown } from "@mui/icons-material";
+import useDirect from "@/customHook/directHook";
 
 function HeaderApp() {
   const [value, setValue] = React.useState();
@@ -30,6 +31,7 @@ function HeaderApp() {
           destination: "#",
         },
       ],
+      onClick: () => handleDirectToLearn()
     },
     {
       titile: "BUILD",
@@ -55,27 +57,21 @@ function HeaderApp() {
           destination: "#",
         },
       ],
+      onClick: () => handleDirectToBuild()
     },
     {
       titile: "NETWORK",
       items: [
         {
-          itemTitle: "What is WEB3 NEXUS SPACE?",
+          itemTitle: "Our Network (Comming soon)",
           destination: "#",
         },
         {
-          itemTitle: "Blog (comming soon)",
-          destination: "#",
-        },
-        {
-          itemTitle: "Glossary (comming soon)",
-          destination: "#",
-        },
-        {
-          itemTitle: "FAQ",
+          itemTitle: "Partner and friend",
           destination: "#",
         },
       ],
+      onClick: () => handleDirectToBuild()
     },
     {
       titile: "COMMUNITY",
@@ -97,6 +93,7 @@ function HeaderApp() {
           destination: "#",
         },
       ],
+      onClick: () => handleDirectToBuild()
     },
     {
       titile: "SECURITY",
@@ -118,6 +115,7 @@ function HeaderApp() {
           destination: "#",
         },
       ],
+      onClick: () => handleDirectToBuild()
     },
   ];
 
@@ -128,6 +126,8 @@ function HeaderApp() {
   const handleClear = () => {
     setValue(null);
   };
+
+  const {handleDirectToBuild, handleDirectToLearn} = useDirect()
 
   return (
     <AppBar
@@ -221,6 +221,8 @@ function HeaderApp() {
                               },
                             }}
                             key={index}
+                            component={'div'}
+                            onClick={page.onClick}
                           >
                             <Typography fontSize={12}>
                               {item.itemTitle}
