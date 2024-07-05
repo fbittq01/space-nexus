@@ -445,6 +445,12 @@ const Home = () => {
               ></Close>
             </IconButton>
           </Stack>
+          <Stack alignItems={'center'} position={'relative'} justifyContent={'center'}>
+                <Box component={'img'} src="setting.png" position={'absolute'} height={'50%'}>
+                </Box>
+                <Box component={'img'} src="image-16.png" height={80}>
+                </Box>
+          </Stack>
           <Typography color={"white"} fontSize={32} fontWeight={700} whiteSpace={'nowrap'}>
             WEBSITE MAINTENANCE ANNOUNCEMENT
           </Typography>
