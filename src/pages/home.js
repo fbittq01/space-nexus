@@ -15,7 +15,7 @@ import { useState } from "react";
 const Home = () => {
   const [open, setOpen] = useState(true);
 
-  const handleOpen = () => setOpen(preValue => !preValue)
+  const handleOpen = () => setOpen((preValue) => !preValue);
   const nexusBenifit = [
     {
       image: "image-49.png",
@@ -426,8 +426,8 @@ const Home = () => {
           ".MuiDialog-paper": {
             backdropFilter: "blur(10px)",
             backgroundColor: "rgb(23,23,23)",
-            borderRadius: '10px',
-            minWidth: 800
+            borderRadius: "10px",
+            minWidth: 800,
           },
         }}
         onClose={handleOpen}
@@ -440,18 +440,30 @@ const Home = () => {
                 sx={{
                   color: "rgb(175,175,175)",
                   width: 14,
-                  height: 14
+                  height: 14,
                 }}
               ></Close>
             </IconButton>
           </Stack>
-          <Stack alignItems={'center'} position={'relative'} justifyContent={'center'}>
-                <Box component={'img'} src="setting.png" position={'absolute'} height={'50%'}>
-                </Box>
-                <Box component={'img'} src="image-16.png" height={80}>
-                </Box>
+          <Stack
+            alignItems={"center"}
+            position={"relative"}
+            justifyContent={"center"}
+          >
+            <Box
+              component={"img"}
+              src="setting.png"
+              position={"absolute"}
+              height={"50%"}
+            ></Box>
+            <Box component={"img"} src="image-16.png" height={80}></Box>
           </Stack>
-          <Typography color={"white"} fontSize={32} fontWeight={700} whiteSpace={'nowrap'}>
+          <Typography
+            color={"white"}
+            fontSize={32}
+            fontWeight={700}
+            whiteSpace={"nowrap"}
+          >
             WEBSITE MAINTENANCE ANNOUNCEMENT
           </Typography>
 
