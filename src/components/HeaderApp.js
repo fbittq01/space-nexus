@@ -162,15 +162,24 @@ function HeaderApp() {
                   direction={"row"}
                   spacing={0.2}
                   alignItems={"center"}
-                  component={"div"}
-                  onMouseLeave={() => handleClear()}
-                  onMouseEnter={() => handleChange(index)}
                   position={"relative"}
                   key={index}
                 >
                   <Stack
                     direction={"row"}
                     alignItems={"center"}
+                    component={"div"}
+                    onMouseEnter={() => handleChange(index)}
+                    position={'relative'}
+                    sx={{
+                      ':before': {
+                        width: '100px',
+                        height: '100px',
+                        backgroundColor: 'pink',
+                        position: 'absolute',
+                        top: 0
+                      }
+                    }}
                   >
                     <Typography fontSize={12} fontWeight={"bold"}>
                       {page.titile}
@@ -186,6 +195,12 @@ function HeaderApp() {
                     top={"150%"}
                     left={"-50%"}
                     zIndex={10}
+                    onMouseEnter={() => {
+                      if (index === value) {
+                        handleChange(index)
+                      }
+                    }}
+                    onMouseLeave={() => handleClear()}
                   >
                     <Collapse in={index === value}>
                       <Stack

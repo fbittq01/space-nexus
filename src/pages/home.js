@@ -1,35 +1,48 @@
 import ButtonCustom from "@/components/Button";
 import HeaderApp from "@/components/HeaderApp";
-import { Box, Grid, Stack, Typography } from "@mui/material";
+import { Close } from "@mui/icons-material";
+import {
+  Box,
+  CircularProgress,
+  Dialog,
+  Grid,
+  IconButton,
+  Stack,
+  Typography,
+} from "@mui/material";
+import { useState } from "react";
 
 const Home = () => {
+  const [open, setOpen] = useState(true);
+
+  const handleOpen = () => setOpen(preValue => !preValue)
   const nexusBenifit = [
     {
-      image: "image-16.png",
+      image: "image-49.png",
       title: "INTERCONNECTIVITY",
       description:
         "Facilitate seamloss connections within the Webs ecosystom, enabling secure and eflicient interactions between projects, communities, and users.",
     },
     {
-      image: "image-16.png",
+      image: "image-49.png",
       title: "SECURITY",
       description:
         "Employ advanced security measures, robust risk controls, and stansure the integio gies our platform.",
     },
     {
-      image: "image-16.png",
+      image: "image-49.png",
       title: "INNOVATION",
       description:
         "Provido accoss to pioncoring Web3 projects and services. Join us and explore the future of decentralized technology.",
     },
     {
-      image: "image-16.png",
+      image: "image-49.png",
       title: "COMMUNITY EMPOWERMENT",
       description:
         "Strengthen and grow your community with our expert setup and management sorvices, ensuring active and engaged participants.",
     },
     {
-      image: "image-16.png",
+      image: "image-49.png",
       title: "COMPREHENSIVE SUPPORT",
       description:
         "From strategic planning to execution, we provide continuous support to ensure your project's success at every stage.",
@@ -42,9 +55,6 @@ const Home = () => {
     "Strategy & Management",
   ];
   const partners = [
-    "image-21.png",
-    "image-22.png",
-    "image-23.png",
     "image-24.png",
     "image-25.png",
     "image-26.png",
@@ -55,6 +65,9 @@ const Home = () => {
     "image-31.png",
     "image-32.png",
     "image-33.png",
+    "image-34.png",
+    "image-35.png",
+    "image-36.png",
   ];
   return (
     <Stack>
@@ -78,12 +91,10 @@ const Home = () => {
           </Typography>
           <ButtonCustom
             sx={{
-              background: 'url("button-icon.svg")',
               mt: 2,
-              width: "274px",
-              height: '56px',
+              width: "280px",
+              height: "56px",
               borderRadius: "30px",
-              
             }}
           >
             NEXUS NOW
@@ -93,9 +104,11 @@ const Home = () => {
           component={"img"}
           src="image-14.png"
           height={"50vh"}
-          sx={{ ":hover": {
-            scale: 2
-          } }}
+          sx={{
+            ":hover": {
+              scale: 2,
+            },
+          }}
         ></Box>
       </Stack>
       <Stack
@@ -132,10 +145,10 @@ const Home = () => {
                 sx={{
                   transition: "all 0.3s linear",
                   ":hover": {
-                    bgcolor: "rgb(23, 23, 23)",
+                    bgcolor: "rgb(40, 40, 40)",
                   },
                 }}
-                height={'100%'}
+                height={"100%"}
               >
                 <Stack
                   position={"relative"}
@@ -192,9 +205,9 @@ const Home = () => {
             fontWeight={600}
             color={"rgb(178, 178, 178)"}
           >
-            {`DURING PHASE 1
-            <br />
-            (AS WE COMPLETE THE DATABASE TO PROVIDE THE SPECIAL "NEXUS" SERVICE
+            {`DURING PHASE 1`}
+            <br></br>
+            {`(AS WE COMPLETE THE DATABASE TO PROVIDE THE SPECIAL "NEXUS" SERVICE
             IN PHASE 2), WE ARE READY TO OFFER THE FOLLOWING KEY SERVICES:`}
           </Typography>
           <Stack
@@ -206,13 +219,17 @@ const Home = () => {
             color={"rgb(178, 178, 178)"}
           >
             {services.map((service, index) => (
-              <Typography fontSize={12} key={index}>{service}</Typography>
+              <Typography fontSize={12} key={index}>
+                {service}
+              </Typography>
             ))}
           </Stack>
           <ButtonCustom
             sx={{
-              width: "fit-content",
-              borderRadius: "30px",
+              background: 'url("2.svg")',
+              width: 1,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
             }}
             endIcon={
               <Box component={"img"} src="image-18.png" width={32}></Box>
@@ -224,9 +241,9 @@ const Home = () => {
         <Stack flex={5} alignItems={"center"}>
           <Box
             component={"img"}
-            src="image-17.png"
-            height={"50%"}
-            width={"50%"}
+            src="image-48.png"
+            height={"70%"}
+            width={"70%"}
           ></Box>
         </Stack>
       </Stack>
@@ -253,17 +270,7 @@ const Home = () => {
           OTHER KEY ENTITIES, AND VICE VERSA,
         </Typography>
         <Box component={"img"} src="image-19.png" height={"40vh"}></Box>
-        <ButtonCustom
-          sx={{
-            bgcolor: "transparent",
-            mt: 2,
-            width: "fit-content",
-            borderRadius: "30px",
-            px: "32px",
-          }}
-        >
-          BUILD WITH US
-        </ButtonCustom>
+        <ButtonCustom>BUILD WITH US</ButtonCustom>
       </Stack>
       <Stack
         height={"90vh"}
@@ -288,8 +295,68 @@ const Home = () => {
               border={"1px solid rgb(56,56,56)"}
               borderRadius={"8px"}
               p={2}
+              minHeight={148}
             >
               <Box component={"img"} src="image-21.png" width={32}></Box>
+              <Stack alignItems={"center"}>
+                <svg width={0} height={0}>
+                  <defs>
+                    <linearGradient
+                      id="my_gradient"
+                      x1="0%"
+                      y1="0%"
+                      x2="0%"
+                      y2="100%"
+                    >
+                      <stop offset="0%" stopColor="#e01cd5" />
+                      <stop offset="100%" stopColor="#1CB5E0" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <CircularProgress
+                  sx={{ "svg circle": { stroke: "url(#my_gradient)" } }}
+                />
+              </Stack>
+            </Stack>
+          </Grid>
+          <Grid sm={6 - 0.4} xs={12}>
+            <Stack
+              spacing={2}
+              border={"1px solid rgb(56,56,56)"}
+              borderRadius={"8px"}
+              p={2}
+              minHeight={148}
+            >
+              <Box component={"img"} src="image-23.png" width={32}></Box>
+              <Stack alignItems={"center"}>
+                <svg width={0} height={0}>
+                  <defs>
+                    <linearGradient
+                      id="my_gradient"
+                      x1="0%"
+                      y1="0%"
+                      x2="0%"
+                      y2="100%"
+                    >
+                      <stop offset="0%" stopColor="#e01cd5" />
+                      <stop offset="100%" stopColor="#1CB5E0" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <CircularProgress
+                  sx={{ "svg circle": { stroke: "url(#my_gradient)" } }}
+                />
+              </Stack>
+            </Stack>
+          </Grid>
+          <Grid sm={6 - 0.4} xs={12}>
+            <Stack
+              spacing={2}
+              border={"1px solid rgb(56,56,56)"}
+              borderRadius={"8px"}
+              p={2}
+            >
+              <Box component={"img"} src="image-37.png" width={32}></Box>
               <Typography fontSize={12} color={"rgb(212, 212, 212)"}>
                 {`I think you guys are great and am genuinely impressed with your
                 work. I'm also curious to know what areas you're focusing on to
@@ -320,70 +387,7 @@ const Home = () => {
               border={"1px solid rgb(56,56,56)"}
               borderRadius={"8px"}
               p={2}
-            >
-              <Box component={"img"} src="image-21.png" width={32}></Box>
-              <Typography fontSize={12} color={"rgb(212, 212, 212)"}>
-                {`I think you guys are great and am genuinely impressed with your
-                work. I'm also curious to know what areas you're focusing on to
-                improve, as I'm sure any enhancements will only make the
-                experience even better.`}
-              </Typography>
-              <Stack direction={"row"} alignItems={"center"} spacing={1}>
-                <Box
-                  component={"img"}
-                  src="image-22.png"
-                  width={28}
-                  height={28}
-                ></Box>
-                <Stack>
-                  <Typography fontSize={10} color={"rgb(212, 212, 212)"}>
-                    OpenTheFridge
-                  </Typography>
-                  <Typography fontSize={10} color={"rgb(212, 212, 212)"}>
-                    Leadership Team at AP Collective
-                  </Typography>
-                </Stack>
-              </Stack>
-            </Stack>
-          </Grid>
-          <Grid sm={6 - 0.4} xs={12}>
-            <Stack
-              spacing={2}
-              border={"1px solid rgb(56,56,56)"}
-              borderRadius={"8px"}
-              p={2}
-            >
-              <Box component={"img"} src="image-21.png" width={32}></Box>
-              <Typography fontSize={12} color={"rgb(212, 212, 212)"}>
-                {`I think you guys are great and am genuinely impressed with your
-                work. I'm also curious to know what areas you're focusing on to
-                improve, as I'm sure any enhancements will only make the
-                experience even better.`}
-              </Typography>
-              <Stack direction={"row"} alignItems={"center"} spacing={1}>
-                <Box
-                  component={"img"}
-                  src="image-22.png"
-                  width={28}
-                  height={28}
-                ></Box>
-                <Stack>
-                  <Typography fontSize={10} color={"rgb(212, 212, 212)"}>
-                    OpenTheFridge
-                  </Typography>
-                  <Typography fontSize={10} color={"rgb(212, 212, 212)"}>
-                    Leadership Team at AP Collective
-                  </Typography>
-                </Stack>
-              </Stack>
-            </Stack>
-          </Grid>
-          <Grid sm={6 - 0.4} xs={12}>
-            <Stack
-              spacing={2}
-              border={"1px solid rgb(56,56,56)"}
-              borderRadius={"8px"}
-              p={2}
+              height={"100%"}
             >
               <Box component={"img"} src="image-29.png" width={32}></Box>
               <Typography fontSize={12} color={"rgb(212, 212, 212)"}>
@@ -411,18 +415,58 @@ const Home = () => {
           </Grid>
         </Grid>
         <ButtonCustom
-          sx={{
-            bgcolor: "transparent",
-            mt: 2,
-            width: "fit-content",
-            borderRadius: "30px",
-            px: "32px",
-          }}
           endIcon={<Box component={"img"} src="image-18.png" width={32}></Box>}
         >
           VIEW ALL
         </ButtonCustom>
       </Stack>
+      <Dialog
+        open={open}
+        sx={{
+          ".MuiDialog-paper": {
+            backdropFilter: "blur(10px)",
+            backgroundColor: "rgb(23,23,23)",
+            borderRadius: '10px',
+            minWidth: 800
+          },
+        }}
+        onClose={handleOpen}
+        fullWidth
+      >
+        <Stack p={4} alignItems={"center"} spacing={4} position={"relative"}>
+          <Stack position={"absolute"} top={10} right={10}>
+            <IconButton onClick={handleOpen}>
+              <Close
+                sx={{
+                  color: "rgb(175,175,175)",
+                  width: 14,
+                  height: 14
+                }}
+              ></Close>
+            </IconButton>
+          </Stack>
+          <Typography color={"white"} fontSize={32} fontWeight={700} whiteSpace={'nowrap'}>
+            WEBSITE MAINTENANCE ANNOUNCEMENT
+          </Typography>
+
+          <Stack spacing={2}>
+            <Typography color={"rgb(175, 175, 175)"}>Dear users,</Typography>
+            <Typography color={"rgb(175, 175, 175)"}>
+              We are currently conducting scheduled maintenance. During this
+              period, some services may be temporarily unavailable, and certain
+              buttons will be temporarily disabled for updates and maintenance.
+            </Typography>
+            <Typography color={"rgb(175, 175, 175)"}>
+              We appreciate your understanding and cooperation.
+            </Typography>
+            <Typography color={"rgb(175, 175, 175)"}>Best regards,</Typography>
+            <Typography color={"rgb(175, 175, 175)"}>
+              Web3 Nexus Space Team.
+            </Typography>
+          </Stack>
+          <ButtonCustom>ACKNOWLEDGE</ButtonCustom>
+        </Stack>
+      </Dialog>
     </Stack>
   );
 };
