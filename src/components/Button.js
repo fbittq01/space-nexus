@@ -16,6 +16,7 @@ const ButtonCustom = styled(Button)({
   borderRadius: "30px",
   background: 'url("1.svg")',
   transition: "all 0.3s linear",
+  textAlign: 'center',
   "&:hover": {
     opacity: 0.7,
   },

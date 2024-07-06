@@ -10,6 +10,7 @@ import useDirect from "@/customHook/directHook";
 
 function HeaderApp() {
   const [value, setValue] = React.useState();
+  const { handleDirectToHome } = useDirect();
   const pages = [
     {
       titile: "LEARN",
@@ -101,24 +102,7 @@ function HeaderApp() {
     },
     {
       titile: "SECURITY",
-      items: [
-        {
-          itemTitle: "What is WEB3 NEXUS SPACE?",
-          destination: "#",
-        },
-        {
-          itemTitle: "Blog (comming soon)",
-          destination: "#",
-        },
-        {
-          itemTitle: "Glossary (comming soon)",
-          destination: "#",
-        },
-        {
-          itemTitle: "FAQ",
-          destination: "#",
-        },
-      ],
+      items: [],
       onClick: () => handleDirectToBuild(),
     },
   ];
@@ -147,18 +131,19 @@ function HeaderApp() {
         <Toolbar disableGutters>
           <Stack
             direction={"row"}
-            width={1}
+            width={1400}
             alignItems={"center"}
-            justifyContent={"space-around"}
-            px={10}
+            justifyContent={"space-between"}
+            px={20}
+            pr={25}
           >
-            <Box component={"img"} src="/logo.png" height={32}></Box>
+            <Box component={"img"} src="/logo.png" height={32} onClick={handleDirectToHome}></Box>
 
             <Stack
               flex={1}
               direction={"row"}
               alignItems={"center"}
-              justifyContent={"center"}
+              justifyContent={"flex-end"}
               spacing={5}
             >
               {pages.map((page, index) => (
@@ -183,89 +168,100 @@ function HeaderApp() {
                         position: "absolute",
                         top: 0,
                       },
+                      cursor: "pointer",
+                      ":hover": {
+                        color: 'white'
+                      }
                     }}
                   >
                     <Typography fontSize={12} fontWeight={"bold"}>
                       {page.titile}
                     </Typography>
-                    <Icon>
-                      <KeyboardArrowDown></KeyboardArrowDown>
-                    </Icon>
+                    {index !== 4 && (
+                      <Icon>
+                        <KeyboardArrowDown></KeyboardArrowDown>
+                      </Icon>
+                    )}
                   </Stack>
-                  <Stack
-                    position={"absolute"}
-                    width={"250px"}
-                    height={"199px"}
-                    top={"150%"}
-                    left={"-50%"}
-                    zIndex={10}
-                    onMouseEnter={() => {
-                      if (index === value) {
-                        handleChange(index);
-                      }
-                    }}
-                    onMouseLeave={() => handleClear()}
-                  >
-                    <Collapse in={index === value}>
-                      <Stack
-                        direction={"row"}
-                        bgcolor={"rgb(23, 23, 23)"}
-                        p={2}
-                        spacing={1}
-                      >
-                        <Stack spacing={1} borderRadius={"4px"}>
-                          {page.items.map((item, index) => (
-                            <Stack
-                              p={1}
-                              borderRadius={"4px"}
-                              sx={{
-                                color: "rgb(180, 180, 180)",
-                                ":hover": {
-                                  bgcolor: "rgb(42, 42, 42)",
-                                  color: "white",
-                                },
-                              }}
-                              key={index}
-                              component={"div"}
-                              onClick={page.onClick}
-                            >
-                              <Typography fontSize={12}>
-                                {item.itemTitle}
-                              </Typography>
-                            </Stack>
-                          ))}
-                        </Stack>
-                        {value === 3 && (
-                          <Stack spacing={3}>
-                            <Box
-                              component={"img"}
-                              src="x.png"
-                              height={20}
-                              width={'100%'}
-                            ></Box>
-                            <Box
-                              component={"img"}
-                              src="discord.png"
-                              height={20}
-                              width={'100%'}
-                            ></Box>
-                            <Box
-                              component={"img"}
-                              src="youtube.png"
-                              height={20}
-                              width={'100%'}
-                            ></Box>
-                            <Box
-                              component={"img"}
-                              src="tele.png"
-                              height={20}
-                              width={'100%'}
-                            ></Box>
+                  {page.items.length > 0 && (
+                    <Stack
+                      position={"absolute"}
+                      width={"250px"}
+                      height={"199px"}
+                      top={"150%"}
+                      left={"-50%"}
+                      zIndex={10}
+                      onMouseEnter={() => {
+                        if (index === value) {
+                          handleChange(index);
+                        }
+                      }}
+                      onMouseLeave={() => handleClear()}
+                      sx={{
+                        cursor: 'pointer'
+                      }}
+                    >
+                      <Collapse in={index === value}>
+                        <Stack
+                          direction={"row"}
+                          bgcolor={"rgb(23, 23, 23)"}
+                          p={2}
+                          spacing={1}
+                        >
+                          <Stack spacing={1} borderRadius={"4px"} flex={1}>
+                            {page.items.map((item, index) => (
+                              <Stack
+                                p={1}
+                                borderRadius={"4px"}
+                                sx={{
+                                  color: "rgb(180, 180, 180)",
+                                  ":hover": {
+                                    bgcolor: "rgb(42, 42, 42)",
+                                    color: "white",
+                                  },
+                                }}
+                                key={index}
+                                component={"div"}
+                                onClick={page.onClick}
+                              >
+                                <Typography fontSize={12}>
+                                  {item.itemTitle}
+                                </Typography>
+                              </Stack>
+                            ))}
                           </Stack>
-                        )}
-                      </Stack>
-                    </Collapse>
-                  </Stack>
+                          {value === 3 && (
+                            <Stack spacing={3}>
+                              <Box
+                                component={"img"}
+                                src="x.png"
+                                height={20}
+                                width={"100%"}
+                              ></Box>
+                              <Box
+                                component={"img"}
+                                src="discord.png"
+                                height={20}
+                                width={"100%"}
+                              ></Box>
+                              <Box
+                                component={"img"}
+                                src="youtube.png"
+                                height={20}
+                                width={"100%"}
+                              ></Box>
+                              <Box
+                                component={"img"}
+                                src="tele.png"
+                                height={20}
+                                width={"100%"}
+                              ></Box>
+                            </Stack>
+                          )}
+                        </Stack>
+                      </Collapse>
+                    </Stack>
+                  )}
                 </Stack>
               ))}
             </Stack>

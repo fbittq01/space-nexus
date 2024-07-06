@@ -1,6 +1,9 @@
+import useDirect from "@/customHook/directHook";
+
 const { Stack, Box, Typography } = require("@mui/material");
 
 const Footer = () => {
+  const {handleDirectToPolicy, handleDirectToTermsOfServices} = useDirect();
   return (
     <Stack
       direction={"row"}
@@ -21,10 +24,24 @@ const Footer = () => {
         <Box component={"img"} height={20} src="youtube.png"></Box>
       </Stack>
       <Stack direction={"row"} spacing={4}>
-        <Typography fontSize={14} fontWeight={500} color={"rgb(175, 175, 175)"}>
+        <Typography
+          fontSize={14}
+          fontWeight={500}
+          color={"rgb(175, 175, 175)"}
+          sx={{ cursor: "pointer" }}
+          component={'div'}
+          onClick={handleDirectToTermsOfServices}
+        >
           TERMS OF SERVICES
         </Typography>
-        <Typography fontSize={14} fontWeight={500} color={"rgb(175, 175, 175)"}>
+        <Typography
+          fontSize={14}
+          fontWeight={500}
+          color={"rgb(175, 175, 175)"}
+          sx={{ cursor: "pointer" }}
+          component={'div'}
+          onClick={handleDirectToPolicy}
+        >
           PRIVACY POLICY
         </Typography>
       </Stack>

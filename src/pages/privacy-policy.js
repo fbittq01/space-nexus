@@ -19,6 +19,7 @@ const PrivacyPolicy = () => {
             fontWeight={700}
             textTransform={"uppercase"}
             fontSize={32}
+            color={'white'}
           >
             PRIVACY POLICY
           </Typography>

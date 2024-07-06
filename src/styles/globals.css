@@ -85,8 +85,9 @@ body {
   overflow-x: hidden;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none;  /* Internet Explorer 10+ */
-  background-color: 'rgb(0, 0, 0)';
-  color-scheme: dark;
+  background-color: black !important;
+  color: white;
+  /* color-scheme: dark; */
 
 }
 
@@ -109,8 +110,3 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-}

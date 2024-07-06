@@ -19,6 +19,7 @@ const TermsOfService = () => {
             fontWeight={700}
             textTransform={"uppercase"}
             fontSize={32}
+            color={'white'}
           >
             TERMS OF SERVICE
           </Typography>

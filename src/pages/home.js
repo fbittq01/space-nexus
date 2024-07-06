@@ -1,11 +1,12 @@
 import ButtonCustom from "@/components/Button";
 import Footer from "@/components/Footer";
 import HeaderApp from "@/components/HeaderApp";
+import Loading from "@/components/Loading";
 import { Close } from "@mui/icons-material";
 import {
   Box,
-  CircularProgress,
   Dialog,
+  Divider,
   Grid,
   IconButton,
   Stack,
@@ -78,9 +79,11 @@ const Home = () => {
         direction={"row"}
         alignItems={"center"}
         justifyContent={"center"}
+        spacing={2}
+        pt={10}
       >
         <Stack spacing={0}>
-          <Typography fontSize={32} fontWeight={700}>
+          <Typography fontSize={42} fontWeight={700}>
             SPACE FOR WEB3 NEXUS
           </Typography>
           <Typography
@@ -105,11 +108,11 @@ const Home = () => {
           component={"img"}
           src="image-14.png"
           height={"50vh"}
-          sx={{
-            ":hover": {
-              scale: 2,
-            },
-          }}
+          // sx={{
+          //   ":hover": {
+          //     scale: 2,
+          //   },
+          // }}
         ></Box>
       </Stack>
       <Stack
@@ -128,6 +131,7 @@ const Home = () => {
             fontWeight={600}
             color={"rgb(178, 178, 178)"}
             maxWidth={"40vw"}
+            textAlign={'center'}
           >
             WE OFFER A COMPREHENSIVE SUITE OF SERVICES OPTIMIZED FOR WEB3
             PROJECTS, INCLUDING CONNECTIVITY, SECURITY, COMMUNITY SETUP, AND
@@ -172,7 +176,7 @@ const Home = () => {
                     </Typography>
                   </Stack>
                 </Stack>
-                <Typography fontSize={12} fontWeight={700}>
+                <Typography fontSize={12} fontWeight={700} textAlign={'center'}>
                   {benifit.title}
                 </Typography>
                 <Typography
@@ -218,6 +222,7 @@ const Home = () => {
             p={2}
             borderRadius={"8px"}
             color={"rgb(178, 178, 178)"}
+            divider={<Stack sx={{bgcolor: 'white', color: 'white', width: '1px'}}></Stack>}
           >
             {services.map((service, index) => (
               <Typography fontSize={12} key={index}>
@@ -300,23 +305,7 @@ const Home = () => {
             >
               <Box component={"img"} src="image-21.png" width={32}></Box>
               <Stack alignItems={"center"}>
-                <svg width={0} height={0}>
-                  <defs>
-                    <linearGradient
-                      id="my_gradient"
-                      x1="0%"
-                      y1="0%"
-                      x2="0%"
-                      y2="100%"
-                    >
-                      <stop offset="0%" stopColor="#e01cd5" />
-                      <stop offset="100%" stopColor="#1CB5E0" />
-                    </linearGradient>
-                  </defs>
-                </svg>
-                <CircularProgress
-                  sx={{ "svg circle": { stroke: "url(#my_gradient)" } }}
-                />
+                <Loading></Loading>
               </Stack>
             </Stack>
           </Grid>
@@ -330,23 +319,7 @@ const Home = () => {
             >
               <Box component={"img"} src="image-23.png" width={32}></Box>
               <Stack alignItems={"center"}>
-                <svg width={0} height={0}>
-                  <defs>
-                    <linearGradient
-                      id="my_gradient"
-                      x1="0%"
-                      y1="0%"
-                      x2="0%"
-                      y2="100%"
-                    >
-                      <stop offset="0%" stopColor="#e01cd5" />
-                      <stop offset="100%" stopColor="#1CB5E0" />
-                    </linearGradient>
-                  </defs>
-                </svg>
-                <CircularProgress
-                  sx={{ "svg circle": { stroke: "url(#my_gradient)" } }}
-                />
+                <Loading></Loading>
               </Stack>
             </Stack>
           </Grid>
@@ -417,6 +390,9 @@ const Home = () => {
         </Grid>
         <ButtonCustom
           endIcon={<Box component={"img"} src="image-18.png" width={32}></Box>}
+          sx={{
+            right: 10
+          }}
         >
           VIEW ALL
         </ButtonCustom>
@@ -483,7 +459,7 @@ const Home = () => {
               Web3 Nexus Space Team.
             </Typography>
           </Stack>
-          <ButtonCustom>ACKNOWLEDGE</ButtonCustom>
+          <ButtonCustom onClick={handleOpen}>ACKNOWLEDGE</ButtonCustom>
         </Stack>
       </Dialog>
       <Footer></Footer>

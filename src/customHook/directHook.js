@@ -24,16 +24,37 @@ const useDirect = () => {
     });
   };
 
-  const handleDirectToBuild = () => [
+  const handleDirectToBuild = () => {
     handleDirect({
-      destination: '/build'
-    })
-  ]
+      destination: "/build",
+    });
+  };
+
+  const handleDirectToTermsOfServices = () => {
+    handleDirect({
+      destination: "/terms-of-service",
+    });
+  };
+
+  const handleDirectToPolicy = () => {
+    handleDirect({
+      destination: "/privacy-policy",
+    });
+  };
+
+  const handleDirectToHome = () => {
+    handleDirect({
+      destination: "/home",
+    });
+  }
 
   return {
     handleBack,
     handleDirectToLearn,
-    handleDirectToBuild
+    handleDirectToBuild,
+    handleDirectToTermsOfServices,
+    handleDirectToPolicy,
+    handleDirectToHome
   };
 };
 

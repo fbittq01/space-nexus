@@ -113,6 +113,16 @@ const Learn = () => {
                 borderRadius={"8px"}
                 alignItems={"center"}
                 justifyContent={"center"}
+                divider={
+                  <Stack
+                    sx={{
+                      bgcolor: "white",
+                      color: "white",
+                      width: "1px",
+                      height: "100%",
+                    }}
+                  ></Stack>
+                }
               >
                 {aboutUs.map((item, index) => (
                   <Typography fontSize={12} key={index}>
@@ -126,6 +136,12 @@ const Learn = () => {
                 needed to succeed in the Web3 space.
               </Typography>
               <ButtonCustom
+                sx={{
+                  background: 'url("2.svg")',
+                  width: 1,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
                 endIcon={
                   <Box component={"img"} src="image-18.png" width={32}></Box>
                 }
