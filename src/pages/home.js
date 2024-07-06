@@ -131,7 +131,7 @@ const Home = () => {
             fontWeight={600}
             color={"rgb(178, 178, 178)"}
             maxWidth={"40vw"}
-            textAlign={'center'}
+            textAlign={"center"}
           >
             WE OFFER A COMPREHENSIVE SUITE OF SERVICES OPTIMIZED FOR WEB3
             PROJECTS, INCLUDING CONNECTIVITY, SECURITY, COMMUNITY SETUP, AND
@@ -176,7 +176,7 @@ const Home = () => {
                     </Typography>
                   </Stack>
                 </Stack>
-                <Typography fontSize={12} fontWeight={700} textAlign={'center'}>
+                <Typography fontSize={12} fontWeight={700} textAlign={"center"}>
                   {benifit.title}
                 </Typography>
                 <Typography
@@ -222,7 +222,11 @@ const Home = () => {
             p={2}
             borderRadius={"8px"}
             color={"rgb(178, 178, 178)"}
-            divider={<Stack sx={{bgcolor: 'white', color: 'white', width: '1px'}}></Stack>}
+            divider={
+              <Stack
+                sx={{ bgcolor: "white", color: "white", width: "1px" }}
+              ></Stack>
+            }
           >
             {services.map((service, index) => (
               <Typography fontSize={12} key={index}>
@@ -372,16 +376,16 @@ const Home = () => {
               <Stack direction={"row"} alignItems={"center"} spacing={1}>
                 <Box
                   component={"img"}
-                  src="image-22.png"
+                  src="image-39.png"
                   width={28}
                   height={28}
                 ></Box>
                 <Stack>
                   <Typography fontSize={10} color={"rgb(212, 212, 212)"}>
-                    OpenTheFridge
+                    Carisne
                   </Typography>
                   <Typography fontSize={10} color={"rgb(212, 212, 212)"}>
-                    Leadership Team at AP Collective
+                    CMO at Inferno Labs
                   </Typography>
                 </Stack>
               </Stack>
@@ -391,7 +395,7 @@ const Home = () => {
         <ButtonCustom
           endIcon={<Box component={"img"} src="image-18.png" width={32}></Box>}
           sx={{
-            right: 10
+            right: 10,
           }}
         >
           VIEW ALL
