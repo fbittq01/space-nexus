@@ -5,7 +5,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { Collapse, Icon, Stack } from "@mui/material";
-import { ColorLens, KeyboardArrowDown } from "@mui/icons-material";
+import { KeyboardArrowDown } from "@mui/icons-material";
 import useDirect from "@/customHook/directHook";
 
 function HeaderApp() {
@@ -31,7 +31,7 @@ function HeaderApp() {
           destination: "#",
         },
       ],
-      onClick: () => handleDirectToLearn()
+      onClick: () => handleDirectToLearn(),
     },
     {
       titile: "BUILD",
@@ -57,7 +57,7 @@ function HeaderApp() {
           destination: "#",
         },
       ],
-      onClick: () => handleDirectToBuild()
+      onClick: () => handleDirectToBuild(),
     },
     {
       titile: "NETWORK",
@@ -71,29 +71,33 @@ function HeaderApp() {
           destination: "#",
         },
       ],
-      onClick: () => handleDirectToBuild()
+      onClick: () => handleDirectToBuild(),
     },
     {
       titile: "COMMUNITY",
       items: [
         {
-          itemTitle: "What is WEB3 NEXUS SPACE?",
+          itemTitle: "Careers",
           destination: "#",
         },
         {
-          itemTitle: "Blog (comming soon)",
+          itemTitle: "Help center (coming soon)",
           destination: "#",
         },
         {
-          itemTitle: "Glossary (comming soon)",
+          itemTitle: "Community forum (coming soon)",
           destination: "#",
         },
         {
-          itemTitle: "FAQ",
+          itemTitle: "Contact us",
+          destination: "#",
+        },
+        {
+          itemTitle: "Brand Assets",
           destination: "#",
         },
       ],
-      onClick: () => handleDirectToBuild()
+      onClick: () => handleDirectToBuild(),
     },
     {
       titile: "SECURITY",
@@ -115,7 +119,7 @@ function HeaderApp() {
           destination: "#",
         },
       ],
-      onClick: () => handleDirectToBuild()
+      onClick: () => handleDirectToBuild(),
     },
   ];
 
@@ -127,7 +131,7 @@ function HeaderApp() {
     setValue(null);
   };
 
-  const {handleDirectToBuild, handleDirectToLearn} = useDirect()
+  const { handleDirectToBuild, handleDirectToLearn } = useDirect();
 
   return (
     <AppBar
@@ -137,7 +141,7 @@ function HeaderApp() {
         color: "rgb(178, 178, 178)",
         borderBottom: "1px solid rgb(178, 178, 178)",
       }}
-      component={'nav'}
+      component={"nav"}
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
@@ -170,15 +174,15 @@ function HeaderApp() {
                     alignItems={"center"}
                     component={"div"}
                     onMouseEnter={() => handleChange(index)}
-                    position={'relative'}
+                    position={"relative"}
                     sx={{
-                      ':before': {
-                        width: '100px',
-                        height: '100px',
-                        backgroundColor: 'pink',
-                        position: 'absolute',
-                        top: 0
-                      }
+                      ":before": {
+                        width: "100px",
+                        height: "100px",
+                        backgroundColor: "pink",
+                        position: "absolute",
+                        top: 0,
+                      },
                     }}
                   >
                     <Typography fontSize={12} fontWeight={"bold"}>
@@ -197,38 +201,68 @@ function HeaderApp() {
                     zIndex={10}
                     onMouseEnter={() => {
                       if (index === value) {
-                        handleChange(index)
+                        handleChange(index);
                       }
                     }}
                     onMouseLeave={() => handleClear()}
                   >
                     <Collapse in={index === value}>
                       <Stack
-                        spacing={1}
-                        p={2}
-                        borderRadius={"4px"}
+                        direction={"row"}
                         bgcolor={"rgb(23, 23, 23)"}
+                        p={2}
+                        spacing={1}
                       >
-                        {page.items.map((item, index) => (
-                          <Stack
-                            p={1}
-                            borderRadius={"4px"}
-                            sx={{
-                              color: "rgb(180, 180, 180)",
-                              ":hover": {
-                                bgcolor: "rgb(42, 42, 42)",
-                                color: "white",
-                              },
-                            }}
-                            key={index}
-                            component={'div'}
-                            onClick={page.onClick}
-                          >
-                            <Typography fontSize={12}>
-                              {item.itemTitle}
-                            </Typography>
+                        <Stack spacing={1} borderRadius={"4px"}>
+                          {page.items.map((item, index) => (
+                            <Stack
+                              p={1}
+                              borderRadius={"4px"}
+                              sx={{
+                                color: "rgb(180, 180, 180)",
+                                ":hover": {
+                                  bgcolor: "rgb(42, 42, 42)",
+                                  color: "white",
+                                },
+                              }}
+                              key={index}
+                              component={"div"}
+                              onClick={page.onClick}
+                            >
+                              <Typography fontSize={12}>
+                                {item.itemTitle}
+                              </Typography>
+                            </Stack>
+                          ))}
+                        </Stack>
+                        {value === 3 && (
+                          <Stack spacing={3}>
+                            <Box
+                              component={"img"}
+                              src="x.png"
+                              height={20}
+                              width={'100%'}
+                            ></Box>
+                            <Box
+                              component={"img"}
+                              src="discord.png"
+                              height={20}
+                              width={'100%'}
+                            ></Box>
+                            <Box
+                              component={"img"}
+                              src="youtube.png"
+                              height={20}
+                              width={'100%'}
+                            ></Box>
+                            <Box
+                              component={"img"}
+                              src="tele.png"
+                              height={20}
+                              width={'100%'}
+                            ></Box>
                           </Stack>
-                        ))}
+                        )}
                       </Stack>
                     </Collapse>
                   </Stack>
