@@ -98,7 +98,7 @@ function HeaderApp() {
           destination: "#",
         },
       ],
-      onClick: () => handleDirectToBuild(),
+      onClick: () => handleDirectToComunity(),
     },
     {
       titile: "SECURITY",
@@ -115,7 +115,7 @@ function HeaderApp() {
     setValue(null);
   };
 
-  const { handleDirectToBuild, handleDirectToLearn } = useDirect();
+  const { handleDirectToBuild, handleDirectToLearn, handleDirectToComunity } = useDirect();
 
   return (
     <AppBar
