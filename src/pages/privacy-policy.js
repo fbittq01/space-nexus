@@ -19,16 +19,16 @@ const PrivacyPolicy = () => {
             fontWeight={700}
             textTransform={"uppercase"}
             fontSize={32}
-            color={'white'}
+            color={"white"}
           >
             PRIVACY POLICY
           </Typography>
           <Typography fontSize={12}>Last Updated: June 23, 2024</Typography>
           <Typography fontSize={14}>
-            WEB3 NEXUS SPACE ("WNS," "we," "us," or "our") is committed to
+            {`WEB3 NEXUS SPACE ("WNS," "we," "us," or "our") is committed to
             protecting your privacy. This Privacy Policy explains how we
             collect, use, disclose, and safeguard your information when you use
-            our services.
+            our services.`}
           </Typography>
           <Typography
             textTransform={"uppercase"}

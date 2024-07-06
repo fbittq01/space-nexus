@@ -19,33 +19,33 @@ const TermsOfService = () => {
             fontWeight={700}
             textTransform={"uppercase"}
             fontSize={32}
-            color={'white'}
+            color={"white"}
           >
             TERMS OF SERVICE
           </Typography>
           <Typography fontSize={12}>Last Updated: June 23, 2024</Typography>
           <Typography fontSize={14}>
-            WEB3 NEXUS SPACE ("WNS," "we," "our," or "us") provides various
+            {`WEB3 NEXUS SPACE ("WNS," "we," "our," or "us") provides various
             services and tools (collectively, the "WNS Offerings"). Your use of
             these Offerings is governed by these Terms of Service ("Terms"). By
             accessing or using our services, you agree to be bound by these
             Terms. If you do not agree to these Terms, please do not use our
-            services.
+            services.`}
           </Typography>
           <Typography fontSize={14}>
-            SECTION 8 OF THESE TERMS CONTAINS A BINDING ARBITRATION CLAUSE AND A
+            {`SECTION 8 OF THESE TERMS CONTAINS A BINDING ARBITRATION CLAUSE AND A
             WAIVER OF CLASS ACTION RIGHTS, WHICH MAY SIGNIFICANTLY IMPACT YOUR
             LEGAL RIGHTS, INCLUDING YOUR RIGHT TO FILE A LAWSUIT IN COURT. IF
             YOU DO NOT AGREE TO ALL OF THE TERMS IN THEIR ENTIRETY, YOU MAY NOT
-            USE THE WEB3 NEXUS SPACE OFFERINGS IN ANY MANNER.
+            USE THE WEB3 NEXUS SPACE OFFERINGS IN ANY MANNER.`}
           </Typography>
           <Typography fontSize={14}>
-            Please read the Terms carefully and in full. They cover important
+            {`Please read the Terms carefully and in full. They cover important
             information about our Offerings, your rights under this agreement,
             and all future changes to the Terms. They require that you accept
             all the risks associated with using the Offerings, as they are
             experimental in nature. We reserve the right to change these Terms
-            at any time.
+            at any time.`}
           </Typography>
           <Typography
             textTransform={"uppercase"}
@@ -56,7 +56,7 @@ const TermsOfService = () => {
             1. Use of the Offerings
           </Typography>
           <Typography color={"rgb(175, 175, 175)"} fontSize={14}>
-            <Box component={"img"} src="logo-2.png" height={12}></Box> You agree
+            <Box component={"img"} src="logo-2.png" height={12}></Box> {`You agree
             that your use of the Offerings shall be deemed your agreement in
             full to these Terms and our Privacy Policy, which is incorporated
             herein by reference. We grant you a worldwide, royalty-free,
@@ -65,7 +65,7 @@ const TermsOfService = () => {
             as all information and materials published, distributed, or
             otherwise made available on our website. You agree not to use these
             Offerings in a manner that is fraudulent or violative of applicable
-            laws.
+            laws.`}
           </Typography>
           <Typography
             textTransform={"uppercase"}
