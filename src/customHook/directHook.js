@@ -48,13 +48,20 @@ const useDirect = () => {
     });
   }
 
+  const handleDirectToComunity = () => {
+    handleDirect({
+      destination: "/comunity",
+    });
+  }
+
   return {
     handleBack,
     handleDirectToLearn,
     handleDirectToBuild,
     handleDirectToTermsOfServices,
     handleDirectToPolicy,
-    handleDirectToHome
+    handleDirectToHome,
+    handleDirectToComunity
   };
 };
 
