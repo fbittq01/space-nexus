@@ -651,6 +651,9 @@ const Network = () => {
                     p={2}
                     color={"rgb(175 175 175)"}
                     sx={{
+                      ':after': {
+                        borderRight: (index + 1) % 6 === 0 && 'none !important'
+                      },
                       "&:hover": {
                         color: "white !important",
                         textShadow: '-1px 1px 5px #DDDDDD'

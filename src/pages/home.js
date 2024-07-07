@@ -141,7 +141,7 @@ const Home = () => {
             STRATEGIC INNOVATION.
           </Typography>
         </Stack>
-        <Grid container gap={2} px={16}>
+        <Grid container gap={2} px={16} alignItems={'center'} justifyContent={'center'}>
           {nexusBenifit.map((benifit, index) => (
             <Grid xs={2.4 - 0.2} key={index}>
               <Stack
@@ -302,7 +302,7 @@ const Home = () => {
             <Box key={index} component={"img"} src={partner} width={32}></Box>
           ))}
         </Stack>
-        <Grid container gap={4}>
+        <Grid container gap={4} alignItems={'center'} justifyContent={'center'}>
           <Grid sm={6 - 0.4} xs={12}>
             <Stack
               spacing={2}
