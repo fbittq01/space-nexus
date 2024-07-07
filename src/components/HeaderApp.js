@@ -262,7 +262,7 @@ function HeaderApp() {
                             ))}
                           </Stack>
                           {value === 3 && (
-                            <Stack spacing={3}>
+                            <Stack spacing={3.5} alignItems={"center"}>
                               <Box
                                 component={"img"}
                                 src="x.png"
