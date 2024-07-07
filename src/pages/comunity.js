@@ -69,10 +69,16 @@ const Comunity = () => {
               WE LOVE OUR CUSTOMERS, USERS, AND PARTNERS. SO FEEL FREE TO
               CONTACT US ANYTIME YOU WANT.
             </Typography>
-            <Stack alignItems={'center'} justifyContent={'center'} direction={'row'} spacing={4} py={2}>
-              <Box component={'img'} src="x.png" height={24}></Box>
-              <Box component={'img'} src="email.png" height={24}></Box>
-              <Box component={'img'} src="tele.png" height={24}></Box>
+            <Stack
+              alignItems={"center"}
+              justifyContent={"center"}
+              direction={"row"}
+              spacing={4}
+              py={2}
+            >
+              <Box component={"img"} src="x.png" height={24}></Box>
+              <Box component={"img"} src="email.png" height={24}></Box>
+              <Box component={"img"} src="tele.png" height={24}></Box>
             </Stack>
             <Stack>
               <ButtonCustom
@@ -128,7 +134,12 @@ const Comunity = () => {
                     ></Box>
                     <VisuallyHiddenInput type="file" multiple />
 
-                    <Typography fontSize={12} color={"rgb(175, 175, 175)"} textTransform={'none'} pl={1}>
+                    <Typography
+                      fontSize={12}
+                      color={"rgb(175, 175, 175)"}
+                      textTransform={"none"}
+                      pl={1}
+                    >
                       Attach Files
                     </Typography>
                   </Button>
@@ -173,7 +184,7 @@ const Comunity = () => {
                   sx={{
                     flex: 1,
                     background: "none",
-                    backgroundImage: 'url(button-4.svg)'
+                    backgroundImage: "url(button-4.svg)",
                   }}
                 >
                   SEND
