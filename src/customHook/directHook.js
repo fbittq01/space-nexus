@@ -60,6 +60,18 @@ const useDirect = () => {
     });
   }
 
+  const handleDirectToServiceAndTool = () => {
+    handleDirect({
+      destination: "/services-and-tools",
+    });
+  }
+
+  const handleDirectToInterConect = () => {
+    handleDirect({
+      destination: "/interconnect",
+    });
+  }
+
   return {
     handleBack,
     handleDirectToLearn,
@@ -68,7 +80,9 @@ const useDirect = () => {
     handleDirectToPolicy,
     handleDirectToHome,
     handleDirectToComunity,
-    handleDirectToNetwork
+    handleDirectToNetwork,
+    handleDirectToServiceAndTool,
+    handleDirectToInterConect
   };
 };
 

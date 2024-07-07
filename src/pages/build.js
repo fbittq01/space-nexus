@@ -1,5 +1,6 @@
 import EmblaCarousel from "@/components/Banner";
 import ButtonCustom from "@/components/Button";
+import Footer from "@/components/Footer";
 import HeaderApp from "@/components/HeaderApp";
 import Input from "@/components/Input";
 import { Box, Stack, Typography } from "@mui/material";
@@ -129,124 +130,7 @@ const Build = () => {
           <Box component={"img"} src="image-15.png" width={200}></Box>
         </Stack>
       </Stack>
-      <Stack
-        color={"white"}
-        height={"90vh"}
-        alignItems={"center"}
-        justifyContent={"center"}
-        spacing={4}
-        pt={50}
-      >
-        <Stack spacing={2}>
-          <Typography
-            textTransform={"uppercase"}
-            fontSize={32}
-            fontWeight={700}
-            textAlign={"center"}
-          >
-            Interconect
-          </Typography>
-          <Typography
-            textTransform={"uppercase"}
-            fontSize={12}
-            color={"rgb(190, 190, 190)"}
-          >
-            What is your name?
-          </Typography>
-          <Input></Input>
-          <Typography
-            textTransform={"uppercase"}
-            fontSize={12}
-            color={"rgb(190, 190, 190)"}
-          >
-            ARE YOU REPRESENTING YOURSELF, AN INDIVIDUAL, A PROJECT, AN
-            ORCANIZATION, OR SOMETHING ELSE?<br></br> PLEASE DESCRIBE BRIEFLY.
-          </Typography>
-          <Input></Input>
-          <Typography
-            textTransform={"uppercase"}
-            fontSize={12}
-            color={"rgb(190, 190, 190)"}
-          >
-            THE X ACCOUNT OF. THE ENTITY YOU REPRESENT?
-          </Typography>
-          <Input></Input>
-          <Typography
-            textTransform={"uppercase"}
-            fontSize={12}
-            color={"rgb(190, 190, 190)"}
-          >
-            CONTACT DETAILS FOR THIS ENTITY?
-          </Typography>
-          <Input></Input>
-          <Typography
-            textTransform={"uppercase"}
-            fontSize={12}
-            color={"rgb(190, 190, 190)"}
-          >
-            WHAT ARE YOU READY FOR? ARE YOU PREPARED TO BE PART OF OUR NETWORK?
-          </Typography>
-          <Input></Input>
-          <Stack
-            direction={"row"}
-            alignItems={"center"}
-            justifyContent={"space-between"}
-            width={0.7}
-          >
-            <Typography
-              textTransform={"uppercase"}
-              fontSize={12}
-              color={"rgb(190, 190, 190)"}
-            >
-              PLEASE CHECK HERE IF YOU AGREE TO LET US STORE AND CATEGORIZE THE
-              INFORMATION YOU HAVE SUBMITTED (REQUIRED).
-            </Typography>
-            <Input type="checkbox" sx={{ border: "none", width: 100 }}></Input>
-          </Stack>
-          <Stack
-            direction={"row"}
-            alignItems={"center"}
-            justifyContent={"space-between"}
-            width={0.7}
-          >
-            <Typography
-              textTransform={"uppercase"}
-              fontSize={12}
-              color={"rgb(190, 190, 190)"}
-            >
-              PLEASE CHECK HERE IF YOU HAVE FULLY READ AND AGREE TO THE TERMS OF
-              SERVICE AND PRIVACY POLICY (REQUIRED).
-            </Typography>
-            <Input type="checkbox" sx={{ border: "none", width: 100 }}></Input>
-          </Stack>
-
-          <Stack spacing={2} alignItems={"center"}>
-            <ButtonCustom sx={{ px: 10 }}>SUBMIT</ButtonCustom>
-            <Typography
-              color={"rgb(190, 190, 190)"}
-              width={"60%"}
-              textAlign={"center"}
-            >
-              This information will be kept confidential, and we are committed
-              to complying with legal regulations, terms of service, and privacy
-              policy.
-            </Typography>
-          </Stack>
-        </Stack>
-
-        <Stack
-          direction={"row"}
-          justifyContent={"flex-start"}
-          alignItems={"center"}
-          spacing={2}
-          pb={20}
-        >
-          <Typography color={"rgb(190, 190, 190)"}>
-            If you want to speak with us directly, please contact us
-          </Typography>
-          <ButtonCustom sx={{ px: 8 }}>CONTACT US</ButtonCustom>
-        </Stack>
-      </Stack>
+      <Footer></Footer>
     </Stack>
   );
 };

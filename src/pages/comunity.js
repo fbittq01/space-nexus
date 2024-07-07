@@ -1,6 +1,8 @@
 import ButtonCustom from "@/components/Button";
+import Footer from "@/components/Footer";
 import HeaderApp from "@/components/HeaderApp";
 import Input from "@/components/Input";
+import useDirect from "@/customHook/directHook";
 import { Close, CloudUpload } from "@mui/icons-material";
 import {
   Box,
@@ -11,7 +13,8 @@ import {
   styled,
   Typography,
 } from "@mui/material";
-import { useState } from "react";
+import axios from "axios";
+import { useRef, useState } from "react";
 
 const VisuallyHiddenInput = styled("input")({
   clip: "rect(0 0 0 0)",
@@ -29,6 +32,8 @@ const Comunity = () => {
   const [open, setOpen] = useState(false);
   const [files, setFiles] = useState([]);
   const [fileCount, setFileCount] = useState(0);
+  
+  const formRef = useRef();
 
   const handleOpen = () => {
     setOpen((preValue) => !preValue);
@@ -39,6 +44,7 @@ const Comunity = () => {
     const filesArray = Array.from(event.target.files).map((file) => ({
       name: file.name,
       size: file.size,
+      file: file,
     }));
 
     setFiles(filesArray);
@@ -48,6 +54,36 @@ const Comunity = () => {
   const handleDeleteFile = (index) => {
     setFiles((prevFiles) => prevFiles.filter((_, i) => i !== index));
     setFileCount(files.length - 1);
+  };
+
+  const { handleDirectToTermsOfServices, handleDirectToPolicy } = useDirect();
+
+  const handleSubmit = async () => {
+
+    // const formData = {
+    //   name: formRef.current.customerName.value,
+    //   email: formRef.current.email.value,
+    //   message: formRef.current.message.value,
+    // }
+    const formDataToSend = new FormData();
+    formDataToSend.append('name', formRef.current.customerName.value);
+    formDataToSend.append('email', formRef.current.email.value);
+    formDataToSend.append('message', formRef.current.message.value);
+    files.forEach((file) => {
+      formDataToSend.append('file', file.file);
+    });
+
+    try {
+      await axios.post('/api/contact', formDataToSend, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
+      setFiles([]);
+      setFileCount(0);
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
@@ -101,14 +137,15 @@ const Comunity = () => {
             <Typography fontSize={14} color={"rgb(175,175,175)"}>
               Or more easily, just drop us a line!
             </Typography>
-            <Stack spacing={2} width={"30%"} alignItems={"center"}>
-              <Input placeholder="Name" sx={{ color: "white" }}></Input>
-              <Input placeholder="Email" sx={{ color: "white" }}></Input>
+            <Stack spacing={2} width={"30%"} alignItems={"center"} component={'form'} ref={formRef}>
+              <Input placeholder="Name" sx={{ color: "white" }} id="customerName"></Input>
+              <Input placeholder="Email" sx={{ color: "white" }} id="email"></Input>
               <Input
                 placeholder="Message"
                 sx={{ color: "white", height: "86px" }}
                 multiline
                 minRows={3}
+                id="message"
               ></Input>
               <Stack
                 direction={"row"}
@@ -176,8 +213,25 @@ const Comunity = () => {
                 fontSize={12}
                 textAlign={"center"}
               >
-                This site is protected by reCAPTCHA and the Google Privacy
-                Policy and Terms of Service apply.
+                This site is protected by reCAPTCHA and the Google{" "}
+                <Box
+                  component={"a"}
+                  onClick={handleDirectToPolicy}
+                  color={"rgb(7, 92, 178)"}
+                  sx={{ textDecoration: "underline", cursor: "pointer" }}
+                >
+                  Privacy Policy
+                </Box>{" "}
+                and{" "}
+                <Box
+                  component={"a"}
+                  onClick={handleDirectToTermsOfServices}
+                  color={"rgb(7, 92, 178)"}
+                  sx={{ textDecoration: "underline", cursor: "pointer" }}
+                >
+                  Terms of Service
+                </Box>{" "}
+                apply.
               </Typography>
               <Stack direction={"row"} spacing={2}>
                 <ButtonCustom
@@ -186,6 +240,7 @@ const Comunity = () => {
                     background: "none",
                     backgroundImage: "url(button-4.svg)",
                   }}
+                  onClick={handleSubmit}
                 >
                   SEND
                 </ButtonCustom>
@@ -209,6 +264,7 @@ const Comunity = () => {
           </>
         )}
       </Stack>
+      <Footer></Footer>
     </Stack>
   );
 };

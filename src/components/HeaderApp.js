@@ -10,26 +10,26 @@ import useDirect from "@/customHook/directHook";
 
 function HeaderApp() {
   const [value, setValue] = React.useState();
-  const { handleDirectToHome } = useDirect();
+  const { handleDirectToHome, handleDirectToInterConect } = useDirect();
   const pages = [
     {
       titile: "LEARN",
       items: [
         {
           itemTitle: "What is WEB3 NEXUS SPACE?",
-          destination: "#",
+          destination: () => handleDirectToLearn(),
         },
         {
           itemTitle: "Blog (comming soon)",
-          destination: "#",
+          destination: () => {},
         },
         {
           itemTitle: "Glossary (comming soon)",
-          destination: "#",
+          destination: () => {},
         },
         {
           itemTitle: "FAQ",
-          destination: "#",
+          destination: () => handleDirectToLearn(),
         },
       ],
       onClick: () => handleDirectToLearn(),
@@ -39,23 +39,23 @@ function HeaderApp() {
       items: [
         {
           itemTitle: "Documentation (comming soon)",
-          destination: "#",
+          destination: () => {},
         },
         {
           itemTitle: "Status (comming soon)",
-          destination: "#",
+          destination: () => {},
         },
         {
           itemTitle: "Incubator Program (comming soon)",
-          destination: "#",
+          destination: () => {},
         },
         {
           itemTitle: "Services and Tools",
-          destination: "#",
+          destination: () => handleDirectToBuild(),
         },
         {
           itemTitle: "Interconect",
-          destination: "#",
+          destination: () => handleDirectToInterConect(),
         },
       ],
       onClick: () => handleDirectToBuild(),
@@ -65,11 +65,13 @@ function HeaderApp() {
       items: [
         {
           itemTitle: "Our Network (Comming soon)",
-          destination: "#",
+          destination: () => {},
         },
         {
           itemTitle: "Partner and friend",
-          destination: "#",
+          destination: () => {
+            handleDirectToNetwork();
+          },
         },
       ],
       onClick: () => handleDirectToNetwork(),
@@ -79,23 +81,29 @@ function HeaderApp() {
       items: [
         {
           itemTitle: "Careers",
-          destination: "#",
+          destination: () => {
+            window.location.href = "https://jobs.polymer.co/web3-nexus-space";
+          },
         },
         {
           itemTitle: "Help center (coming soon)",
-          destination: "#",
+          destination: () => {},
         },
         {
           itemTitle: "Community forum (coming soon)",
-          destination: "#",
+          destination: () => {},
         },
         {
           itemTitle: "Contact us",
-          destination: "#",
+          destination: () => {
+            handleDirectToComunity();
+          },
         },
         {
           itemTitle: "Brand Assets",
-          destination: "#",
+          destination: () => {
+            handleDirectToComunity();
+          },
         },
       ],
       onClick: () => handleDirectToComunity(),
@@ -115,7 +123,12 @@ function HeaderApp() {
     setValue(null);
   };
 
-  const { handleDirectToBuild, handleDirectToLearn, handleDirectToComunity, handleDirectToNetwork } = useDirect();
+  const {
+    handleDirectToBuild,
+    handleDirectToLearn,
+    handleDirectToComunity,
+    handleDirectToNetwork,
+  } = useDirect();
 
   return (
     <AppBar
@@ -137,7 +150,12 @@ function HeaderApp() {
             px={20}
             pr={25}
           >
-            <Box component={"img"} src="/logo.png" height={32} onClick={handleDirectToHome}></Box>
+            <Box
+              component={"img"}
+              src="/logo.png"
+              height={32}
+              onClick={handleDirectToHome}
+            ></Box>
 
             <Stack
               flex={1}
@@ -170,8 +188,8 @@ function HeaderApp() {
                       },
                       cursor: "pointer",
                       ":hover": {
-                        color: 'white'
-                      }
+                        color: "white",
+                      },
                     }}
                   >
                     <Typography fontSize={12} fontWeight={"bold"}>
@@ -198,7 +216,7 @@ function HeaderApp() {
                       }}
                       onMouseLeave={() => handleClear()}
                       sx={{
-                        cursor: 'pointer'
+                        cursor: "pointer",
                       }}
                     >
                       <Collapse in={index === value}>
@@ -222,7 +240,7 @@ function HeaderApp() {
                                 }}
                                 key={index}
                                 component={"div"}
-                                onClick={page.onClick}
+                                onClick={item.destination}
                               >
                                 <Typography fontSize={12}>
                                   {item.itemTitle}
@@ -236,25 +254,50 @@ function HeaderApp() {
                                 component={"img"}
                                 src="x.png"
                                 height={20}
-                                width={"100%"}
+                                width={"fit-content"}
+                                onClick={() => {
+                                  window.location.href =
+                                    "https://x.com/Web3NexusSpace";
+                                }}
                               ></Box>
                               <Box
                                 component={"img"}
                                 src="discord.png"
                                 height={20}
-                                width={"100%"}
+                                width={"fit-content"}
+                                onClick={() => {
+                                  window.location.href =
+                                    "https://discord.com/invite/web3nexusspace";
+                                }}
                               ></Box>
                               <Box
                                 component={"img"}
                                 src="youtube.png"
                                 height={20}
-                                width={"100%"}
+                                width={"fit-content"}
+                                onClick={() => {
+                                  window.location.href =
+                                    "https://www.youtube.com/@Web3NexusSpace";
+                                }}
                               ></Box>
                               <Box
                                 component={"img"}
                                 src="tele.png"
                                 height={20}
-                                width={"100%"}
+                                width={"fit-content"}
+                                onClick={() => {
+                                  window.location.href =
+                                    "https://t.me/Web3NexusSpace";
+                                }}
+                              ></Box>
+                              <Box
+                                component={"img"}
+                                src="tele.png"
+                                height={20}
+                                width={"fit-content"}
+                                onClick={() => {
+                                  window.location.href = "https://t.me/WNSCom";
+                                }}
                               ></Box>
                             </Stack>
                           )}

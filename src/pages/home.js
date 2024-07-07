@@ -2,6 +2,7 @@ import ButtonCustom from "@/components/Button";
 import Footer from "@/components/Footer";
 import HeaderApp from "@/components/HeaderApp";
 import Loading from "@/components/Loading";
+import useDirect from "@/customHook/directHook";
 import { Close } from "@mui/icons-material";
 import {
   Box,
@@ -55,6 +56,7 @@ const Home = () => {
     "Marketing & Promotion",
     "Collaboration and Partnerships",
     "Strategy & Management",
+    "Talent Acquisition and Human Resources Support",
   ];
   const partners = [
     "image-24.png",
@@ -71,6 +73,7 @@ const Home = () => {
     "image-35.png",
     "image-36.png",
   ];
+  const { handleDirectToBuild, handleDirectToInterConect, handleDirectToNetwork } = useDirect();
   return (
     <Stack>
       <HeaderApp></HeaderApp>
@@ -244,6 +247,7 @@ const Home = () => {
             endIcon={
               <Box component={"img"} src="image-18.png" width={32}></Box>
             }
+            onClick={handleDirectToBuild}
           >
             DISCOVER MORE ABOUT THESE SERVICES
           </ButtonCustom>
@@ -280,7 +284,7 @@ const Home = () => {
           OTHER KEY ENTITIES, AND VICE VERSA,
         </Typography>
         <Box component={"img"} src="image-19.png" height={"40vh"}></Box>
-        <ButtonCustom>BUILD WITH US</ButtonCustom>
+        <ButtonCustom onClick={handleDirectToInterConect}>BUILD WITH US</ButtonCustom>
       </Stack>
       <Stack
         height={"90vh"}
@@ -397,6 +401,7 @@ const Home = () => {
           sx={{
             right: 10,
           }}
+          onClick={handleDirectToNetwork}
         >
           VIEW ALL
         </ButtonCustom>

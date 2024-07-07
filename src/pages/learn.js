@@ -1,4 +1,5 @@
 import ButtonCustom from "@/components/Button";
+import Footer from "@/components/Footer";
 import HeaderApp from "@/components/HeaderApp";
 import { ExpandMore } from "@mui/icons-material";
 import {
@@ -202,6 +203,7 @@ const Learn = () => {
           </Stack>
         </Stack>
       </Stack>
+      <Footer></Footer>
     </Stack>
   );
 };

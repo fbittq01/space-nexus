@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import HeaderApp from "@/components/HeaderApp";
 import Input from "@/components/Input";
 import styled from "@emotion/styled";
@@ -400,204 +401,213 @@ const Network = () => {
   }));
 
   return (
-    <Stack alignItems={"center"} pb={20}>
-      <HeaderApp></HeaderApp>
-      <Stack pt={20} width={1000} maxWidth={1000} spacing={2}>
-        <Typography fontSize={32} fontWeight={600}>
-          PARTNERS & FRIENDS
-        </Typography>
-        <Stack width={1} height={"1px"} bgcolor={"rgb(50 50 50)"}></Stack>
-        <Stack
-          direction={"row"}
-          justifyContent={"space-between"}
-          alignItems={"flex-start"}
-        >
-          <Stack direction={"row"} alignItems={"center"} spacing={1} pt={2}>
-            <Typography fontSize={13} fontWeight={600}>
-              +99
-            </Typography>
-            <Typography
-              fontSize={13}
-              fontWeight={600}
-              color={"rgb(175 175 175)"}
-            >
-              ENTITIES
-            </Typography>
-          </Stack>
-          <Stack spacing={2} alignItems={"center"}>
-            <Stack
-              direction={"row"}
-              alignItems={"center"}
-              spacing={1}
-              sx={{ cursor: "pointer" }}
-              component={"div"}
-              onClick={handleOpen}
-              fontSize={13}
-              pt={2}
-            >
+    <>
+      <Stack alignItems={"center"} pb={20}>
+        <HeaderApp></HeaderApp>
+        <Stack pt={20} width={1000} maxWidth={1000} spacing={2}>
+          <Typography fontSize={32} fontWeight={600}>
+            PARTNERS & FRIENDS
+          </Typography>
+          <Stack width={1} height={"1px"} bgcolor={"rgb(50 50 50)"}></Stack>
+          <Stack
+            direction={"row"}
+            justifyContent={"space-between"}
+            alignItems={"flex-start"}
+          >
+            <Stack direction={"row"} alignItems={"center"} spacing={1} pt={2}>
+              <Typography fontSize={13} fontWeight={600}>
+                +99
+              </Typography>
               <Typography
                 fontSize={13}
                 fontWeight={600}
                 color={"rgb(175 175 175)"}
               >
-                PROJECT CATEGORY:
+                ENTITIES
               </Typography>
-              <Typography
-                fontSize={13}
-                fontWeight={600}
-                textTransform={"uppercase"}
-              >
-                {categorySelected ? categorySelected : "ALL"}
-              </Typography>
-              <Icon>
-                {open ? (
-                  <KeyboardArrowUp></KeyboardArrowUp>
-                ) : (
-                  <KeyboardArrowDown></KeyboardArrowDown>
-                )}
-              </Icon>
             </Stack>
-            <Collapse in={open}>
-              <Grid
-                container
-                sx={{
-                  bgcolor: "rgb(23 23 23)",
-                  p: 2,
-                  px: 0,
-                  borderRadius: "8px",
-                }}
+            <Stack spacing={2} alignItems={"center"}>
+              <Stack
+                direction={"row"}
+                alignItems={"center"}
+                spacing={1}
+                sx={{ cursor: "pointer" }}
+                component={"div"}
+                onClick={handleOpen}
+                fontSize={13}
+                pt={2}
               >
-                <Grid xs={12} px={2}>
-                  <Stack width={'31.5%'} component={'div'} onClick={() => {
-                    setCategorySelected('ALL');
-                    setDisplayProject(projects)
-                  }}>
-                    <Typography
-                      p={1}
-                      fontSize={12}
-                      fontWeight={600}
-                      color={"rgb(175 175 175)"}
-                      textTransform={"uppercase"}
-                      sx={{
-                        ":hover": {
-                          bgcolor: "rgb(175 175 175)",
-                          color: "white",
-                          borderRadius: "8px",
-                        },
-                        cursor: "pointer",
+                <Typography
+                  fontSize={13}
+                  fontWeight={600}
+                  color={"rgb(175 175 175)"}
+                >
+                  PROJECT CATEGORY:
+                </Typography>
+                <Typography
+                  fontSize={13}
+                  fontWeight={600}
+                  textTransform={"uppercase"}
+                >
+                  {categorySelected ? categorySelected : "ALL"}
+                </Typography>
+                <Icon>
+                  {open ? (
+                    <KeyboardArrowUp></KeyboardArrowUp>
+                  ) : (
+                    <KeyboardArrowDown></KeyboardArrowDown>
+                  )}
+                </Icon>
+              </Stack>
+              <Collapse in={open}>
+                <Grid
+                  container
+                  sx={{
+                    bgcolor: "rgb(23 23 23)",
+                    p: 2,
+                    px: 0,
+                    borderRadius: "8px",
+                  }}
+                >
+                  <Grid xs={12} px={2}>
+                    <Stack
+                      width={"31.5%"}
+                      component={"div"}
+                      onClick={() => {
+                        setCategorySelected("ALL");
+                        setDisplayProject(projects);
                       }}
                     >
-                      ALL
-                    </Typography>
-                  </Stack>
-                </Grid>
-                {Array.from({ length: Math.ceil(categories.length / 7) }).map(
-                  (_, i) => (
-                    <Grid key={i}>
-                      <Stack
-                        spacing={1}
-                        borderRight={
-                          i < Math.ceil(categories.length / 7) - 1
-                            ? "1px solid white"
-                            : "none"
-                        }
-                        px={2}
-                        height={
-                          i === Math.ceil(categories.length / 7) - 1
-                            ? "100%"
-                            : "auto"
-                        }
+                      <Typography
+                        p={1}
+                        fontSize={12}
+                        fontWeight={600}
+                        color={"rgb(175 175 175)"}
+                        textTransform={"uppercase"}
+                        sx={{
+                          ":hover": {
+                            bgcolor: "rgb(175 175 175)",
+                            color: "white",
+                            borderRadius: "8px",
+                          },
+                          cursor: "pointer",
+                        }}
                       >
-                        {categories
-                          .slice(i * 7, (i + 1) * 7)
-                          .map((category, index) => (
-                            <Stack
-                              key={index}
-                              component={"div"}
-                              onClick={() => filterProjectsByCategory(category)}
-                            >
-                              <Typography
-                                p={1}
-                                fontSize={12}
-                                fontWeight={600}
-                                color={"rgb(175 175 175)"}
-                                textTransform={"uppercase"}
-                                sx={{
-                                  ":hover": {
-                                    bgcolor: "rgb(175 175 175)",
-                                    color: "white",
-                                    borderRadius: "8px",
-                                  },
-                                  cursor: "pointer",
-                                }}
+                        ALL
+                      </Typography>
+                    </Stack>
+                  </Grid>
+                  {Array.from({ length: Math.ceil(categories.length / 7) }).map(
+                    (_, i) => (
+                      <Grid key={i}>
+                        <Stack
+                          spacing={1}
+                          borderRight={
+                            i < Math.ceil(categories.length / 7) - 1
+                              ? "1px solid white"
+                              : "none"
+                          }
+                          px={2}
+                          height={
+                            i === Math.ceil(categories.length / 7) - 1
+                              ? "100%"
+                              : "auto"
+                          }
+                        >
+                          {categories
+                            .slice(i * 7, (i + 1) * 7)
+                            .map((category, index) => (
+                              <Stack
+                                key={index}
+                                component={"div"}
+                                onClick={() =>
+                                  filterProjectsByCategory(category)
+                                }
                               >
-                                {category}
-                              </Typography>
-                            </Stack>
-                          ))}
-                      </Stack>
-                    </Grid>
-                  )
-                )}
-              </Grid>
-            </Collapse>
-          </Stack>
-          <Input
-            placeholder="SEARCH"
-            sx={{ color: "white", maxWidth: "200px", fontSize: 14 }}
-          ></Input>
-        </Stack>
-        <Grid container columnGap={0.1} rowGap={0.1}>
-          {displayProjects.map((project, index) => (
-            <Grid xs={6} sm={4} md={2 - 0.01} xl={2 - 0.01} key={index}>
-              <BorderBox
-                display={"flex"}
-                flexDirection={"column"}
-                height={"150px"}
-                justifyContent={"space-between"}
-                alignItems={"center"}
-                p={2}
-                color={"rgb(175 175 175)"}
-                sx={{
-                  "&:hover": {
-                    color: "white !important",
-                  },
-                }}
-              >
-                <Grid container rowGap={0.5}>
-                  {project.categories.map((category, index) => (
-                    <Typography
-                      fontSize={8}
-                      borderLeft={"1px solid rgb(175 175 175)"}
-                      px={1}
-                      // color={"rgb(175 175 175)"}
-                      textTransform={"uppercase"}
-                      fontWeight={700}
-                      key={index}
-                    >
-                      {category}
-                    </Typography>
-                  ))}
+                                <Typography
+                                  p={1}
+                                  fontSize={12}
+                                  fontWeight={600}
+                                  color={"rgb(175 175 175)"}
+                                  textTransform={"uppercase"}
+                                  sx={{
+                                    ":hover": {
+                                      bgcolor: "rgb(175 175 175)",
+                                      color: "white",
+                                      borderRadius: "8px",
+                                    },
+                                    cursor: "pointer",
+                                  }}
+                                >
+                                  {category}
+                                </Typography>
+                              </Stack>
+                            ))}
+                        </Stack>
+                      </Grid>
+                    )
+                  )}
                 </Grid>
-                <Box
-                  component={"img"}
-                  src={`image-33.png`}
-                  height={"40%"}
-                ></Box>
-                <Typography
-                  fontSize={8}
-                  textTransform={"uppercase"}
-                  // color={"rgb(175 175 175)"}
-                  fontWeight={700}
+              </Collapse>
+            </Stack>
+            <Input
+              placeholder="SEARCH"
+              sx={{ color: "white", maxWidth: "200px", fontSize: 14 }}
+            ></Input>
+          </Stack>
+          <Grid container columnGap={0.1} rowGap={0.1}>
+            {displayProjects.map((project, index) => (
+              <Grid xs={6} sm={4} md={2 - 0.01} xl={2 - 0.01} key={index}>
+                <BorderBox
+                  display={"flex"}
+                  flexDirection={"column"}
+                  height={"150px"}
+                  justifyContent={"space-between"}
+                  alignItems={"center"}
+                  p={2}
+                  color={"rgb(175 175 175)"}
+                  sx={{
+                    "&:hover": {
+                      color: "white !important",
+                    },
+                  }}
                 >
-                  {project.name}
-                </Typography>
-              </BorderBox>
-            </Grid>
-          ))}
-        </Grid>
+                  <Grid container rowGap={0.5}>
+                    {project.categories.map((category, index) => (
+                      <Typography
+                        fontSize={8}
+                        borderLeft={"1px solid rgb(175 175 175)"}
+                        px={1}
+                        // color={"rgb(175 175 175)"}
+                        textTransform={"uppercase"}
+                        fontWeight={700}
+                        key={index}
+                      >
+                        {category}
+                      </Typography>
+                    ))}
+                  </Grid>
+                  <Box
+                    component={"img"}
+                    src={`image-brand-${index + 1}.png`}
+                    height={"40%"}
+                  ></Box>
+                  <Typography
+                    fontSize={8}
+                    textTransform={"uppercase"}
+                    // color={"rgb(175 175 175)"}
+                    fontWeight={700}
+                  >
+                    {project.name}
+                  </Typography>
+                </BorderBox>
+              </Grid>
+            ))}
+          </Grid>
+        </Stack>
       </Stack>
-    </Stack>
+      <Footer></Footer>
+    </>
   );
 };
 

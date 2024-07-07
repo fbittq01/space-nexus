@@ -3,7 +3,7 @@ import useDirect from "@/customHook/directHook";
 const { Stack, Box, Typography } = require("@mui/material");
 
 const Footer = () => {
-  const {handleDirectToPolicy, handleDirectToTermsOfServices} = useDirect();
+  const { handleDirectToPolicy, handleDirectToTermsOfServices } = useDirect();
   return (
     <Stack
       direction={"row"}
@@ -18,10 +18,51 @@ const Footer = () => {
         </Typography>
       </Stack>
       <Stack direction={"row"} spacing={4}>
-        <Box component={"img"} height={20} src="x.png"></Box>
-        <Box component={"img"} height={20} src="discord.png"></Box>
-        <Box component={"img"} height={20} src="tele.png"></Box>
-        <Box component={"img"} height={20} src="youtube.png"></Box>
+        <Box
+          component={"img"}
+          src="x.png"
+          height={20}
+          width={"fit-content"}
+          onClick={() => {
+            window.location.href = "https://x.com/Web3NexusSpace";
+          }}
+        ></Box>
+        <Box
+          component={"img"}
+          src="discord.png"
+          height={20}
+          width={"fit-content"}
+          onClick={() => {
+            window.location.href = "https://discord.com/invite/web3nexusspace";
+          }}
+        ></Box>
+        <Box
+          component={"img"}
+          src="youtube.png"
+          height={20}
+          width={"fit-content"}
+          onClick={() => {
+            window.location.href = "https://www.youtube.com/@Web3NexusSpace";
+          }}
+        ></Box>
+        <Box
+          component={"img"}
+          src="tele.png"
+          height={20}
+          width={"fit-content"}
+          onClick={() => {
+            window.location.href = "https://t.me/Web3NexusSpace";
+          }}
+        ></Box>
+        <Box
+          component={"img"}
+          src="tele.png"
+          height={20}
+          width={"fit-content"}
+          onClick={() => {
+            window.location.href = "https://t.me/WNSCom";
+          }}
+        ></Box>
       </Stack>
       <Stack direction={"row"} spacing={4}>
         <Typography
@@ -29,7 +70,7 @@ const Footer = () => {
           fontWeight={500}
           color={"rgb(175, 175, 175)"}
           sx={{ cursor: "pointer" }}
-          component={'div'}
+          component={"div"}
           onClick={handleDirectToTermsOfServices}
         >
           TERMS OF SERVICES
@@ -39,7 +80,7 @@ const Footer = () => {
           fontWeight={500}
           color={"rgb(175, 175, 175)"}
           sx={{ cursor: "pointer" }}
-          component={'div'}
+          component={"div"}
           onClick={handleDirectToPolicy}
         >
           PRIVACY POLICY

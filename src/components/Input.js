@@ -8,6 +8,7 @@ const Input = styled(InputBase)({
   border: '1px solid rgb(48, 48, 48)',
   borderRadius: '15px',
   padding: '16px 14px',
+  color: 'rgb(173 173 173)'
 });
 
 export default Input;
