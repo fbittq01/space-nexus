@@ -19,6 +19,7 @@ const Learn = () => {
     "Marketing & Promotion",
     "Collaboration and Partnerships",
     "Strategy & Management",
+    "Talent Acquisition and Human Resources Support",
   ];
 
   const askQuestions = [
