@@ -72,7 +72,7 @@ function HeaderApp() {
           destination: "#",
         },
       ],
-      onClick: () => handleDirectToBuild(),
+      onClick: () => handleDirectToNetwork(),
     },
     {
       titile: "COMMUNITY",
@@ -115,7 +115,7 @@ function HeaderApp() {
     setValue(null);
   };
 
-  const { handleDirectToBuild, handleDirectToLearn, handleDirectToComunity } = useDirect();
+  const { handleDirectToBuild, handleDirectToLearn, handleDirectToComunity, handleDirectToNetwork } = useDirect();
 
   return (
     <AppBar

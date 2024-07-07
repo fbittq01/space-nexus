@@ -54,6 +54,12 @@ const useDirect = () => {
     });
   }
 
+  const handleDirectToNetwork = () => {
+    handleDirect({
+      destination: "/network",
+    });
+  }
+
   return {
     handleBack,
     handleDirectToLearn,
@@ -61,7 +67,8 @@ const useDirect = () => {
     handleDirectToTermsOfServices,
     handleDirectToPolicy,
     handleDirectToHome,
-    handleDirectToComunity
+    handleDirectToComunity,
+    handleDirectToNetwork
   };
 };
 
