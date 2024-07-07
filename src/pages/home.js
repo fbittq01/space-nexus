@@ -270,7 +270,7 @@ const Home = () => {
         spacing={2}
       >
         <Typography fontSize={26} fontWeight={700}>
-          TRUSTED BY MAJOR PARTNERS & FRIENDS
+          {`LET'S BUILD A ROBUST NETWORK IN WEB3 TOGETHER`}
         </Typography>
         <Typography
           fontSize={12}
@@ -295,7 +295,7 @@ const Home = () => {
         spacing={4}
       >
         <Typography fontSize={26} fontWeight={700}>
-          {`LET'S BUILD A ROBUST NETWORK IN WEB3 TOGETHER`}
+          TRUSTED BY MAJOR PARTNERS & FRIENDS
         </Typography>
         <Stack direction={"row"} spacing={6}>
           {partners.map((partner, index) => (

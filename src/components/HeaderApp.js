@@ -72,7 +72,7 @@ function HeaderApp() {
           destination: () => {},
         },
         {
-          itemTitle: "Partner and friend",
+          itemTitle: "Partner and friends",
           destination: () => {
             handleDirectToNetwork();
           },

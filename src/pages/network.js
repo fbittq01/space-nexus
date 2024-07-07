@@ -35,338 +35,406 @@ const Network = () => {
       name: "Linea",
       categories: ["Layer Blockchain"],
       link: "https://x.com/LineaBuild/photo",
+      logo: "image-brand-1.png"
     },
     {
       name: "Pirate Nation",
       categories: ["Gaming", "NFT"],
       link: "https://x.com/PirateNation/photo",
+      logo: "image-brand-2.png"
     },
     {
       name: "SPACE ID",
       categories: ["Data Service", "Identity", "NFT", "API"],
       link: "https://x.com/SpaceIDProtocol/photo",
+      logo: "image-brand-3.png"
     },
     {
       name: "Inferno Labs",
       categories: ["Consulting & Marketing"],
       link: "https://x.com/InfernoLabs_/photo",
+      logo: "image-brand-4.png"
     },
     {
       name: "AP Collective",
       categories: ["Consulting & Marketing"],
       link: "https://x.com/apcollectiveio/photo",
+      logo: "image-brand-5.png"
     },
     {
       name: "SHADOW WAR",
       categories: ["Gaming"],
       link: "https://x.com/PlayShadowWar/photo",
+      logo: "image-brand-6.png"
     },
     {
       name: "Ultiverse",
       categories: ["AI", "Gaming", "NFT"],
       link: "https://x.com/UltiverseDAO/photo",
+      logo: "image-brand-7.png"
     },
     {
       name: "My Shell",
       categories: ["AI"],
       link: "https://x.com/myshell_ai/photo",
+      logo: "image-brand-8.png"
     },
     {
       name: "Foxy",
       categories: ["Memecoin"],
       link: "https://x.com/FoxyLinea/photo",
+      logo: "image-brand-9.png"
     },
     {
       name: "Onchain",
       categories: ["Layer Blockchain"],
       link: "https://x.com/onchaincoin/photo",
+      logo: "image-brand-10.png"
     },
     {
       name: "Champions Tactics",
       categories: ["Gaming"],
       link: "https://x.com/ChampionsVerse/photo",
+      logo: "image-brand-11.png"
     },
     {
       name: "Palio",
       categories: ["Gaming"],
       link: "https://x.com/PalioAI/photo",
+      logo: "image-brand-12.png"
     },
     {
       name: "TODAY",
       categories: ["Gaming"],
       link: "https://x.com/todaythegame/photo",
+      logo: "image-brand-13.png"
     },
     {
       name: "Seedify",
       categories: ["Launchpad"],
       link: "https://x.com/SeedifyFund/photo",
+      logo: "image-brand-14.png"
     },
     {
       name: "Playember",
       categories: ["Gaming"],
       link: "https://x.com/play_ember/photo",
+      logo: "image-brand-15.png"
     },
     {
       name: "MetaVirtuallz",
       categories: ["Consulting & Marketing"],
       link: "https://x.com/MetaVirtuallz/photo",
+      logo: "image-brand-16.png"
     },
     {
       name: "Jigen",
       categories: ["Consulting & Marketing"],
       link: "https://x.com/JigenOfficial/photo",
+      logo: "image-brand-17.png"
     },
     {
       name: "Holo Hive",
       categories: ["Consulting & Marketing"],
       link: "https://x.com/HoloHive_/photo",
+      logo: "image-brand-18.png"
     },
     {
       name: "Gomble Games",
       categories: ["Gaming"],
       link: "https://x.com/gomblegames/photo",
+      logo: "image-brand-19.png"
     },
     {
       name: "SkyArk Chronicles",
       categories: ["Gaming"],
       link: "https://x.com/SkyarkS/photo",
+      logo: "image-brand-20.png"
     },
     {
       name: "Initia",
       categories: ["Layer Blockchain"],
       link: "https://x.com/initiaFDN/photo",
+      logo: "image-brand-21.png"
     },
     {
       name: "San FranTokyo",
       categories: ["Gaming"],
       link: "https://x.com/San_FranTokyo/photo",
+      logo: "image-brand-22.png"
     },
     {
       name: "Zone Nine",
       categories: ["Gaming"],
       link: "https://x.com/Zone9Survival/photo",
+      logo: "image-brand-23.png"
     },
     {
       name: "Saros",
       categories: ["DeFi", "DEX"],
       link: "https://x.com/saros_xyz/photo",
+      logo: "image-brand-24.png"
     },
     {
       name: "Bitcoin Cats",
       categories: ["Gaming", "Memecoin"],
       link: "https://x.com/BitcoinCats1Cat/photo",
+      logo: "image-brand-25.png"
     },
     {
       name: "Ape Terminal",
       categories: ["Marketplace"],
       link: "https://x.com/apeterminal/photo",
+      logo: "image-brand-26.png"
     },
     {
       name: "MemeFi",
       categories: ["Social Network", "Gaming"],
       link: "https://x.com/memeficlub/photo",
+      logo: "image-brand-27.png"
     },
     {
       name: "Revived",
       categories: ["Gaming"],
       link: "https://x.com/playrevived/photo",
+      logo: "image-brand-28.png"
     },
     {
       name: "MONO",
       categories: ["NFT"],
       link: "https://twitter.com/monoonx/photo",
+      logo: "image-brand-29.png"
     },
     {
       name: "BasedVC",
       categories: ["VC"],
       link: "https://x.com/basedvcfund/photo",
+      logo: "image-brand-30.png"
     },
     {
       name: "Anomaly",
       categories: ["Gaming"],
       link: "https://twitter.com/anomalygamesinc/photo",
+      logo: "image-brand-31.png"
     },
     {
       name: "W3BFlow",
       categories: ["Consulting & Marketing"],
       link: "https://x.com/W3BFlow/photo",
+      logo: "image-brand-32.png"
     },
     {
       name: "Linea Vietnam",
       categories: ["Community"],
       link: "https://x.com/Linea_VietNam/photo",
+      logo: "image-brand-33.png"
     },
     {
       name: "SPACE ID Vietnam",
       categories: ["Community"],
       link: "https://x.com/SpaceIDVietnam/photo",
+      logo: "image-brand-34.png"
     },
     {
       name: "Initia Vietnam",
       categories: ["Community"],
       link: "https://x.com/InitiaVietnam/photo",
+      logo: "image-brand-35.png"
     },
     {
       name: "Blast Vietnam",
       categories: ["Community"],
       link: "https://t.me/Blast_VietnamChannel/photo",
+      logo: "image-brand-36.png"
     },
     {
       name: "Merlin Chain Vietnam",
       categories: ["Community"],
       link: "https://t.me/MerlinChainVietnamChannel/photo",
+      logo: "image-brand-37.png"
     },
     {
       name: "Farcana",
       categories: ["Gaming"],
       link: "https://x.com/FarcanaOfficial/photo",
+      logo: "image-brand-38.png"
     },
     {
       name: "Storm Warfare",
       categories: ["Gaming"],
       link: "https://x.com/StormWarfare/photo",
+      logo: "image-brand-39.png"
     },
     {
       name: "STR8FIRE",
       categories: ["Gaming"],
       link: "https://x.com/STR8FIRE_io/photo",
+      logo: "image-brand-40.png"
     },
     {
       name: "Shards",
       categories: ["Gaming", "Infrastructure"],
       link: "https://x.com/ShardsOfficial/photo",
+      logo: "image-brand-41.png"
     },
     {
       name: "Param Labs",
       categories: ["Gaming"],
       link: "https://x.com/ParamLaboratory/photo",
+      logo: "image-brand-42.png"
     },
     {
       name: "KIRAVERSE",
       categories: ["Gaming"],
       link: "https://x.com/KiraverseGame/photo",
+      logo: "image-brand-43.png"
     },
     {
       name: "bitsCrunch",
       categories: ["Data Service", "AI", "Analytics", "API"],
       link: "https://x.com/bitsCrunch/photo",
+      logo: "image-brand-44.png"
     },
     {
       name: "Dark Frontiers",
       categories: ["Gaming"],
       link: "https://x.com/DarkFrontiersGS/photo",
+      logo: "image-brand-45.png"
     },
     {
       name: "Lucid",
       categories: ["NFT"],
       link: "https://x.com/lucidbtc/photo",
+      logo: "image-brand-46.png"
     },
     {
       name: "TRALA",
       categories: ["Gaming"],
       link: "https://x.com/TRALA_Official/photo",
+      logo: "image-brand-47.png"
     },
     {
       name: "Legend of Arcadia",
       categories: ["Gaming"],
       link: "https://x.com/LegendofArcadia/photo",
+      logo: "image-brand-48.png"
     },
     {
       name: "Venom",
       categories: ["Layer Blockchain"],
       link: "https://x.com/VenomFoundation/photo",
+      logo: "image-brand-49.png"
     },
     {
       name: "Fableborne",
       categories: ["Gaming"],
       link: "https://x.com/fableborne/photo",
+      logo: "image-brand-50.png"
     },
     {
       name: "KOKODI",
       categories: ["Gaming"],
       link: "https://x.com/kokodigame/photo/",
+      logo: "image-brand-51.png"
     },
     {
       name: "Mana Web3",
       categories: ["Consulting & Marketing"],
       link: "https://x.com/Mana_Web3/photo",
+      logo: "image-brand-52.png"
     },
     {
       name: "THE D3N",
       categories: ["Consulting & Marketing"],
       link: "https://x.com/thed3n_/photo",
+      logo: "image-brand-53.png"
     },
     {
       name: "BRAWL3RS",
       categories: ["Gaming"],
       link: "https://x.com/BRAWL3RS/photo",
+      logo: "image-brand-54.png"
     },
     {
       name: "BlockGames",
       categories: ["Gaming"],
       link: "https://x.com/GetBlockGames/photo",
+      logo: "image-brand-55.png"
     },
     {
       name: "Hub.xyz",
       categories: ["Social Network"],
       link: "https://x.com/hubdotxyz/photo",
+      logo: "image-brand-56.png"
     },
     {
       name: "MomoJi",
       categories: ["Memecoin"],
       link: "https://t.me/MoMojiGlobal/photo",
+      logo: "image-brand-57.png"
     },
     {
       name: "Grok Inu",
       categories: ["Memecoin"],
       link: "https://t.me/grokinu_portal/photo",
+      logo: "image-brand-58.png"
     },
     {
       name: "Asteroid",
       categories: ["Community"],
       link: "https://t.me/asteroid_community/photo",
+      logo: "image-brand-59.png"
     },
     {
       name: "MON Protocol",
       categories: ["Gaming"],
       link: "https://x.com/monprotocol/photo",
+      logo: "image-brand-60.png"
     },
     {
       name: "Animalia",
       categories: ["Gaming"],
       link: "https://x.com/Animalia_games/photo",
+      logo: "image-brand-61.png"
     },
     {
       name: "Endblock",
       categories: ["Gaming"],
       link: "https://x.com/Endblock_io/photo",
+      logo: "image-brand-62.png"
     },
     {
       name: "eesee.io",
       categories: ["Launchpad", "Marketplace"],
       link: "https://x.com/eesee_io/photo",
+      logo: "image-brand-63.png"
     },
     {
       name: "Astra Nova",
       categories: ["Gaming"],
       link: "https://x.com/Astra__Nova/photo",
+      logo: "image-brand-64.png"
     },
     {
       name: "Rage Effect",
       categories: ["Gaming"],
       link: "https://x.com/RageEffect_/photo",
+      logo: "image-brand-65.png"
     },
     {
       name: "Cyborg Heroes",
       categories: ["Gaming"],
       link: "https://x.com/CyborgHeroes/photo",
+      logo: "image-brand-66.png"
     },
     {
       name: "Spikynads",
       categories: ["NFT"],
       link: "https://x.com/spikynads/photo",
+      logo: "image-brand-67.png"
     },
   ];
+
   const [displayProjects, setDisplayProject] = useState(projects);
   const [categorySelected, setCategorySelected] = useState("ALL");
   const filterProjectsByCategory = (category) => {
@@ -606,7 +674,7 @@ const Network = () => {
                     </Grid>
                     <Box
                       component={"img"}
-                      src={`image-brand-${index + 1}.png`}
+                      src={project.logo}
                       height={"40%"}
                     ></Box>
                     <Typography

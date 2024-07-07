@@ -256,7 +256,7 @@ const Comunity = () => {
                 <Box
                   component={"a"}
                   onClick={handleDirectToPolicy}
-                  color={"rgb(7, 92, 178)"}
+                  color={"white"}
                   sx={{ textDecoration: "underline", cursor: "pointer" }}
                 >
                   Privacy Policy
@@ -265,7 +265,7 @@ const Comunity = () => {
                 <Box
                   component={"a"}
                   onClick={handleDirectToTermsOfServices}
-                  color={"rgb(7, 92, 178)"}
+                  color={"white"}
                   sx={{ textDecoration: "underline", cursor: "pointer" }}
                 >
                   Terms of Service

@@ -130,7 +130,7 @@ const InterConnect = () => {
               PLEASE CHECK HERE IF YOU HAVE FULLY READ AND AGREE TO THE{" "}
               <Box
                 component={"a"}
-                color={"rgb(7, 92, 178)"}
+                color={"white"}
                 onClick={handleDirectToTermsOfServices}
               >
                 TERMS OF SERVICE
@@ -138,7 +138,7 @@ const InterConnect = () => {
               AND{" "}
               <Box
                 component={"a"}
-                color={"rgb(7, 92, 178)"}
+                color={"white"}
                 onClick={handleDirectToPolicy}
               >
                 PRIVACY POLICY
