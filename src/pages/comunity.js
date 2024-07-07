@@ -2,7 +2,15 @@ import ButtonCustom from "@/components/Button";
 import HeaderApp from "@/components/HeaderApp";
 import Input from "@/components/Input";
 import { Close, CloudUpload } from "@mui/icons-material";
-import { Button, IconButton, Stack, styled, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Icon,
+  IconButton,
+  Stack,
+  styled,
+  Typography,
+} from "@mui/material";
 import { useState } from "react";
 
 const VisuallyHiddenInput = styled("input")({
@@ -39,7 +47,7 @@ const Comunity = () => {
 
   const handleDeleteFile = (index) => {
     setFiles((prevFiles) => prevFiles.filter((_, i) => i !== index));
-    setFileCount(files.length - 1)
+    setFileCount(files.length - 1);
   };
 
   return (
@@ -61,6 +69,11 @@ const Comunity = () => {
               WE LOVE OUR CUSTOMERS, USERS, AND PARTNERS. SO FEEL FREE TO
               CONTACT US ANYTIME YOU WANT.
             </Typography>
+            <Stack alignItems={'center'} justifyContent={'center'} direction={'row'} spacing={4} py={2}>
+              <Box component={'img'} src="x.png" height={24}></Box>
+              <Box component={'img'} src="email.png" height={24}></Box>
+              <Box component={'img'} src="tele.png" height={24}></Box>
+            </Stack>
             <Stack>
               <ButtonCustom
                 sx={{
@@ -108,12 +121,17 @@ const Comunity = () => {
                     }}
                     onChange={(e) => handleFileChange(e)}
                   >
-                    <CloudUpload />
+                    <Box
+                      component={"img"}
+                      src="attach-file.png"
+                      width={16}
+                    ></Box>
                     <VisuallyHiddenInput type="file" multiple />
+
+                    <Typography fontSize={12} color={"rgb(175, 175, 175)"} textTransform={'none'} pl={1}>
+                      Attach Files
+                    </Typography>
                   </Button>
-                  <Typography fontSize={12} color={"rgb(175, 175, 175)"}>
-                    Attach Files
-                  </Typography>
                 </Stack>
                 <Typography fontSize={12} color={"rgb(175, 175, 175)"}>
                   Attachments ({fileCount})
@@ -155,6 +173,7 @@ const Comunity = () => {
                   sx={{
                     flex: 1,
                     background: "none",
+                    backgroundImage: 'url(button-4.svg)'
                   }}
                 >
                   SEND
@@ -163,6 +182,7 @@ const Comunity = () => {
                   sx={{
                     flex: 1,
                   }}
+                  onClick={handleOpen}
                 >
                   <Typography
                     color={"white"}

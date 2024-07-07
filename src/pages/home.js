@@ -237,7 +237,7 @@ const Home = () => {
           <ButtonCustom
             sx={{
               background: 'url("2.svg")',
-              width: 1,
+              width: 530,
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
