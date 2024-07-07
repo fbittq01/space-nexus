@@ -1,9 +1,11 @@
 import ButtonCustom from "@/components/Button";
 import Footer from "@/components/Footer";
 import HeaderApp from "@/components/HeaderApp";
+import useDirect from "@/customHook/directHook";
 import { Box, Stack, Typography } from "@mui/material";
 
 const TermsOfService = () => {
+  const {handleDirectToComunity} = useDirect()
   return (
     <>
       <Stack alignItems={"center"}>
@@ -184,7 +186,7 @@ const TermsOfService = () => {
           <Typography fontSize={14}>
             If you have any questions about these Terms, please contact us.
           </Typography>
-          <ButtonCustom>CONTACT US</ButtonCustom>
+          <ButtonCustom onClick={handleDirectToComunity}>CONTACT US</ButtonCustom>
         </Stack>
       </Stack>
 

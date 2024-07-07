@@ -7,7 +7,7 @@ const ButtonCustom = styled(Button)({
   fontSize: 14,
   fontWeight: 600,
   height: "56px",
-  borderRadius: "8px",
+  borderRadius: "4px",
   lineHeight: 2,
   backgroundColor: "transparent",
   backgroundRepeat: "no-repeat !important",

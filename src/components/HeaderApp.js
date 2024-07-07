@@ -10,7 +10,11 @@ import useDirect from "@/customHook/directHook";
 
 function HeaderApp() {
   const [value, setValue] = React.useState();
-  const { handleDirectToHome, handleDirectToInterConect, handleDirectToBrandAssets } = useDirect();
+  const {
+    handleDirectToHome,
+    handleDirectToInterConect,
+    handleDirectToBrandAssets,
+  } = useDirect();
   const pages = [
     {
       titile: "LEARN",
@@ -82,7 +86,7 @@ function HeaderApp() {
         {
           itemTitle: "Careers",
           destination: () => {
-            window.location.href = "https://jobs.polymer.co/web3-nexus-space";
+            window.open("https://jobs.polymer.co/web3-nexus-space", "_blank");
           },
         },
         {
@@ -192,7 +196,15 @@ function HeaderApp() {
                       },
                     }}
                   >
-                    <Typography fontSize={12} fontWeight={"bold"}>
+                    <Typography
+                      fontSize={12}
+                      fontWeight={"bold"}
+                      sx={{
+                        ":hover": {
+                          textShadow: "-1px 1px 5px #DDDDDD",
+                        },
+                      }}
+                    >
                       {page.titile}
                     </Typography>
                     {index !== 4 && (
@@ -236,6 +248,7 @@ function HeaderApp() {
                                   ":hover": {
                                     bgcolor: "rgb(42, 42, 42)",
                                     color: "white",
+                                    textShadow: "-1px 1px 5px #DDDDDD",
                                   },
                                 }}
                                 key={index}
@@ -256,8 +269,10 @@ function HeaderApp() {
                                 height={20}
                                 width={"fit-content"}
                                 onClick={() => {
-                                  window.location.href =
-                                    "https://x.com/Web3NexusSpace";
+                                  window.open(
+                                    "https://x.com/Web3NexusSpace",
+                                    "_blank"
+                                  );
                                 }}
                               ></Box>
                               <Box
@@ -266,8 +281,10 @@ function HeaderApp() {
                                 height={20}
                                 width={"fit-content"}
                                 onClick={() => {
-                                  window.location.href =
-                                    "https://discord.com/invite/web3nexusspace";
+                                  window.open(
+                                    "https://discord.com/invite/web3nexusspace",
+                                    "_blank"
+                                  );
                                 }}
                               ></Box>
                               <Box
@@ -276,8 +293,10 @@ function HeaderApp() {
                                 height={20}
                                 width={"fit-content"}
                                 onClick={() => {
-                                  window.location.href =
-                                    "https://www.youtube.com/@Web3NexusSpace";
+                                  window.open(
+                                    "https://discord.com/invite/web3nexusspace",
+                                    "_blank"
+                                  );
                                 }}
                               ></Box>
                               <Box
@@ -286,8 +305,10 @@ function HeaderApp() {
                                 height={20}
                                 width={"fit-content"}
                                 onClick={() => {
-                                  window.location.href =
-                                    "https://t.me/Web3NexusSpace";
+                                  window.open(
+                                    "https://t.me/Web3NexusSpace",
+                                    "_blank"
+                                  );
                                 }}
                               ></Box>
                               <Box
@@ -296,7 +317,7 @@ function HeaderApp() {
                                 height={20}
                                 width={"fit-content"}
                                 onClick={() => {
-                                  window.location.href = "https://t.me/WNSCom";
+                                  window.open("https://t.me/WNSCom", "_blank");
                                 }}
                               ></Box>
                             </Stack>

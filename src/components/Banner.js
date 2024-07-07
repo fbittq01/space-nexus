@@ -39,6 +39,9 @@ const EmblaCarousel = ({ slides, options }) => {
               border={"1px solid rgb(23, 23, 23)"}
               borderRadius={"8px"}
               bgcolor={index === count && "rgb(23, 23, 23)"}
+              sx={{
+                opacity: index !== count && 0.5
+              }}
             >
               <Stack
                 direction={"row"}

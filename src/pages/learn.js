@@ -171,7 +171,7 @@ const Learn = () => {
           >
             FREQUENTLY ASKED QUESTIONS (FAQs)
           </Typography>
-          <Stack>
+          <Stack spacing={1}>
             {askQuestions.map((question, index) => (
               <Accordion
                 sx={{
@@ -186,6 +186,11 @@ const Learn = () => {
                   }
                   aria-controls="panel1-content"
                   id="panel1-header"
+                  sx={{
+                    '.Mui-expanded': {
+                      color: 'white'
+                    },
+                  }}
                 >
                   <Typography fontSize={14}>{question.title}</Typography>
                 </AccordionSummary>

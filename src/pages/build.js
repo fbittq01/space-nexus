@@ -32,6 +32,17 @@ const Build = () => {
         "Description: Develop and implement effective strategies for project minting, growth, and management. Our experts guide projects from initial planning to execution and beyond.",
       image: "image-42.png",
     },
+    {
+      title: "Talent Acquisition and Human Resources Support",
+      description:
+        `Description: Assist projects in finding and
+        recruiting the right talent to build their teams
+        We connect you with skilled professionals,
+        including developers, marketers, community
+        managers, and other key roles necessary for
+        your project&s success,`,
+      image: "image-60.png",
+    },
   ];
 
   return (

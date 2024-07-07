@@ -32,8 +32,10 @@ const Comunity = () => {
   const [open, setOpen] = useState(false);
   const [files, setFiles] = useState([]);
   const [fileCount, setFileCount] = useState(0);
-  
+
   const formRef = useRef();
+
+  const emailTo = "Contactandsupport@web3nexus.space"
 
   const handleOpen = () => {
     setOpen((preValue) => !preValue);
@@ -59,24 +61,23 @@ const Comunity = () => {
   const { handleDirectToTermsOfServices, handleDirectToPolicy } = useDirect();
 
   const handleSubmit = async () => {
-
     // const formData = {
     //   name: formRef.current.customerName.value,
     //   email: formRef.current.email.value,
     //   message: formRef.current.message.value,
     // }
     const formDataToSend = new FormData();
-    formDataToSend.append('name', formRef.current.customerName.value);
-    formDataToSend.append('email', formRef.current.email.value);
-    formDataToSend.append('message', formRef.current.message.value);
+    formDataToSend.append("name", formRef.current.customerName.value);
+    formDataToSend.append("email", formRef.current.email.value);
+    formDataToSend.append("message", formRef.current.message.value);
     files.forEach((file) => {
-      formDataToSend.append('file', file.file);
+      formDataToSend.append("file", file.file);
     });
 
     try {
-      await axios.post('/api/contact', formDataToSend, {
+      await axios.post("/api/contact", formDataToSend, {
         headers: {
-          'Content-Type': 'multipart/form-data',
+          "Content-Type": "multipart/form-data",
         },
       });
       setFiles([]);
@@ -112,9 +113,33 @@ const Comunity = () => {
               spacing={4}
               py={2}
             >
-              <Box component={"img"} src="x.png" height={24}></Box>
-              <Box component={"img"} src="email.png" height={24}></Box>
-              <Box component={"img"} src="tele.png" height={24}></Box>
+              <Box
+                component={"img"}
+                src="x.png"
+                height={20}
+                width={"fit-content"}
+                onClick={() => {
+                  window.open("https://x.com/Web3NexusSpace", "_blank");
+                }}
+              ></Box>
+              <Box
+                component={"img"}
+                src="email.png"
+                height={20}
+                onClick={() => {
+                  window.location.href = `mailto:${emailTo}`;
+                }}
+              ></Box>
+
+              <Box
+                component={"img"}
+                src="tele.png"
+                height={20}
+                width={"fit-content"}
+                onClick={() => {
+                  window.open("https://t.me/Web3NexusSpace", "_blank");
+                }}
+              ></Box>
             </Stack>
             <Stack>
               <ButtonCustom
@@ -137,9 +162,23 @@ const Comunity = () => {
             <Typography fontSize={14} color={"rgb(175,175,175)"}>
               Or more easily, just drop us a line!
             </Typography>
-            <Stack spacing={2} width={"30%"} alignItems={"center"} component={'form'} ref={formRef}>
-              <Input placeholder="Name" sx={{ color: "white" }} id="customerName"></Input>
-              <Input placeholder="Email" sx={{ color: "white" }} id="email"></Input>
+            <Stack
+              spacing={2}
+              width={"30%"}
+              alignItems={"center"}
+              component={"form"}
+              ref={formRef}
+            >
+              <Input
+                placeholder="Name"
+                sx={{ color: "white" }}
+                id="customerName"
+              ></Input>
+              <Input
+                placeholder="Email"
+                sx={{ color: "white" }}
+                id="email"
+              ></Input>
               <Input
                 placeholder="Message"
                 sx={{ color: "white", height: "86px" }}

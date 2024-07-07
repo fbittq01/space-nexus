@@ -24,7 +24,7 @@ const Footer = () => {
           height={20}
           width={"fit-content"}
           onClick={() => {
-            window.location.href = "https://x.com/Web3NexusSpace";
+            window.open("https://x.com/Web3NexusSpace", "_blank");
           }}
         ></Box>
         <Box
@@ -33,7 +33,7 @@ const Footer = () => {
           height={20}
           width={"fit-content"}
           onClick={() => {
-            window.location.href = "https://discord.com/invite/web3nexusspace";
+            window.open("https://discord.com/invite/web3nexusspace", "_blank");
           }}
         ></Box>
         <Box
@@ -42,7 +42,7 @@ const Footer = () => {
           height={20}
           width={"fit-content"}
           onClick={() => {
-            window.location.href = "https://www.youtube.com/@Web3NexusSpace";
+            window.open("https://discord.com/invite/web3nexusspace", "_blank");
           }}
         ></Box>
         <Box
@@ -51,7 +51,7 @@ const Footer = () => {
           height={20}
           width={"fit-content"}
           onClick={() => {
-            window.location.href = "https://t.me/Web3NexusSpace";
+            window.open("https://t.me/Web3NexusSpace", "_blank");
           }}
         ></Box>
         <Box
@@ -60,7 +60,7 @@ const Footer = () => {
           height={20}
           width={"fit-content"}
           onClick={() => {
-            window.location.href = "https://t.me/WNSCom";
+            window.open("https://t.me/WNSCom", "_blank");
           }}
         ></Box>
       </Stack>

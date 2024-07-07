@@ -368,13 +368,24 @@ const Network = () => {
     },
   ];
   const [displayProjects, setDisplayProject] = useState(projects);
-  const [categorySelected, setCategorySelected] = useState("");
+  const [categorySelected, setCategorySelected] = useState("ALL");
   const filterProjectsByCategory = (category) => {
     const result = projects.filter((project) =>
       project.categories.includes(category)
     );
     setDisplayProject(result);
     setCategorySelected(category);
+  };
+
+  const searchByName = (searchName) => {
+    if (searchName.trim() === "") {
+      setDisplayProject(projects);
+    } else {
+      const result = projects.filter((project) =>
+        project.name.toLowerCase().includes(searchName.toLowerCase())
+      );
+      setDisplayProject(result);
+    }
   };
 
   const BorderBox = styled(Box)(({ theme }) => ({
@@ -466,7 +477,7 @@ const Network = () => {
                     bgcolor: "rgb(23 23 23)",
                     p: 2,
                     px: 0,
-                    borderRadius: "8px",
+                    borderRadius: "4px",
                   }}
                 >
                   <Grid xs={12} px={2}>
@@ -488,7 +499,8 @@ const Network = () => {
                           ":hover": {
                             bgcolor: "rgb(175 175 175)",
                             color: "white",
-                            borderRadius: "8px",
+                            borderRadius: "4px",
+                            textShadow: '-1px 1px 5px #DDDDDD'
                           },
                           cursor: "pointer",
                         }}
@@ -534,7 +546,8 @@ const Network = () => {
                                     ":hover": {
                                       bgcolor: "rgb(175 175 175)",
                                       color: "white",
-                                      borderRadius: "8px",
+                                      borderRadius: "4px",
+                                      textShadow: '-1px 1px 5px #DDDDDD'
                                     },
                                     cursor: "pointer",
                                   }}
@@ -553,57 +566,91 @@ const Network = () => {
             <Input
               placeholder="SEARCH"
               sx={{ color: "white", maxWidth: "200px", fontSize: 14 }}
+              onChange={(e) => searchByName(e.target.value)}
             ></Input>
           </Stack>
-          <Grid container columnGap={0.1} rowGap={0.1}>
-            {displayProjects.map((project, index) => (
-              <Grid xs={6} sm={4} md={2 - 0.01} xl={2 - 0.01} key={index}>
-                <BorderBox
-                  display={"flex"}
-                  flexDirection={"column"}
-                  height={"150px"}
-                  justifyContent={"space-between"}
-                  alignItems={"center"}
-                  p={2}
-                  color={"rgb(175 175 175)"}
-                  sx={{
-                    "&:hover": {
-                      color: "white !important",
-                    },
-                  }}
-                >
-                  <Grid container rowGap={0.5}>
-                    {project.categories.map((category, index) => (
+          {displayProjects && displayProjects.length > 0 && (
+            <Grid container columnGap={0.1} rowGap={0.1}>
+              {displayProjects.map((project, index) => (
+                <Grid xs={6} sm={4} md={2 - 0.01} xl={2 - 0.01} key={index}>
+                  <BorderBox
+                    display={"flex"}
+                    flexDirection={"column"}
+                    height={"150px"}
+                    justifyContent={"space-between"}
+                    alignItems={"center"}
+                    p={2}
+                    color={"rgb(175 175 175)"}
+                    sx={{
+                      "&:hover": {
+                        color: "white !important",
+                        textShadow: '-1px 1px 5px #DDDDDD'
+                      },
+                    }}
+                  >
+                    <Grid container rowGap={0.5}>
+                      {project.categories.map((category, index) => (
+                        <Typography
+                          fontSize={8}
+                          borderLeft={"1px solid rgb(175 175 175)"}
+                          px={1}
+                          // color={"rgb(175 175 175)"}
+                          textTransform={"uppercase"}
+                          fontWeight={700}
+                          key={index}
+                        >
+                          {category}
+                        </Typography>
+                      ))}
+                    </Grid>
+                    <Box
+                      component={"img"}
+                      src={`image-brand-${index + 1}.png`}
+                      height={"40%"}
+                    ></Box>
+                    <Typography
+                      fontSize={8}
+                      textTransform={"uppercase"}
+                      // color={"rgb(175 175 175)"}
+                      fontWeight={700}
+                    >
+                      {project.name}
+                    </Typography>
+                  </BorderBox>
+                </Grid>
+              ))}
+              {categorySelected === "ALL" && (
+                <Grid xs={6} sm={4} md={2 - 0.01} xl={2 - 0.01}>
+                  <BorderBox
+                    display={"flex"}
+                    flexDirection={"column"}
+                    height={"150px"}
+                    justifyContent={"space-between"}
+                    alignItems={"center"}
+                    p={2}
+                    color={"rgb(175 175 175)"}
+                    sx={{
+                      "&:hover": {
+                        color: "white !important",
+                      },
+                    }}
+                  >
+                    <Stack alignItems={'center'} justifyContent={'center'} height={'100%'}>
                       <Typography
                         fontSize={8}
-                        borderLeft={"1px solid rgb(175 175 175)"}
-                        px={1}
-                        // color={"rgb(175 175 175)"}
                         textTransform={"uppercase"}
+                        // color={"rgb(175 175 175)"}
                         fontWeight={700}
-                        key={index}
+                        textAlign={'center'}
                       >
-                        {category}
+                        AND HUNDREDS OF OTHER PARTNERS & FRIENDS
                       </Typography>
-                    ))}
-                  </Grid>
-                  <Box
-                    component={"img"}
-                    src={`image-brand-${index + 1}.png`}
-                    height={"40%"}
-                  ></Box>
-                  <Typography
-                    fontSize={8}
-                    textTransform={"uppercase"}
-                    // color={"rgb(175 175 175)"}
-                    fontWeight={700}
-                  >
-                    {project.name}
-                  </Typography>
-                </BorderBox>
-              </Grid>
-            ))}
-          </Grid>
+                    </Stack>
+                  </BorderBox>
+                </Grid>
+              )}
+            </Grid>
+          )}
         </Stack>
       </Stack>
       <Footer></Footer>
