@@ -42,7 +42,7 @@ const Footer = () => {
           height={20}
           width={"fit-content"}
           onClick={() => {
-            window.open("https://discord.com/invite/web3nexusspace", "_blank");
+            window.open("https://www.youtube.com/@Web3NexusSpace", "_blank");
           }}
         ></Box>
         <Box

@@ -33,7 +33,7 @@ function HeaderApp() {
         },
         {
           itemTitle: "FAQ",
-          destination: () => handleDirectToLearn(),
+          destination: () => handleDirectToFAQ(),
         },
       ],
       onClick: () => handleDirectToLearn(),
@@ -132,6 +132,7 @@ function HeaderApp() {
     handleDirectToLearn,
     handleDirectToComunity,
     handleDirectToNetwork,
+    handleDirectToFAQ
   } = useDirect();
 
   return (
@@ -294,7 +295,7 @@ function HeaderApp() {
                                 width={"fit-content"}
                                 onClick={() => {
                                   window.open(
-                                    "https://discord.com/invite/web3nexusspace",
+                                    "https://www.youtube.com/@Web3NexusSpace",
                                     "_blank"
                                   );
                                 }}

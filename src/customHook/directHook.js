@@ -78,6 +78,12 @@ const useDirect = () => {
     });
   }
 
+  const handleDirectToFAQ = () => {
+    handleDirect({
+      destination: "/faqs",
+    });
+  }
+
   return {
     handleBack,
     handleDirectToLearn,
@@ -89,7 +95,8 @@ const useDirect = () => {
     handleDirectToNetwork,
     handleDirectToServiceAndTool,
     handleDirectToInterConect,
-    handleDirectToBrandAssets
+    handleDirectToBrandAssets,
+    handleDirectToFAQ
   };
 };
 

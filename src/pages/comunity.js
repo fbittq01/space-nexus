@@ -255,7 +255,9 @@ const Comunity = () => {
                 This site is protected by reCAPTCHA and the Google{" "}
                 <Box
                   component={"a"}
-                  onClick={handleDirectToPolicy}
+                  onClick={() => {
+                    window.open("https://policies.google.com/privacy", "_blank")
+                  }}
                   color={"white"}
                   sx={{ textDecoration: "underline", cursor: "pointer" }}
                 >
@@ -264,7 +266,9 @@ const Comunity = () => {
                 and{" "}
                 <Box
                   component={"a"}
-                  onClick={handleDirectToTermsOfServices}
+                  onClick={() => {
+                    window.open("https://policies.google.com/terms", "_blank")
+                  }}
                   color={"white"}
                   sx={{ textDecoration: "underline", cursor: "pointer" }}
                 >

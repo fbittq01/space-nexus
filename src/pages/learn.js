@@ -166,51 +166,6 @@ const Learn = () => {
             <Box component={"img"} src="image-17.png" width={350}></Box>
           </Stack>
         </Stack>
-        <Stack spacing={2} py={15}>
-          <Typography
-            width={1}
-            textAlign={"center"}
-            fontWeight={700}
-            fontSize={32}
-          >
-            FREQUENTLY ASKED QUESTIONS (FAQs)
-          </Typography>
-          <Stack spacing={1}>
-            {askQuestions.map((question, index) => (
-              <Accordion
-                sx={{
-                  bgcolor: "rgb(23, 23, 23)",
-                  color: "rgb(187, 187, 187)",
-                }}
-                key={index}
-              >
-                <AccordionSummary
-                  expandIcon={
-                    <ExpandMore sx={{ color: "rgb(128, 128, 128)" }} />
-                  }
-                  aria-controls="panel1-content"
-                  id="panel1-header"
-                  sx={{
-                    ".Mui-expanded": {
-                      color: "white",
-                    },
-                  }}
-                >
-                  <Typography fontSize={14}>{question.title}</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                  <Typography
-                    color={"white"}
-                    fontSize={12}
-                    dangerouslySetInnerHTML={{
-                      __html: question.description.replace(/\n/g, "<br />"),
-                    }}
-                  ></Typography>
-                </AccordionDetails>
-              </Accordion>
-            ))}
-          </Stack>
-        </Stack>
       </Stack>
       <Footer></Footer>
     </Stack>
