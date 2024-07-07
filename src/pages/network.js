@@ -378,6 +378,7 @@ const Network = () => {
   };
 
   const searchByName = (searchName) => {
+    setCategorySelected("")
     if (searchName.trim() === "") {
       setDisplayProject(projects);
     } else {
