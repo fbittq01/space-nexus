@@ -187,7 +187,7 @@ function HeaderApp() {
                     <Stack
                       position={"absolute"}
                       width={"250px"}
-                      height={"199px"}
+                      // height={"199px"}
                       top={"150%"}
                       left={"-50%"}
                       zIndex={10}
