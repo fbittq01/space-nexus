@@ -1,6 +1,7 @@
 import ButtonCustom from "@/components/Button";
 import Footer from "@/components/Footer";
 import HeaderApp from "@/components/HeaderApp";
+import useDirect from "@/customHook/directHook";
 import { ExpandMore } from "@mui/icons-material";
 import {
   Accordion,
@@ -73,6 +74,7 @@ const Learn = () => {
       description: ` If you have any further questions or need additional assistance, please feel free to contact us. We are here to assist you with any questions or support you may need regarding our services and your goals.`,
     },
   ];
+  const { handleDirectToBuild } = useDirect();
   return (
     <Stack>
       <HeaderApp></HeaderApp>
@@ -146,6 +148,7 @@ const Learn = () => {
                 endIcon={
                   <Box component={"img"} src="image-18.png" width={32}></Box>
                 }
+                onClick={handleDirectToBuild}
               >
                 DISCOVER MORE ABOUT THESE SERVICES
               </ButtonCustom>
@@ -187,8 +190,8 @@ const Learn = () => {
                   aria-controls="panel1-content"
                   id="panel1-header"
                   sx={{
-                    '.Mui-expanded': {
-                      color: 'white'
+                    ".Mui-expanded": {
+                      color: "white",
                     },
                   }}
                 >
