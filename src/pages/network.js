@@ -549,7 +549,7 @@ const Network = () => {
         </Stack>
         <Grid container columnGap={0.1} rowGap={0.1}>
           {displayProjects.map((project, index) => (
-            <Grid xs={6} sm={4} md={2 - 0.01} xl={2 - 0.01}>
+            <Grid xs={6} sm={4} md={2 - 0.01} xl={2 - 0.01} key={index}>
               <BorderBox
                 display={"flex"}
                 flexDirection={"column"}
@@ -565,7 +565,7 @@ const Network = () => {
                 }}
               >
                 <Grid container rowGap={0.5}>
-                  {project.categories.map((category) => (
+                  {project.categories.map((category, index) => (
                     <Typography
                       fontSize={8}
                       borderLeft={"1px solid rgb(175 175 175)"}
@@ -573,6 +573,7 @@ const Network = () => {
                       // color={"rgb(175 175 175)"}
                       textTransform={"uppercase"}
                       fontWeight={700}
+                      key={index}
                     >
                       {category}
                     </Typography>

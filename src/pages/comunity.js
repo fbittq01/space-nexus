@@ -128,6 +128,7 @@ const Comunity = () => {
                   alignItems={"center"}
                   direction={"row"}
                   justifyContent={"space-between"}
+                  key={index}
                 >
                   <Typography fontSize={12} color={"black"}>
                     {`${file.name} (${file.size})kB`}
