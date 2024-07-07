@@ -54,15 +54,6 @@ const Footer = () => {
             window.open("https://t.me/Web3NexusSpace", "_blank");
           }}
         ></Box>
-        <Box
-          component={"img"}
-          src="tele.png"
-          height={20}
-          width={"fit-content"}
-          onClick={() => {
-            window.open("https://t.me/WNSCom", "_blank");
-          }}
-        ></Box>
       </Stack>
       <Stack direction={"row"} spacing={4}>
         <Typography
