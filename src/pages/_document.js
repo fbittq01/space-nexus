@@ -12,7 +12,7 @@ export default function Document() {
           property="og:description"
           content="WEB3 NEXUS SPACE is a pioneering Web3 project with the ambition to connect projects with every possible entity within the Web3 ecosystem..."
         ></meta>
-        <meta property="og:image" content="https://ibb.co/mR6bttT"></meta>
+        <meta property="og:image" content="https://ibb.co/Zh16YVZ"></meta>
       </Head>
       <body>
         <Main />

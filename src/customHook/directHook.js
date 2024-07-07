@@ -72,6 +72,12 @@ const useDirect = () => {
     });
   }
 
+  const handleDirectToBrandAssets = () => {
+    handleDirect({
+      destination: "/brand-assets",
+    });
+  }
+
   return {
     handleBack,
     handleDirectToLearn,
@@ -82,7 +88,8 @@ const useDirect = () => {
     handleDirectToComunity,
     handleDirectToNetwork,
     handleDirectToServiceAndTool,
-    handleDirectToInterConect
+    handleDirectToInterConect,
+    handleDirectToBrandAssets
   };
 };
 

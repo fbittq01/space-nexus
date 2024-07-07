@@ -10,7 +10,7 @@ import useDirect from "@/customHook/directHook";
 
 function HeaderApp() {
   const [value, setValue] = React.useState();
-  const { handleDirectToHome, handleDirectToInterConect } = useDirect();
+  const { handleDirectToHome, handleDirectToInterConect, handleDirectToBrandAssets } = useDirect();
   const pages = [
     {
       titile: "LEARN",
@@ -102,7 +102,7 @@ function HeaderApp() {
         {
           itemTitle: "Brand Assets",
           destination: () => {
-            handleDirectToComunity();
+            handleDirectToBrandAssets();
           },
         },
       ],
