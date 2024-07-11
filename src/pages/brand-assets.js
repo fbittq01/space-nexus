@@ -56,7 +56,7 @@ const BrandAssets = () => {
                 WEB3 NEXUS SPACE BRAND GUIDELINES <br></br>
                 THAT ENSURE PROPER USE OF OUR ASSETS.
               </Typography>
-              <ButtonCustom component="a" href="image-logo-14.png" download>
+              <ButtonCustom component="a" href="guideline.zip" download>
                 DOWNLOAD BRAND GUIDELINES
               </ButtonCustom>
             </Stack>
@@ -81,7 +81,7 @@ const BrandAssets = () => {
                 A LIBRARY OF ASSETS TO SUPPORT <br></br>
                 MARKETING COMMUNICATIONS.
               </Typography>
-              <ButtonCustom component="a" href="image-logo-15.png" download>DOWNLOAD MEDIA KIT</ButtonCustom>
+              <ButtonCustom component="a" href="mediakit.zip" download>DOWNLOAD MEDIA KIT</ButtonCustom>
             </Stack>
             <Box
               component={"img"}

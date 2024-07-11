@@ -20,7 +20,7 @@ const useDirect = () => {
 
   const handleDirectToLearn = () => {
     handleDirect({
-      destination: "/learn",
+      destination: "/about-us",
     });
   };
 
