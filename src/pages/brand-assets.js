@@ -50,14 +50,14 @@ const BrandAssets = () => {
           >
             <Stack spacing={2} pr={4} width={300}>
               <Typography fontSize={28} fontWeight={600}>
-                WNS
+                GUIDELINES
               </Typography>
               <Typography fontSize={12} color={"rgb(175 175 175)"}>
                 WEB3 NEXUS SPACE BRAND GUIDELINES <br></br>
                 THAT ENSURE PROPER USE OF OUR ASSETS.
               </Typography>
               <ButtonCustom component="a" href="image-logo-14.png" download>
-                DOWNLOAD BRAND WNS
+                DOWNLOAD BRAND GUIDELINES
               </ButtonCustom>
             </Stack>
             <Box

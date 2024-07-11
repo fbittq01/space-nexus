@@ -16,7 +16,7 @@ import {
 import { useState } from "react";
 
 const Home = () => {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
 
   const handleOpen = () => setOpen((preValue) => !preValue);
   const nexusBenifit = [
@@ -73,7 +73,11 @@ const Home = () => {
     "image-35.png",
     "image-36.png",
   ];
-  const { handleDirectToBuild, handleDirectToInterConect, handleDirectToNetwork } = useDirect();
+  const {
+    handleDirectToServiceAndTool,
+    handleDirectToInterConect,
+    handleDirectToPartner,
+  } = useDirect();
   return (
     <Stack>
       <HeaderApp></HeaderApp>
@@ -141,7 +145,13 @@ const Home = () => {
             STRATEGIC INNOVATION.
           </Typography>
         </Stack>
-        <Grid container gap={2} px={16} alignItems={'center'} justifyContent={'center'}>
+        <Grid
+          container
+          gap={2}
+          px={16}
+          alignItems={"center"}
+          justifyContent={"center"}
+        >
           {nexusBenifit.map((benifit, index) => (
             <Grid xs={2.4 - 0.2} key={index}>
               <Stack
@@ -247,7 +257,7 @@ const Home = () => {
             endIcon={
               <Box component={"img"} src="image-18.png" width={32}></Box>
             }
-            onClick={handleDirectToBuild}
+            onClick={handleDirectToServiceAndTool}
           >
             DISCOVER MORE ABOUT THESE SERVICES
           </ButtonCustom>
@@ -284,7 +294,9 @@ const Home = () => {
           OTHER KEY ENTITIES, AND VICE VERSA,
         </Typography>
         <Box component={"img"} src="image-19.png" height={"40vh"}></Box>
-        <ButtonCustom onClick={handleDirectToInterConect}>BUILD WITH US</ButtonCustom>
+        <ButtonCustom onClick={handleDirectToInterConect}>
+          BUILD WITH US
+        </ButtonCustom>
       </Stack>
       <Stack
         height={"90vh"}
@@ -302,7 +314,7 @@ const Home = () => {
             <Box key={index} component={"img"} src={partner} width={32}></Box>
           ))}
         </Stack>
-        <Grid container gap={4} alignItems={'center'} justifyContent={'center'}>
+        <Grid container gap={4} alignItems={"center"} justifyContent={"center"}>
           <Grid sm={6 - 0.4} xs={12}>
             <Stack
               spacing={2}
@@ -401,7 +413,7 @@ const Home = () => {
           sx={{
             right: 10,
           }}
-          onClick={handleDirectToNetwork}
+          onClick={handleDirectToPartner}
         >
           VIEW ALL
         </ButtonCustom>

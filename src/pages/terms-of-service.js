@@ -5,7 +5,7 @@ import useDirect from "@/customHook/directHook";
 import { Box, Stack, Typography } from "@mui/material";
 
 const TermsOfService = () => {
-  const {handleDirectToComunity} = useDirect()
+  const {handleDirectToContactUs} = useDirect()
   return (
     <>
       <Stack alignItems={"center"}>
@@ -186,7 +186,7 @@ const TermsOfService = () => {
           <Typography fontSize={14}>
             If you have any questions about these Terms, please contact us.
           </Typography>
-          <ButtonCustom onClick={handleDirectToComunity}>CONTACT US</ButtonCustom>
+          <ButtonCustom onClick={handleDirectToContactUs}>CONTACT US</ButtonCustom>
         </Stack>
       </Stack>
 

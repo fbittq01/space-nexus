@@ -47,7 +47,7 @@ const Learn = () => {
     },
     {
       title: "6. HOW CAN I GET INVOLVED WITH WEB3 NEXUS SPACE?",
-      description: `You can get involved by contacting us directly to discuss what your needs are and how we can support you. Additionally, you can join our community on Discord and Telegram to stay updated and participate in our activities.      `,
+      description: `You can get involved by <a href="/contact-us" >contacting us<a /> directly to discuss what your needs are and how we can support you. Additionally, you can join our community on <a href="https://discord.com/invite/web3nexusspace" target="_blank">Discord</a> and <a href="https://t.me/Web3NexusSpace" target="_blank">Telegram</a> to stay updated and participate in our activities.      `,
     },
     {
       title: "7. WHAT MAKES WEB3 NEXUS SPACE UNIQUE?      ",
@@ -57,12 +57,12 @@ const Learn = () => {
     {
       title:
         "8. WHERE CAN I FIND MORE INFORMATION ABOUT YOUR CAREER OPPORTUNITIES?      ",
-      description: `You can find information about our career opportunities by visiting our Careers page.
+      description: `You can find information about our career opportunities by visiting our <a href="https://jobs.polymer.co/web3-nexus-space" target="_blank">Careers</a> page.
       `,
     },
     {
       title: "9. WHO SHOULD I CONTACT FOR FURTHER QUESTIONS?      ",
-      description: ` If you have any further questions or need additional assistance, please feel free to contact us. We are here to assist you with any questions or support you may need regarding our services and your goals.`,
+      description: ` If you have any further questions or need additional assistance, please feel free to <a href="/contact-us" >contact us<a /> . We are here to assist you with any questions or support you may need regarding our services and your goals.`,
     },
   ];
   return (

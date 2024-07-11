@@ -75,7 +75,7 @@ const Learn = () => {
       description: ` If you have any further questions or need additional assistance, please feel free to contact us. We are here to assist you with any questions or support you may need regarding our services and your goals.`,
     },
   ];
-  const { handleDirectToBuild } = useDirect();
+  const { handleDirectToServiceAndTool } = useDirect();
   return (
     <Stack>
       <HeaderApp></HeaderApp>
@@ -149,7 +149,7 @@ const Learn = () => {
                 endIcon={
                   <Box component={"img"} src="image-18.png" width={32}></Box>
                 }
-                onClick={handleDirectToBuild}
+                onClick={handleDirectToServiceAndTool}
               >
                 DISCOVER MORE ABOUT THESE SERVICES
               </ButtonCustom>

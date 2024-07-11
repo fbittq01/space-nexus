@@ -84,6 +84,18 @@ const useDirect = () => {
     });
   }
 
+  const handleDirectToPartner = () => {
+    handleDirect({
+      destination: "/partners-and-friends",
+    });
+  }
+
+  const handleDirectToContactUs = () => {
+    handleDirect({
+      destination: "/contact-us",
+    });
+  }
+
   return {
     handleBack,
     handleDirectToLearn,
@@ -96,7 +108,9 @@ const useDirect = () => {
     handleDirectToServiceAndTool,
     handleDirectToInterConect,
     handleDirectToBrandAssets,
-    handleDirectToFAQ
+    handleDirectToFAQ,
+    handleDirectToPartner,
+    handleDirectToContactUs
   };
 };
 

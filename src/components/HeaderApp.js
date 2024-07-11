@@ -55,14 +55,14 @@ function HeaderApp() {
         },
         {
           itemTitle: "Services and Tools",
-          destination: () => handleDirectToBuild(),
+          destination: () => handleDirectToServiceAndTool(),
         },
         {
           itemTitle: "Interconect",
           destination: () => handleDirectToInterConect(),
         },
       ],
-      onClick: () => handleDirectToBuild(),
+      onClick: () => handleDirectToServiceAndTool(),
     },
     {
       titile: "NETWORK",
@@ -72,13 +72,13 @@ function HeaderApp() {
           destination: () => {},
         },
         {
-          itemTitle: "Partner and friends",
+          itemTitle: "Partner and Friends",
           destination: () => {
-            handleDirectToNetwork();
+            handleDirectToPartner();
           },
         },
       ],
-      onClick: () => handleDirectToNetwork(),
+      onClick: () => handleDirectToPartner(),
     },
     {
       titile: "COMMUNITY",
@@ -100,7 +100,7 @@ function HeaderApp() {
         {
           itemTitle: "Contact us",
           destination: () => {
-            handleDirectToComunity();
+            handleDirectToContactUs();
           },
         },
         {
@@ -110,12 +110,12 @@ function HeaderApp() {
           },
         },
       ],
-      onClick: () => handleDirectToComunity(),
+      onClick: () => handleDirectToContactUs(),
     },
     {
       titile: "SECURITY",
       items: [],
-      onClick: () => handleDirectToBuild(),
+      onClick: () => handleDirectToServiceAndTool(),
     },
   ];
 
@@ -128,10 +128,10 @@ function HeaderApp() {
   };
 
   const {
-    handleDirectToBuild,
+    handleDirectToServiceAndTool,
     handleDirectToLearn,
-    handleDirectToComunity,
-    handleDirectToNetwork,
+    handleDirectToContactUs,
+    handleDirectToPartner,
     handleDirectToFAQ
   } = useDirect();
 

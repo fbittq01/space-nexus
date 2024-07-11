@@ -9,7 +9,7 @@ import { useRef } from "react";
 
 const InterConnect = () => {
   const {
-    handleDirectToComunity,
+    handleDirectToContactUs,
     handleDirectToPolicy,
     handleDirectToTermsOfServices,
   } = useDirect();
@@ -176,7 +176,7 @@ const InterConnect = () => {
           <Typography color={"rgb(190, 190, 190)"}>
             If you want to speak with us directly, please contact us
           </Typography>
-          <ButtonCustom onClick={handleDirectToComunity} sx={{ px: 8 }}>
+          <ButtonCustom onClick={handleDirectToContactUs} sx={{ px: 8 }}>
             CONTACT US
           </ButtonCustom>
         </Stack>

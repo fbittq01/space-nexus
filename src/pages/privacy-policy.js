@@ -5,7 +5,7 @@ import useDirect from "@/customHook/directHook";
 import { Box, Stack, Typography } from "@mui/material";
 
 const PrivacyPolicy = () => {
-  const { handleDirectToComunity } = useDirect();
+  const { handleDirectToContactUs } = useDirect();
   return (
     <>
       <Stack alignItems={"center"}>
@@ -193,7 +193,7 @@ const PrivacyPolicy = () => {
             If you have any questions about this Privacy Policy, please contact
             us.
           </Typography>
-          <ButtonCustom onClick={handleDirectToComunity}>CONTACT US</ButtonCustom>
+          <ButtonCustom onClick={handleDirectToContactUs}>CONTACT US</ButtonCustom>
         </Stack>
       </Stack>
 
