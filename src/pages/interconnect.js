@@ -44,12 +44,22 @@ const InterConnect = () => {
         alignItems={"center"}
         justifyContent={"center"}
         spacing={4}
-        pt={20}
+        p={{
+          xs: 2,
+          md: 0
+        }}
+        pt={{
+          xs: 20,
+          md: 20
+        }}
       >
         <Stack spacing={2} component={"form"} ref={formRef}>
           <Typography
             textTransform={"uppercase"}
-            fontSize={32}
+            fontSize={{
+              xs: 20,
+              md: 32
+            }}
             fontWeight={700}
             textAlign={"center"}
           >
@@ -100,7 +110,10 @@ const InterConnect = () => {
             direction={"row"}
             alignItems={"center"}
             justifyContent={"space-between"}
-            width={0.7}
+            width={{
+              xs: 1,
+              md: 0.7
+            }}
           >
             <Typography
               textTransform={"uppercase"}
@@ -120,7 +133,10 @@ const InterConnect = () => {
             direction={"row"}
             alignItems={"center"}
             justifyContent={"space-between"}
-            width={0.7}
+            width={{
+              xs: 1,
+              md: 0.7
+            }}
           >
             <Typography
               textTransform={"uppercase"}
@@ -152,12 +168,22 @@ const InterConnect = () => {
             ></Input>
           </Stack>
 
-          <Stack spacing={2} alignItems={"center"}>
+          <Stack spacing={2} alignItems={"center"} py={{
+            xs: 4,
+            md: 0
+          }}>
             <ButtonCustom onClick={handleSubmit} sx={{ px: 10 }}>SUBMIT</ButtonCustom>
             <Typography
               color={"rgb(190, 190, 190)"}
-              width={"60%"}
+              width={{
+                xs: 1,
+                md: "60%"
+              }}
               textAlign={"center"}
+              fontSize={{
+                xs: 12,
+                md: 14
+              }}
             >
               This information will be kept confidential, and we are committed
               to complying with legal regulations, terms of service , and{" "}
@@ -167,9 +193,14 @@ const InterConnect = () => {
         </Stack>
 
         <Stack
-          direction={"row"}
+          direction={{
+            xs: 'column',
+            md: "row"
+          }}
           justifyContent={"flex-start"}
-          alignItems={"center"}
+          alignItems={{
+            md: "center"
+          }}
           spacing={2}
           pb={20}
         >

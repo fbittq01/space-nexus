@@ -3,11 +3,10 @@ import Footer from "@/components/Footer";
 import HeaderApp from "@/components/HeaderApp";
 import Input from "@/components/Input";
 import useDirect from "@/customHook/directHook";
-import { Close, CloudUpload } from "@mui/icons-material";
+import { Close } from "@mui/icons-material";
 import {
   Box,
   Button,
-  Icon,
   IconButton,
   Stack,
   styled,
@@ -91,18 +90,25 @@ const Comunity = () => {
     <Stack>
       <HeaderApp></HeaderApp>
       <Stack
+        p={2}
         pt={10}
         alignItems={"center"}
         justifyContent={"center"}
         height={"90vh"}
         spacing={2}
       >
-        <Typography fontSize={32} fontWeight={600}>
+        <Typography fontSize={{
+          xs: 20,
+          md: 32
+        }} fontWeight={600}>
           CONTACT US
         </Typography>
         {!open ? (
           <>
-            <Typography fontSize={14} color={"rgb(175, 175, 175)"}>
+            <Typography fontSize={{
+              xs: 10,
+              md: 14
+            }} color={"rgb(175, 175, 175)"}>
               WE LOVE OUR CUSTOMERS, USERS, AND PARTNERS. SO FEEL FREE TO
               CONTACT US ANYTIME YOU WANT.
             </Typography>
@@ -141,15 +147,22 @@ const Comunity = () => {
                 }}
               ></Box>
             </Stack>
-            <Stack>
+            <Stack width={1}>
               <ButtonCustom
                 sx={{
                   background: 'url("2.svg")',
-                  width: "580px",
+                  width: {
+                    xs: '100%',
+                    md: "580px"
+                  },
                   height: "56px",
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                   p: 2,
+                  fontSize: {
+                    xs: 10,
+                    md: 14
+                  }
                 }}
                 onClick={handleOpen}
               >
@@ -164,7 +177,10 @@ const Comunity = () => {
             </Typography>
             <Stack
               spacing={2}
-              width={"30%"}
+              width={{
+                xs: '100%',
+                md: "30%"
+              }}
               alignItems={"center"}
               component={"form"}
               ref={formRef}

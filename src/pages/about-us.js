@@ -2,16 +2,7 @@ import ButtonCustom from "@/components/Button";
 import Footer from "@/components/Footer";
 import HeaderApp from "@/components/HeaderApp";
 import useDirect from "@/customHook/directHook";
-import { ExpandMore } from "@mui/icons-material";
-import {
-  Accordion,
-  AccordionDetails,
-  AccordionSummary,
-  Box,
-  Stack,
-  Typography,
-} from "@mui/material";
-import { useEffect, useState } from "react";
+import { Box, Stack, Typography } from "@mui/material";
 
 const Learn = () => {
   const aboutUs = [
@@ -79,12 +70,32 @@ const Learn = () => {
   return (
     <Stack>
       <HeaderApp></HeaderApp>
-      <Stack spacing={10} px={20} component={"div"} position={"relative"}>
-        <Stack height={"90vh"} direction={"row"}>
+      <Stack
+        spacing={10}
+        px={{
+          xs: 2,
+          md: 20,
+        }}
+        component={"div"}
+        position={"relative"}
+      >
+        <Stack
+          minHeight={"90vh"}
+          direction={{
+            xs: "column",
+            md: "row",
+          }}
+        >
           <Stack
-            spacing={10}
+            spacing={{
+              xs: 5,
+              md: 10,
+            }}
             flex={1}
-            py={30}
+            py={{
+              xs: 15,
+              md: 30,
+            }}
             height={"90vh"}
             overflow={"scroll"}
             sx={{
@@ -92,28 +103,89 @@ const Learn = () => {
             }}
           >
             <Stack spacing={2} height={"fit-content"}>
-              <Typography fontSize={32} fontWeight={799}>
+              <Typography
+                fontSize={{
+                  xs: 20,
+                  md: 32,
+                }}
+                fontWeight={799}
+                textAlign={{
+                  xs: "center",
+                  md: "unset",
+                }}
+              >
                 WHAT IS WEB3 NEXUS SPACE?
               </Typography>
-              <Typography fontSize={12} fontWeight={400}>
+              <Typography
+                fontSize={12}
+                fontWeight={400}
+                textAlign={{
+                  xs: "center",
+                  md: "unset",
+                }}
+              >
                 {
                   "WEB3 NEXUS SPACE is a pioneering Web3 project with the ambition to connect projects with every possible entity within the Web3 ecosystem.Our mission is to help these projects build and achieve-everything they aspire to within the realm of Web3.We redefine decentralized connectivity by creating a seamless network that fosters collaboration and innovation. At WEB3 NEXUS SPACE, we don't just connect entities; we create a space where limitless possibilities unfold, enabling projects to engage with users,investors, and other key entities, and vice versa."
                 }
               </Typography>
             </Stack>
+            <Stack
+              flex={1}
+              alignItems={"center"}
+              position={"relative"}
+              display={{
+                xs: "flex",
+                md: "none",
+              }}
+            >
+              <Box
+                component={"img"}
+                src="image-15.png"
+                sx={{ position: "absolute", top: 50 }}
+                width={160}
+                height={160}
+              ></Box>
+              <Box component={"img"} src="image-17.png" width={260}></Box>
+            </Stack>
             <Stack spacing={2} height={"fit-content"}>
-              <Typography fontSize={32} fontWeight={799}>
+              <Typography
+                fontSize={{
+                  xs: 20,
+                  md: 32,
+                }}
+                fontWeight={799}
+                textAlign={{
+                  xs: "center",
+                  md: "unset",
+                }}
+              >
                 More About Us for Now
               </Typography>
-              <Typography fontSize={12} fontWeight={400}>
+              <Typography
+                fontSize={12}
+                fontWeight={400}
+                textAlign={{
+                  xs: "center",
+                  md: "unset",
+                }}
+              >
                 {`Currently, in Phase I, we are gathering Web3 databases, striving to create a vast network with other entities in Web3 to fully prepare for the"Nexus" feature of our project (to be unveiled in Phase Il). We are focusing on Layer Blockchain, GameFi and Memetoken projects are also attracting significant interest. Nevertheless, even at this early stage, we function as a fully decentralized, community-governed project dedicated to expanding the ecosystem through thorough project exploration and research. Therefore, we are ready to offer fundamental but outstanding and useful services to projects, whether they are in their early stages or have grown significantly, such as:`}
               </Typography>
               <Stack
                 direction={"row"}
-                spacing={2}
+                spacing={{
+                  xs: 0.5,
+                  md: 2,
+                }}
                 bgcolor={"rgb(23, 23, 23)"}
-                p={1}
-                px={2}
+                p={{
+                  xs: 1,
+                  md: 2,
+                }}
+                px={{
+                  xs: 1,
+                  md: 2,
+                }}
                 borderRadius={"8px"}
                 alignItems={"center"}
                 justifyContent={"center"}
@@ -129,10 +201,36 @@ const Learn = () => {
                 }
               >
                 {aboutUs.map((item, index) => (
-                  <Typography fontSize={12} key={index}>
+                  <Typography
+                    fontSize={{
+                      xs: 10,
+                      md: 12,
+                    }}
+                    key={index}
+                  >
                     {item}
                   </Typography>
                 ))}
+              </Stack>
+              <Stack alignItems={'center'}>
+                <Box
+                  display={{
+                    md: 'none'
+                  }}
+                  component={"img"}
+                  src="image-48.png"
+                  maxWidth={"400px"}
+                  minWidth={"250px"}
+                  height={{
+                    xs: "70%",
+                    md: "70%",
+                  }}
+                  width={{
+                    xs: "70%",
+                    md: "70%",
+                  }}
+                  pt={10}
+                ></Box>
               </Stack>
               <Typography fontSize={12}>
                 These services are designed to support projects at any stage of
@@ -145,6 +243,10 @@ const Learn = () => {
                   width: 1,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
+                  fontSize: {
+                    xs: 10,
+                    md: 14,
+                  },
                 }}
                 endIcon={
                   <Box component={"img"} src="image-18.png" width={32}></Box>
@@ -155,7 +257,16 @@ const Learn = () => {
               </ButtonCustom>
             </Stack>
           </Stack>
-          <Stack flex={1} alignItems={"center"} position={"relative"} pt={30}>
+          <Stack
+            flex={1}
+            alignItems={"center"}
+            position={"relative"}
+            pt={30}
+            display={{
+              xs: "none",
+              md: "flex",
+            }}
+          >
             <Box
               component={"img"}
               src="image-15.png"

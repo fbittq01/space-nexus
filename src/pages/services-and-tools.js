@@ -34,8 +34,7 @@ const Build = () => {
     },
     {
       title: "Talent Acquisition and Human Resources Support",
-      description:
-        `Description: Assist projects in finding and
+      description: `Description: Assist projects in finding and
         recruiting the right talent to build their teams
         We connect you with skilled professionals,
         including developers, marketers, community
@@ -50,7 +49,10 @@ const Build = () => {
       <HeaderApp></HeaderApp>
       <Stack
         color={"white"}
-        height={"90vh"}
+        minHeight={{
+          xs: "100vh",
+          md: "90vh",
+        }}
         alignItems={"center"}
         justifyContent={"center"}
         spacing={4}
@@ -58,20 +60,36 @@ const Build = () => {
       >
         <Typography
           color={"white"}
-          fontSize={32}
+          fontSize={{
+            xs: 26,
+            md: 32,
+          }}
           fontWeight={700}
           textTransform={"uppercase"}
         >
           Services and tools
         </Typography>
-        <Typography color={"white"} fontSize={30} fontWeight={700}>
+        <Typography
+          color={"white"}
+          fontSize={{
+            xs: 20,
+            md: 30,
+          }}
+          fontWeight={700}
+        >
           Services
         </Typography>
         <Typography
           color={"rgb(182, 182, 182)"}
-          fontSize={14}
+          fontSize={{
+            xs: 12,
+            md: 14,
+          }}
           fontWeight={600}
-          maxWidth={"40%"}
+          maxWidth={{
+            xs: "90%",
+            md: "40%",
+          }}
           textAlign={"center"}
         >
           CURRENTLY, IN PHASE I, WE ARE READY TO OFFER ESSENTIAL AND IMPACTFUL
@@ -83,27 +101,46 @@ const Build = () => {
       </Stack>
       <Stack
         color={"white"}
-        height={"90vh"}
+        minHeight={{
+          xs: "100vh",
+          md: "90vh",
+        }}
         alignItems={"center"}
         justifyContent={"center"}
         spacing={4}
       >
         <Typography
           color={"white"}
-          fontSize={32}
+          fontSize={{
+            xs: 26,
+            md: 32,
+          }}
           fontWeight={700}
           textTransform={"uppercase"}
         >
           Services and tools
         </Typography>
-        <Typography color={"white"} fontSize={30} fontWeight={700}>
+        <Typography
+          color={"white"}
+          fontSize={{
+            xs: 20,
+            md: 30,
+          }}
+          fontWeight={700}
+        >
           Tools
         </Typography>
         <Typography
           color={"rgb(182, 182, 182)"}
-          fontSize={14}
+          fontSize={{
+            xs: 12,
+            md: 14,
+          }}
           fontWeight={600}
-          maxWidth={"60%"}
+          maxWidth={{
+            xs: '90%',
+            md: "60%"
+          }}
           textAlign={"center"}
         >
           {`AS WE TRANSITION INTO PHASE II, WE WILL CONTINUE PROVIDING THESE
@@ -116,29 +153,72 @@ const Build = () => {
           width={1}
           p={2}
           alignItems={"center"}
-          direction={"row"}
+          direction={{
+            xs: "column",
+            md: "row",
+          }}
           justifyContent={"center"}
-          spacing={2}
+          spacing={{
+            xs: 6,
+            md: 6
+          }}
+          // display={{
+          //   xs: 'none',
+          //   md: 'flex'
+          // }}
         >
-          <Box component={"img"} src="image-15.png" width={200}></Box>
+          <Box
+            component={"img"}
+            src="image-15.png"
+            width={{
+              xs: 150,
+              md: 200,
+            }}
+          ></Box>
           <Stack>
             <Box
               component={"img"}
               src="image-46.png"
               height={"100%"}
-              width={250}
+              width={{
+                xs: 100,
+                md: 250,
+              }}
+              sx={{
+                transform: "rotate(90deg)",
+              }}
             ></Box>
           </Stack>
-          <Box component={"img"} src="image-45.png" width={200}></Box>
+          <Box
+            component={"img"}
+            src="image-45.png"
+            width={{
+              xs: 150,
+              md: 200,
+            }}
+          ></Box>
           <Stack>
             <Box
               component={"img"}
               src="image-47.png"
               height={"100%"}
-              width={250}
+              width={{
+                xs: 100,
+                md: 250,
+              }}
+              sx={{
+                transform: "rotate(90deg)",
+              }}
             ></Box>
           </Stack>
-          <Box component={"img"} src="image-15.png" width={200}></Box>
+          <Box
+            component={"img"}
+            src="image-15.png"
+            width={{
+              xs: 150,
+              md: 200,
+            }}
+          ></Box>
         </Stack>
       </Stack>
       <Footer></Footer>

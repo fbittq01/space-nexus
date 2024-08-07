@@ -4,12 +4,21 @@ import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
-import { Collapse, Icon, Stack } from "@mui/material";
-import { KeyboardArrowDown } from "@mui/icons-material";
+import {
+  Collapse,
+  Icon,
+  List,
+  ListItemButton,
+  ListItemText,
+  Stack,
+} from "@mui/material";
+import { ExpandLess, ExpandMore, KeyboardArrowDown } from "@mui/icons-material";
 import useDirect from "@/customHook/directHook";
 
 function HeaderApp() {
   const [value, setValue] = React.useState();
+  const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [expand, setExpand] = React.useState("");
   const {
     handleDirectToHome,
     handleDirectToInterConect,
@@ -132,8 +141,29 @@ function HeaderApp() {
     handleDirectToLearn,
     handleDirectToContactUs,
     handleDirectToPartner,
-    handleDirectToFAQ
+    handleDirectToFAQ,
   } = useDirect();
+
+  const navItems = ["Home", "About", "Contact"];
+
+  const handleDrawerToggle = () => {
+    setMobileOpen((prevState) => !prevState);
+  };
+
+  const barStyle = {
+    width: "22px",
+    height: "2px",
+    backgroundColor: "white",
+    transition: "all 0.3s ease-in-out",
+  };
+
+  const handleExpand = (index) => {
+    if (index === expand) {
+      setExpand("");
+    } else {
+      setExpand(index);
+    }
+  };
 
   return (
     <AppBar
@@ -152,8 +182,15 @@ function HeaderApp() {
             width={1400}
             alignItems={"center"}
             justifyContent={"space-between"}
-            px={20}
-            pr={25}
+            px={{
+              md: "15vw",
+              sm: 0,
+            }}
+            pr={{
+              md: "20vw",
+              sm: 0,
+            }}
+            spacing={2}
           >
             <Box
               component={"img"}
@@ -168,6 +205,7 @@ function HeaderApp() {
               alignItems={"center"}
               justifyContent={"flex-end"}
               spacing={5}
+              display={{ xs: "none", md: "flex" }}
             >
               {pages.map((page, index) => (
                 <Stack
@@ -329,6 +367,117 @@ function HeaderApp() {
                   )}
                 </Stack>
               ))}
+            </Stack>
+
+            <Stack position={"relative"}>
+              <Box
+                sx={{
+                  display: {
+                    xs: "flex",
+                    md: 'none'
+                  },
+                  flexDirection: "column",
+                  justifyContent: "space-around",
+                  width: "22px",
+                  height: "22px",
+                  cursor: "pointer",
+                }}
+                onClick={handleDrawerToggle}
+              >
+                <Box
+                  sx={{
+                    ...barStyle,
+                    transform: mobileOpen
+                      ? "rotate(45deg) translate(5px, 5px)"
+                      : "none",
+                  }}
+                />
+                <Box
+                  sx={{
+                    ...barStyle,
+                    opacity: mobileOpen ? 0 : 1,
+                  }}
+                />
+                <Box
+                  sx={{
+                    ...barStyle,
+                    transform: mobileOpen
+                      ? "rotate(-45deg) translate(5px, -5px)"
+                      : "none",
+                  }}
+                />
+              </Box>
+              <Stack
+                position={"absolute"}
+                top={"100%"}
+                right={-12}
+                p={2}
+                width={280}
+              >
+                <Collapse in={mobileOpen}>
+                  {pages.map((page, index) => (
+                    <List
+                      sx={{
+                        width: "100%",
+                        maxWidth: 360,
+
+                        bgcolor: "rgb(23, 23, 23)",
+                      }}
+                      component="nav"
+                      aria-labelledby="nested-list-subheader"
+                    >
+                      <ListItemButton
+                        onClick={() => handleExpand(index)}
+                        sx={{
+                          color: "rgb(180, 180, 180)",
+                          ":hover": {
+                            bgcolor: "rgb(42, 42, 42)",
+                            color: "white",
+                            textShadow: "-1px 1px 5px #DDDDDD",
+                          },
+                        }}
+                      >
+                        <ListItemText
+                          primary={page.titile}
+                          sx={{
+                            textAlign: "end",
+                          }}
+                        />
+                        {index !== 4 && (expand === index ? <ExpandLess /> : <ExpandMore />)}
+                      </ListItemButton>
+                      <Collapse
+                        in={expand === index}
+                        timeout="auto"
+                        unmountOnExit
+                      >
+                        {page.items.map((item, index) => (
+                          <List component="div" disablePadding>
+                            <ListItemButton
+                              sx={{
+                                pl: 4,
+                                color: "rgb(180, 180, 180)",
+                                ":hover": {
+                                  bgcolor: "rgb(42, 42, 42)",
+                                  color: "white",
+                                  textShadow: "-1px 1px 5px #DDDDDD",
+                                },
+                              }}
+                              onClick={item.destination}
+                            >
+                              <ListItemText
+                                primary={item.itemTitle}
+                                sx={{
+                                  textAlign: "end",
+                                }}
+                              />
+                            </ListItemButton>
+                          </List>
+                        ))}
+                      </Collapse>
+                    </List>
+                  ))}
+                </Collapse>
+              </Stack>
             </Stack>
           </Stack>
         </Toolbar>

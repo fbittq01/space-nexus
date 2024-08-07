@@ -57,8 +57,7 @@ const Learn = () => {
     {
       title:
         "8. WHERE CAN I FIND MORE INFORMATION ABOUT YOUR CAREER OPPORTUNITIES?      ",
-      description: `You can find information about our career opportunities by visiting our <a href="https://jobs.polymer.co/web3-nexus-space" target="_blank">Careers</a> page.
-      `,
+      description: `You can find information about our career opportunities by visiting our <a href="https://jobs.polymer.co/web3-nexus-space" target="_blank">Careers page</a>.`,
     },
     {
       title: "9. WHO SHOULD I CONTACT FOR FURTHER QUESTIONS?      ",
@@ -68,13 +67,19 @@ const Learn = () => {
   return (
     <Stack>
       <HeaderApp></HeaderApp>
-      <Stack spacing={10} px={20} component={"div"} position={"relative"}>
+      <Stack spacing={10} px={{
+        xs: 2,
+        md: 20
+      }} component={"div"} position={"relative"}>
         <Stack spacing={2} py={15}>
           <Typography
             width={1}
             textAlign={"center"}
             fontWeight={700}
-            fontSize={32}
+            fontSize={{
+              xs: 20,
+              md: 32
+            }}
           >
             FREQUENTLY ASKED QUESTIONS (FAQs)
           </Typography>

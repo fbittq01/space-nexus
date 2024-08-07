@@ -82,21 +82,42 @@ const Home = () => {
     <Stack>
       <HeaderApp></HeaderApp>
       <Stack
-        height={"90vh"}
+        minHeight={{
+          xs: "100vh",
+          md: "90vh",
+        }}
         direction={"row"}
         alignItems={"center"}
         justifyContent={"center"}
         spacing={2}
         pt={10}
+        position={"relative"}
+        px={{
+          xs: 2,
+          md: 10,
+        }}
       >
-        <Stack spacing={0}>
-          <Typography fontSize={42} fontWeight={700}>
+        <Stack spacing={0} zIndex={10}>
+          <Typography
+            fontSize={{
+              xs: 20,
+              md: 42,
+            }}
+            fontWeight={700}
+          >
             SPACE FOR WEB3 NEXUS
           </Typography>
           <Typography
-            fontSize={12}
+            fontSize={{
+              xs: 10,
+              md: 12,
+            }}
             fontWeight={600}
             color={"rgb(178, 178, 178)"}
+            maxWidth={{
+              xs: "80%",
+              md: "unset",
+            }}
           >
             EMPOWERING WEB3 INTERCONNECTIONS, UNLEASHING INFINITE POSSIBILITIES
           </Typography>
@@ -114,30 +135,49 @@ const Home = () => {
         <Box
           component={"img"}
           src="image-14.png"
-          height={"50vh"}
-          // sx={{
-          //   ":hover": {
-          //     scale: 2,
-          //   },
-          // }}
+          height={{
+            xs: "40vh",
+            md: "50vh",
+          }}
+          position={{
+            xs: "absolute",
+            md: "relative",
+          }}
+          top={{
+            xs: "40%",
+            md: "unset",
+          }}
+          right={{
+            xs: "-20px",
+            md: "unset",
+          }}
         ></Box>
       </Stack>
       <Stack
-        height={"90vh"}
+        minHeight={"90vh"}
         // direction={"row"}
         alignItems={"center"}
         justifyContent={"center"}
         spacing={10}
       >
         <Stack spacing={4} alignItems={"center"}>
-          <Typography fontSize={32} fontWeight={700}>
+          <Typography
+            fontSize={{
+              xs: 20,
+              md: 32,
+            }}
+            fontWeight={700}
+          >
             WHY WEB3 NEXUS SPACE?
           </Typography>
           <Typography
             fontSize={12}
             fontWeight={600}
             color={"rgb(178, 178, 178)"}
-            maxWidth={"40vw"}
+            maxWidth={{
+              xs: "90vw",
+              md: "40vw",
+            }}
             textAlign={"center"}
           >
             WE OFFER A COMPREHENSIVE SUITE OF SERVICES OPTIMIZED FOR WEB3
@@ -148,12 +188,20 @@ const Home = () => {
         <Grid
           container
           gap={2}
-          px={16}
-          alignItems={"center"}
+          px={{
+            xs: 4,
+            md: 16,
+          }}
           justifyContent={"center"}
         >
           {nexusBenifit.map((benifit, index) => (
-            <Grid xs={2.4 - 0.2} key={index}>
+            <Grid
+              md={2.4 - 0.2}
+              sm={3.6}
+              xs={12}
+              key={index}
+              minHeight={"100%"}
+            >
               <Stack
                 alignItems={"center"}
                 spacing={2}
@@ -166,7 +214,7 @@ const Home = () => {
                     bgcolor: "rgb(40, 40, 40)",
                   },
                 }}
-                height={"100%"}
+                minHeight={"100%"}
               >
                 <Stack
                   position={"relative"}
@@ -207,15 +255,32 @@ const Home = () => {
       </Stack>
 
       <Stack
-        height={"90vh"}
-        direction={"row"}
+        minHeight={"90vh"}
+        direction={{
+          xs: "column",
+          md: "row",
+        }}
         alignItems={"center"}
         justifyContent={"center"}
-        px={20}
+        px={{
+          xs: 4,
+          md: 20,
+        }}
+        pt={{
+          xs: 20,
+          md: 0,
+        }}
         spacing={2}
+        position={"relative"}
       >
         <Stack spacing={2} flex={5}>
-          <Typography fontSize={26} fontWeight={700}>
+          <Typography
+            fontSize={{
+              xs: 20,
+              md: 26,
+            }}
+            fontWeight={700}
+          >
             SERVICES WE OFFER DURING PHASE 1
           </Typography>
           <Typography
@@ -230,9 +295,15 @@ const Home = () => {
           </Typography>
           <Stack
             direction={"row"}
-            spacing={2}
+            spacing={{
+              xs: 0.5,
+              md: 2,
+            }}
             bgcolor={"rgb(23, 23, 23)"}
-            p={2}
+            p={{
+              xs: 1,
+              md: 2,
+            }}
             borderRadius={"8px"}
             color={"rgb(178, 178, 178)"}
             divider={
@@ -242,7 +313,13 @@ const Home = () => {
             }
           >
             {services.map((service, index) => (
-              <Typography fontSize={12} key={index}>
+              <Typography
+                fontSize={{
+                  xs: 8,
+                  md: 12,
+                }}
+                key={index}
+              >
                 {service}
               </Typography>
             ))}
@@ -250,9 +327,16 @@ const Home = () => {
           <ButtonCustom
             sx={{
               background: 'url("2.svg")',
-              width: 530,
+              width: {
+                xs: "80%",
+                md: 530,
+              },
               backgroundSize: "cover",
               backgroundPosition: "center",
+              display: {
+                xs: "none",
+                md: "flex",
+              },
             }}
             endIcon={
               <Box component={"img"} src="image-18.png" width={32}></Box>
@@ -262,59 +346,157 @@ const Home = () => {
             DISCOVER MORE ABOUT THESE SERVICES
           </ButtonCustom>
         </Stack>
-        <Stack flex={5} alignItems={"center"}>
+        <Stack
+          flex={5}
+          alignItems={"center"}
+          position={"relative"}
+          justifyContent={"center"}
+        >
           <Box
             component={"img"}
             src="image-48.png"
-            height={"70%"}
-            width={"70%"}
+            maxWidth={"400px"}
+            minWidth={"250px"}
+            height={{
+              xs: "100%",
+              md: "70%",
+            }}
+            width={{
+              xs: "100%",
+              md: "70%",
+            }}
           ></Box>
+          <Stack
+            position={"absolute"}
+            top={"80%"}
+            alignContent={"center"}
+            justifyContent={"center"}
+            width={"120%"}
+          >
+            <ButtonCustom
+              sx={{
+                background: 'url("2.svg")',
+                px: 4,
+                width: {
+                  xs: "100%",
+                  sm: "90%",
+                  md: 530,
+                },
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                display: {
+                  xs: "flex",
+                  md: "none",
+                },
+                margin: "auto",
+                whiteSpace: "nowrap",
+              }}
+              endIcon={
+                <Box component={"img"} src="image-18.png" width={32}></Box>
+              }
+              onClick={handleDirectToServiceAndTool}
+            >
+              DISCOVER MORE ABOUT THESE SERVICES
+            </ButtonCustom>
+          </Stack>
         </Stack>
       </Stack>
       <Stack
-        height={"90vh"}
+        minHeight={"90vh"}
         // direction={"row"}
         alignItems={"center"}
         justifyContent={"center"}
-        px={20}
+        px={{
+          xs: 4,
+          md: 20,
+        }}
         spacing={2}
       >
-        <Typography fontSize={26} fontWeight={700}>
+        <Typography
+          fontSize={{
+            xs: 20,
+            md: 26,
+          }}
+          fontWeight={700}
+        >
           {`LET'S BUILD A ROBUST NETWORK IN WEB3 TOGETHER`}
         </Typography>
         <Typography
           fontSize={12}
           fontWeight={600}
           color={"rgb(178, 178, 178)"}
-          textAlign={"center"}
-          px={10}
+          textAlign={{
+            xs: "start",
+            md: "center",
+          }}
+          px={{
+            xs: 0,
+            md: 10,
+          }}
         >
           WE ARE AMBITIOUS TO CREATE A SEAMLESS NETWORK THAT ENABLES PROJECTS TO
           EASILY AND CONVENIENTLY FIND AND INTERACT WITH USERS, INVESTORS, AND
           OTHER KEY ENTITIES, AND VICE VERSA,
         </Typography>
-        <Box component={"img"} src="image-19.png" height={"40vh"}></Box>
+        <Box
+          component={"img"}
+          src="image-19.png"
+          height={{
+            xs: "40vh",
+            md: "40vh",
+          }}
+          py={{
+            xs: 5,
+            md: 0,
+          }}
+        ></Box>
         <ButtonCustom onClick={handleDirectToInterConect}>
           BUILD WITH US
         </ButtonCustom>
       </Stack>
       <Stack
-        height={"90vh"}
+        minHeight={"90vh"}
         // direction={"row"}
         alignItems={"center"}
         justifyContent={"center"}
-        px={20}
+        px={{
+          xs: 4,
+          md: 20,
+        }}
         spacing={4}
       >
         <Typography fontSize={26} fontWeight={700}>
           TRUSTED BY MAJOR PARTNERS & FRIENDS
         </Typography>
-        <Stack direction={"row"} spacing={6}>
+        <Stack
+          direction={"row"}
+          spacing={6}
+          display={{
+            xs: "none",
+            md: "flex",
+          }}
+        >
           {partners.map((partner, index) => (
             <Box key={index} component={"img"} src={partner} width={32}></Box>
           ))}
         </Stack>
-        <Grid container gap={4} alignItems={"center"} justifyContent={"center"}>
+        <Grid
+          container
+          rowGap={1}
+          alignItems={"center"}
+          justifyContent={"center"}
+          display={{
+            xs: "flex",
+            md: "none",
+          }}
+        >
+          {partners.map((partner, index) => (
+            <Grid xs={2 - 0.1} alignItems={"center"} justifyContent={"center"} display={'flex'}>
+              <Box key={index} component={"img"} src={partner} width={32}></Box>
+            </Grid>
+          ))}
+        </Grid>
+        <Grid container gap={4} justifyContent={"center"}>
           <Grid sm={6 - 0.4} xs={12}>
             <Stack
               spacing={2}
