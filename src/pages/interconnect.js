@@ -186,8 +186,8 @@ const InterConnect = () => {
               }}
             >
               This information will be kept confidential, and we are committed
-              to complying with legal regulations, terms of service , and{" "}
-              privacy policy .
+              to complying with legal regulations, terms of service, and{" "}
+              privacy policy.
             </Typography>
           </Stack>
         </Stack>
@@ -199,13 +199,13 @@ const InterConnect = () => {
           }}
           justifyContent={"flex-start"}
           alignItems={{
-            md: "center"
+            xs: "center"
           }}
           spacing={2}
           pb={20}
         >
           <Typography color={"rgb(190, 190, 190)"}>
-            If you want to speak with us directly, please contact us
+            If you want to speak with us directly, please contact us.
           </Typography>
           <ButtonCustom onClick={handleDirectToContactUs} sx={{ px: 8 }}>
             CONTACT US

@@ -123,7 +123,7 @@ const Comunity = () => {
                 component={"img"}
                 src="x.png"
                 height={20}
-                width={"fit-content"}
+                width={22.05}
                 onClick={() => {
                   window.open("https://x.com/Web3NexusSpace", "_blank");
                 }}
@@ -141,13 +141,13 @@ const Comunity = () => {
                 component={"img"}
                 src="tele.png"
                 height={20}
-                width={"fit-content"}
+                width={24}
                 onClick={() => {
                   window.open("https://t.me/Web3NexusSpace", "_blank");
                 }}
               ></Box>
             </Stack>
-            <Stack width={1}>
+            <Stack width={1} alignItems={'center'}>
               <ButtonCustom
                 sx={{
                   background: 'url("2.svg")',

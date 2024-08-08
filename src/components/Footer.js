@@ -52,7 +52,10 @@ const Footer = () => {
               xs: 16,
               md: 20,
             }}
-            width={"fit-content"}
+            width={{
+              xs: 17.64,
+              md: 20.05
+            }}
             onClick={() => {
               window.open("https://x.com/Web3NexusSpace", "_blank");
             }}
@@ -64,7 +67,11 @@ const Footer = () => {
               xs: 16,
               md: 20,
             }}
-            width={"fit-content"}
+            
+            width={{
+              xs: 21.18,
+              md: 26.48
+            }}
             onClick={() => {
               window.open(
                 "https://discord.com/invite/web3nexusspace",
@@ -79,7 +86,11 @@ const Footer = () => {
               xs: 16,
               md: 20,
             }}
-            width={"fit-content"}
+            
+            width={{
+              xs: 24.45,
+              md: 30.57
+            }}
             onClick={() => {
               window.open("https://www.youtube.com/@Web3NexusSpace", "_blank");
             }}
@@ -91,7 +102,11 @@ const Footer = () => {
               xs: 16,
               md: 20,
             }}
-            width={"fit-content"}
+            
+            width={{
+              xs: 19.2,
+              md: 24
+            }}
             onClick={() => {
               window.open("https://t.me/Web3NexusSpace", "_blank");
             }}

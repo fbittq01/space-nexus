@@ -306,7 +306,7 @@ function HeaderApp() {
                                 component={"img"}
                                 src="x.png"
                                 height={20}
-                                width={"fit-content"}
+                                width={22.05}
                                 onClick={() => {
                                   window.open(
                                     "https://x.com/Web3NexusSpace",
@@ -318,7 +318,7 @@ function HeaderApp() {
                                 component={"img"}
                                 src="discord.png"
                                 height={20}
-                                width={"fit-content"}
+                                width={26.48}
                                 onClick={() => {
                                   window.open(
                                     "https://discord.com/invite/web3nexusspace",
@@ -330,7 +330,7 @@ function HeaderApp() {
                                 component={"img"}
                                 src="youtube.png"
                                 height={20}
-                                width={"fit-content"}
+                                width={30.57}
                                 onClick={() => {
                                   window.open(
                                     "https://www.youtube.com/@Web3NexusSpace",
@@ -342,7 +342,7 @@ function HeaderApp() {
                                 component={"img"}
                                 src="tele.png"
                                 height={20}
-                                width={"fit-content"}
+                                width={24}
                                 onClick={() => {
                                   window.open(
                                     "https://t.me/Web3NexusSpace",
@@ -354,7 +354,7 @@ function HeaderApp() {
                                 component={"img"}
                                 src="tele.png"
                                 height={20}
-                                width={"fit-content"}
+                                width={24}
                                 onClick={() => {
                                   window.open("https://t.me/WNSCom", "_blank");
                                 }}
