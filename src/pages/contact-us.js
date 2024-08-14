@@ -7,6 +7,7 @@ import { Close } from "@mui/icons-material";
 import {
   Box,
   Button,
+  Dialog,
   IconButton,
   Stack,
   styled,
@@ -31,6 +32,9 @@ const Comunity = () => {
   const [open, setOpen] = useState(false);
   const [files, setFiles] = useState([]);
   const [fileCount, setFileCount] = useState(0);
+  const [openThanks, setOpenThanks] = useState(false);
+
+  const { handleDirectToHome } = useDirect();
 
   const formRef = useRef();
 
@@ -57,8 +61,6 @@ const Comunity = () => {
     setFileCount(files.length - 1);
   };
 
-  const { handleDirectToTermsOfServices, handleDirectToPolicy } = useDirect();
-
   const handleSubmit = async () => {
     // const formData = {
     //   name: formRef.current.customerName.value,
@@ -74,6 +76,7 @@ const Comunity = () => {
     });
 
     try {
+      setOpenThanks((preValue) => !preValue)
       await axios.post("/api/contact", formDataToSend, {
         headers: {
           "Content-Type": "multipart/form-data",
@@ -81,6 +84,7 @@ const Comunity = () => {
       });
       setFiles([]);
       setFileCount(0);
+      formRef.current.reset();
     } catch (err) {
       console.log(err);
     }
@@ -324,6 +328,106 @@ const Comunity = () => {
         )}
       </Stack>
       <Footer></Footer>
+
+      <Dialog
+        open={openThanks}
+        onClose={() => setOpenThanks((preValue) => !preValue)}
+        fullScreen
+        sx={{
+          ".MuiDialog-paper": {
+            bgcolor: "transparent",
+          },
+        }}
+      >
+        <HeaderApp></HeaderApp>
+        <Stack
+          bgcolor={"black"}
+          spacing={8}
+          alignItems={"center"}
+          justifyContent={"center"}
+          height={"100vh"}
+          p={2}
+        >
+          <Stack
+            sx={{
+              // backgroundImage:
+              //   "conic-gradient(from 64deg at 0% 80%, #000000, rgb(27, 27, 27))",
+              backgroundImage: {
+                xs: 'url("submit-success.png")',
+                md: 'url("submit-success-1.png")'
+              },
+              height: 'fit-content',
+              backgroundSize: "contain",
+              color: "white",
+              p: 4,
+              alignItems: "center",
+              justifyContent: "center",
+              overflow: "hidden",
+              backgroundRepeat: "no-repeat",
+              py: 12,
+              // border: "2px solid rgb(69, 69, 69)",
+            }}
+            spacing={2}
+          >
+            <Typography
+              fontSize={{
+                xs: 20,
+                md: 32,
+              }}
+              fontWeight={600}
+              textAlign={"center"}
+            >
+              THANK YOU <br></br>
+              YOUR REQUEST HAS BEEN RECEIVED!
+            </Typography>
+            <Typography textAlign={"center"} color={"rgb(185, 185, 185)"}>
+              We will get back to you within 48 business hours.
+            </Typography>
+          </Stack>
+          <Stack
+            direction={"row"}
+            alignItems={"center"}
+            justifyContent={"center"}
+            spacing={2}
+            bgcolor={"transparent"}
+            width={0.9}
+          >
+            <ButtonCustom
+              onClick={() => setOpenThanks((preValue) => !preValue)}
+              sx={{
+                fontSize: {
+                  xs: 10,
+                  md: "unset",
+                },
+                textAlign: "center",
+                height: {
+                  xs: "32px",
+                  md: '56px'
+                },
+              }}
+            >
+              SUBMIT AGAIN
+            </ButtonCustom>
+            <ButtonCustom
+              onClick={handleDirectToHome}
+              sx={{
+                fontSize: {
+                  xs: 10,
+                  md: "unset",
+                },
+                textAlign: "center",
+                height: {
+                  xs: "32px",
+                  md: '56px'
+                },
+              }}
+            >
+              HOME
+            </ButtonCustom>
+          </Stack>
+        </Stack>
+        <Footer></Footer>
+      </Dialog>
     </Stack>
   );
 };

@@ -77,11 +77,13 @@ function HeaderApp() {
       titile: "NETWORK",
       items: [
         {
-          itemTitle: "Our Network (Comming soon)",
-          destination: () => {},
+          itemTitle: "Influential Circle",
+          destination: () => {
+            window.open("https://wnsinfluentialcircle.notion.site/", "_blank");
+          },
         },
         {
-          itemTitle: "Partner and Friends",
+          itemTitle: "Partners and Friends",
           destination: () => {
             handleDirectToPartner();
           },

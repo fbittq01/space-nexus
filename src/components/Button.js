@@ -11,6 +11,7 @@ const ButtonCustom = styled(Button)({
   lineHeight: 2,
   backgroundColor: "transparent",
   backgroundRepeat: "no-repeat !important",
+  backgroundPosition: 'center',
   color: "rgb(178, 178, 178)",
   width: "280px",
   borderRadius: "30px",

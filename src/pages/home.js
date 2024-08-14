@@ -155,10 +155,17 @@ const Home = () => {
       </Stack>
       <Stack
         minHeight={"90vh"}
+        py={4}
         // direction={"row"}
         alignItems={"center"}
         justifyContent={"center"}
         spacing={10}
+        sx={{
+          backgroundImage: 'url("/bg-linear-2.png")',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center',
+          backgroundSize: 'cover'
+        }}
       >
         <Stack spacing={4} alignItems={"center"}>
           <Typography
@@ -252,10 +259,12 @@ const Home = () => {
             </Grid>
           ))}
         </Grid>
+
       </Stack>
 
       <Stack
         minHeight={"90vh"}
+        py={4}
         direction={{
           xs: "column",
           md: "row",
@@ -272,6 +281,12 @@ const Home = () => {
         }}
         spacing={2}
         position={"relative"}
+        sx={{
+          backgroundImage: 'url("/bg-linear-3.png")',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center',
+          backgroundSize: 'cover'
+        }}
       >
         <Stack spacing={2} flex={5}>
           <Typography
@@ -400,9 +415,12 @@ const Home = () => {
             </ButtonCustom>
           </Stack>
         </Stack>
+
       </Stack>
       <Stack
         minHeight={"90vh"}
+        py={4}
+
         // direction={"row"}
         alignItems={"center"}
         justifyContent={"center"}
@@ -411,6 +429,12 @@ const Home = () => {
           md: 20,
         }}
         spacing={2}
+        sx={{
+          backgroundImage: 'url("/bg-linear-4.png")',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center',
+          backgroundSize: 'cover'
+        }}
       >
         <Typography
           fontSize={{
@@ -456,6 +480,8 @@ const Home = () => {
       </Stack>
       <Stack
         minHeight={"90vh"}
+        py={4}
+
         // direction={"row"}
         alignItems={"center"}
         justifyContent={"center"}

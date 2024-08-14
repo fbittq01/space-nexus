@@ -5,7 +5,7 @@ const { Stack, Box, Typography } = require("@mui/material");
 const Footer = () => {
   const { handleDirectToPolicy, handleDirectToTermsOfServices } = useDirect();
   return (
-    <Stack>
+    <Stack bgcolor={'black'}>
       <Stack
         direction={"row"}
         alignItems={"center"}
@@ -131,7 +131,7 @@ const Footer = () => {
             onClick={handleDirectToTermsOfServices}
             whiteSpace={"nowrap"}
           >
-            TERMS OF SERVICES
+            TERMS OF SERVICE
           </Typography>
           <Typography
             fontSize={{
