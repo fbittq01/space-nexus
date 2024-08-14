@@ -257,12 +257,17 @@ const InterConnect = () => {
               height: 'fit-content',
               backgroundSize: "contain",
               color: "white",
-              p: 4,
+              px: {
+                xs: 4,
+                md: 24
+              },
               alignItems: "center",
               justifyContent: "center",
               overflow: "hidden",
               backgroundRepeat: "no-repeat",
-              py: 12,
+              py: {
+                xs: 8, md: 12
+              },
               // border: "2px solid rgb(69, 69, 69)",
             }}
             spacing={2}
@@ -275,11 +280,11 @@ const InterConnect = () => {
               fontWeight={600}
               textAlign={"center"}
             >
-              YOUR REQUEST HAS BEEN RECEIVED!
+              YOUR INFORMATION<br></br> HAS BEEN RECEIVED!
             </Typography>
             <Typography textAlign={"center"} color={"rgb(185, 185, 185)"}>
-              Thank you for contacting us.<br></br>
-              We will get back to you within 48 business hours.
+            Thank you! Your information has been successfully submitted. <br></br>
+            We will contact you within 48 business hours if necessary.
             </Typography>
           </Stack>
           <Stack

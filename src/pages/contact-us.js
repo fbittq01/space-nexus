@@ -364,7 +364,7 @@ const Comunity = () => {
               justifyContent: "center",
               overflow: "hidden",
               backgroundRepeat: "no-repeat",
-              py: 12,
+              py: 8,
               // border: "2px solid rgb(69, 69, 69)",
             }}
             spacing={2}
@@ -381,6 +381,7 @@ const Comunity = () => {
               YOUR REQUEST HAS BEEN RECEIVED!
             </Typography>
             <Typography textAlign={"center"} color={"rgb(185, 185, 185)"}>
+              Your request has been received. Thank you for contacting us. <br></br>
               We will get back to you within 48 business hours.
             </Typography>
           </Stack>

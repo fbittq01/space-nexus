@@ -56,6 +56,18 @@ const Network = () => {
       logo: "image-brand-4.png",
     },
     {
+      name: "OKX",
+      categories: ["CEX"],
+      link: "https://x.com/okx",
+      logo: "image-brand-68.png", // Assign an appropriate logo image
+    },
+    {
+      name: "Bybit",
+      categories: ["CEX"],
+      link: "https://x.com/Bybit_Official",
+      logo: "image-brand-69.png", // Assign an appropriate logo image
+    },
+    {
       name: "AP Collective",
       categories: ["Consulting & Marketing"],
       link: "https://x.com/apcollectiveio",
@@ -432,18 +444,6 @@ const Network = () => {
       categories: ["NFT"],
       link: "https://x.com/spikynads",
       logo: "image-brand-67.png",
-    },
-    {
-      name: "OKX",
-      categories: ["CEX"],
-      link: "https://x.com/okx",
-      logo: "image-brand-68.png", // Assign an appropriate logo image
-    },
-    {
-      name: "Bybit",
-      categories: ["CEX"],
-      link: "https://x.com/Bybit_Official",
-      logo: "image-brand-69.png", // Assign an appropriate logo image
     },
     {
       name: "Jungle",
