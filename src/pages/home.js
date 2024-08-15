@@ -162,9 +162,9 @@ const Home = () => {
         spacing={10}
         sx={{
           backgroundImage: 'url("/bg-linear-2.png")',
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'center',
-          backgroundSize: 'cover'
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
         }}
       >
         <Stack spacing={4} alignItems={"center"}>
@@ -259,7 +259,6 @@ const Home = () => {
             </Grid>
           ))}
         </Grid>
-
       </Stack>
 
       <Stack
@@ -283,9 +282,9 @@ const Home = () => {
         position={"relative"}
         sx={{
           backgroundImage: 'url("/bg-linear-3.png")',
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'center',
-          backgroundSize: 'cover'
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
         }}
       >
         <Stack spacing={2} flex={5}>
@@ -415,12 +414,10 @@ const Home = () => {
             </ButtonCustom>
           </Stack>
         </Stack>
-
       </Stack>
       <Stack
         minHeight={"90vh"}
         py={4}
-
         // direction={"row"}
         alignItems={"center"}
         justifyContent={"center"}
@@ -431,9 +428,9 @@ const Home = () => {
         spacing={2}
         sx={{
           backgroundImage: 'url("/bg-linear-4.png")',
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'center',
-          backgroundSize: 'cover'
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
         }}
       >
         <Typography
@@ -481,7 +478,6 @@ const Home = () => {
       <Stack
         minHeight={"90vh"}
         py={4}
-
         // direction={"row"}
         alignItems={"center"}
         justifyContent={"center"}
@@ -517,7 +513,12 @@ const Home = () => {
           }}
         >
           {partners.map((partner, index) => (
-            <Grid xs={2 - 0.1} alignItems={"center"} justifyContent={"center"} display={'flex'}>
+            <Grid
+              xs={2 - 0.1}
+              alignItems={"center"}
+              justifyContent={"center"}
+              display={"flex"}
+            >
               <Box key={index} component={"img"} src={partner} width={32}></Box>
             </Grid>
           ))}
@@ -594,8 +595,9 @@ const Home = () => {
               <Box component={"img"} src="image-29.png" width={32}></Box>
               <Typography fontSize={12} color={"rgb(212, 212, 212)"}>
                 Definitely one of our favorite people to collaborate with. We
-                love the high-quality Coatcaton make ony colaboration onfoat and
-                tovar ding kcop up ine groat work
+                love the high-quality content you create and the outstanding
+                engagement you bring. Your creativity and dedication make every
+                collaboration enjoyable and rewarding. Keep up the great work!
               </Typography>
               <Stack direction={"row"} alignItems={"center"} spacing={1}>
                 <Box
@@ -609,7 +611,7 @@ const Home = () => {
                     Carisne
                   </Typography>
                   <Typography fontSize={10} color={"rgb(212, 212, 212)"}>
-                    CMO at Inferno Labs
+                    Carisne, CMO at Inferno Labs
                   </Typography>
                 </Stack>
               </Stack>

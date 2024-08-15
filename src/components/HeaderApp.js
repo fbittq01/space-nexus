@@ -58,10 +58,10 @@ function HeaderApp() {
           itemTitle: "Status (comming soon)",
           destination: () => {},
         },
-        {
-          itemTitle: "Incubator Program (comming soon)",
-          destination: () => {},
-        },
+        // {
+        //   itemTitle: "Incubator Program (comming soon)",
+        //   destination: () => {},
+        // },
         {
           itemTitle: "Services and Tools",
           destination: () => handleDirectToServiceAndTool(),

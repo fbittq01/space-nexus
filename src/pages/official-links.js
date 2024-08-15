@@ -162,7 +162,10 @@ const OfficialLinks = () => {
           <Box component={"img"} src="official-links.png" width={"100%"}></Box>
         </Stack>
       </Stack>
-      <Footer></Footer>
+
+      <Stack width={"100vw"}>
+        <Footer></Footer>
+      </Stack>
     </Stack>
   );
 };

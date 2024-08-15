@@ -309,7 +309,7 @@ const InterConnect = () => {
                 },
               }}
             >
-              SEND ANOTHER REQUEST
+              SUBMIT AGAIN
             </ButtonCustom>
             <ButtonCustom
               onClick={handleDirectToHome}

@@ -407,7 +407,7 @@ const Comunity = () => {
                 },
               }}
             >
-              SUBMIT AGAIN
+              SEND ANOTHER REQUEST
             </ButtonCustom>
             <ButtonCustom
               onClick={handleDirectToHome}

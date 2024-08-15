@@ -6,7 +6,7 @@ import { fontSize } from "@mui/system";
 
 const MaketingAndPromotionServices = () => {
   return (
-    <Stack component={"div"} position={"relative"}>
+    <Stack component={"div"} position={"relative"} spacing={2}>
       <HeaderApp></HeaderApp>
       <Stack
         spacing={{
