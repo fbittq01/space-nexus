@@ -123,39 +123,54 @@ const MaketingAndPromotionServices = () => {
             src="/mkt-3.png"
             width={"90%"}
           ></Box>
-
           <Stack
-            component={"div"}
-            width={150}
-            height={30}
-            position={"absolute"}
-            sx={{
-              content: '""',
-            }}
-            zIndex={10}
-            top={"85%"}
-            left={"15%"}
-            onClick={() => {
-              window.open("https://x.com/JocarterTheG/status/1818504584823996460", "_blank")
-            }}
-          ></Stack>
-
-          <Stack
-            component={"div"}
-            width={150}
-            height={30}
-            position={"absolute"}
-            sx={{
-              content: '""',
-            }}
-            zIndex={10}
-            top={"85%"}
-            right={"25%"}
-
-            onClick={() => {
-              window.open("https://www.youtube.com/@Web3NexusSpace", "_blank")
-            }}
-          ></Stack>
+              position={"absolute"}
+              top={"85%"}
+              direction={"row"}
+              width={"85%"}
+              display={{
+                xs: "none",
+                md: "flex",
+              }}
+            >
+              <Stack flex={2} alignItems={"center"}>
+                <ButtonCustom
+                  sx={{
+                    width: "160px",
+                    height: "42px",
+                    p: 0,
+                    ml: 5,
+                    backgroundPosition: "center",
+                  }}
+                  onClick={() =>
+                    window.open(
+                      "https://x.com/JocarterTheG/status/1818504584823996460",
+                      "_blank"
+                    )
+                  }
+                >
+                  VIEW EXAMPLE
+                </ButtonCustom>
+              </Stack>
+              <Stack flex={3} alignItems={"center"}>
+                <ButtonCustom
+                  sx={{
+                    width: "160px",
+                    height: "42px",
+                    p: 0,
+                    backgroundPosition: "center",
+                  }}
+                  onClick={() =>
+                    window.open(
+                      "https://www.youtube.com/@Web3NexusSpace",
+                      "_blank"
+                    )
+                  }
+                >
+                  VIEW EXAMPLE
+                </ButtonCustom>
+              </Stack>
+            </Stack>
           <Stack
             p={2}
             bgcolor={"rgb(23, 23, 23)"}
