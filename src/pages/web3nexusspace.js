@@ -30,12 +30,12 @@ const Foundation = () => {
         }}
         height={"100%"}
       >
-        <Stack width={1}>
+        <Stack width={"fit-content"}>
           <Box
             component={"img"}
             src="logo-foundation.png"
             height={"42px"}
-            width={"fit-content"}
+            // width={"fit-content"}
           ></Box>
         </Stack>
         <Stack
@@ -75,9 +75,21 @@ const Foundation = () => {
             position={"relative"}
             width={1}
             alignItems={"center"}
-            pt={'190px'}
+            pt={{
+              xs: "190px",
+              md: 0
+            }}
           >
-            <Stack position={"absolute"} alignItems={"center"} bottom={"50px"}>
+            <Stack
+              position={"absolute"}
+              alignItems={"center"}
+              bottom={"50px"}
+              right={"10px"}
+              display={{
+                xs: "flex",
+                md: "none",
+              }}
+            >
               <Box
                 component={"img"}
                 src="/foundation-img-1.png"
@@ -86,10 +98,11 @@ const Foundation = () => {
                   md: 0,
                 }}
                 maxWidth={"500px"}
-                minWidth={'250px'}
+                minWidth={"250px"}
                 sx={{
                   objectPosition: "center",
-                  boxShadow: '0 0 15px 15px rgba(0, 0, 0, 0.5)'
+                  boxShadow: "0 0 15px 15px rgba(0, 0, 0, 0.5)",
+                  opacity: 1,
                 }}
               ></Box>
             </Stack>

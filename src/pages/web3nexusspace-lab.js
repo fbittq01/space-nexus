@@ -24,12 +24,12 @@ const Foundation = () => {
         }}
         height={"100%"}
       >
-        <Stack width={1}>
+        <Stack width={'fit-content'}>
           <Box
             component={"img"}
             src="logo-lab.png"
             height={"42px"}
-            width={"fit-content"}
+            // width={"fit-content"}
           ></Box>
         </Stack>
         <Stack
