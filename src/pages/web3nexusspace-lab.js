@@ -8,23 +8,23 @@ const Foundation = () => {
       sx={{
         backgroundImage: {
           xs: 'url("/background-lab-1.png")',
-          md: 'url("/background-lab.png")'
+          md: 'url("/background-lab.png")',
         },
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         height: "100vh",
       }}
       p={2}
-      alignItems={'center'}
+      alignItems={"center"}
     >
       <Stack
         width={{
           xs: "100%",
-          md: "1200px",
+          md: "1400px",
         }}
         height={"100%"}
       >
-        <Stack width={'fit-content'}>
+        <Stack width={"fit-content"}>
           <Box
             component={"img"}
             src="logo-lab.png"
@@ -35,8 +35,8 @@ const Foundation = () => {
         <Stack
           flex={1}
           justifyContent={{
-            xs: 'flex-start',
-            md: "center"
+            xs: "flex-start",
+            md: "center",
           }}
           maxWidth={{
             xs: "100%",
@@ -49,31 +49,62 @@ const Foundation = () => {
           }}
           pt={{
             xs: 15,
-            md: 0
+            md: 0,
           }}
         >
-          <Typography fontSize={32} fontWeight={600}>
+          <Typography fontSize={{
+            xs: 32,
+            md: 64
+          }} fontWeight={600}>
             THE WNS LABS
           </Typography>
           <Typography
+            display={{
+              xs: "none",
+              md: "flex",
+            }}
+            fontWeight={600}
+            fontSize={18}
+            color={"rgb(178, 178, 178)"}
+            textAlign={{
+              xs: "center",
+              md: "start",
+            }}
+          >
+            WNS LABS BUILDS AND DEVELOPS INNOVATIVE SOLUTIONS BY SERVING AS THE
+            RESEARCH AND DEVELOPMENT ARM OF WEB3 NEXUS SPACE. THE GOAL OF WNS
+            LABS IS TO CONTRIBUTE TO THE GROWTH AND EXPANSION OF THE WEB3 NEXUS
+            SPACE ECOSYSTEM, ENSURING THAT PROJECTS WITHIN THIS ECOSYSTEM ARE AT
+            THE FOREFRONT OF ADOPTING NEW TECHNOLOGIES AND DEVELOPING
+            CUTTING-EDGE SOLUTIONS.
+          </Typography>
+          <Typography
+            display={{
+              xs: "flex",
+              md: "none",
+            }}
             fontWeight={600}
             fontSize={14}
             color={"rgb(178, 178, 178)"}
             textAlign={{
-              xs: 'center',
-              md: 'start'
+              xs: "center",
+              md: "start",
             }}
           >
             WNS LABS BUILDS AND DEVELOPS INNOVATIVE SOLUTIONS BY SERVING AS THE
             RESEARCH AND DEVELOPMENT ARM OF WEB3 NEXUS SPACE.
           </Typography>
           <Typography
+            display={{
+              xs: "flex",
+              md: "none",
+            }}
             fontWeight={600}
             fontSize={14}
             color={"rgb(178, 178, 178)"}
             textAlign={{
-              xs: 'center',
-              md: 'start'
+              xs: "center",
+              md: "start",
             }}
           >
             THE GOAL OF WNS LABS IS TO CONTRIBUTE TO THE GROWTH AND EXPANSION OF
@@ -95,8 +126,8 @@ const Foundation = () => {
               },
               fontSize: {
                 xs: 10,
-                md: 14
-              }
+                md: 14,
+              },
             }}
             endIcon={
               <Box component={"img"} src="image-18.png" width={32}></Box>

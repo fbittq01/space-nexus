@@ -26,7 +26,7 @@ const Foundation = () => {
       <Stack
         width={{
           xs: "100%",
-          md: "1200px",
+          md: "1400px",
         }}
         height={"100%"}
       >
@@ -52,7 +52,10 @@ const Foundation = () => {
           }}
         >
           <Typography
-            fontSize={32}
+            fontSize={{
+              xs: 32,
+              md: 64
+            }}
             fontWeight={600}
             textAlign={{ xs: "center", md: "start" }}
             zIndex={10}
@@ -61,7 +64,10 @@ const Foundation = () => {
           </Typography>
           <Typography
             fontWeight={600}
-            fontSize={14}
+            fontSize={{
+              xs: 14,
+              md: 18
+            }}
             color={"rgb(178, 178, 178)"}
             textAlign={{ xs: "center", md: "start" }}
             zIndex={10}
@@ -74,13 +80,12 @@ const Foundation = () => {
           <Stack
             position={"relative"}
             width={1}
-            alignItems={"center"}
-            pt={{
-              xs: "190px",
-              md: 0
+            alignItems={{
+              xs: "center",
+              md: 'flex-start'
             }}
           >
-            <Stack
+            {/* <Stack
               position={"absolute"}
               alignItems={"center"}
               bottom={"50px"}
@@ -90,22 +95,28 @@ const Foundation = () => {
                 md: "none",
               }}
             >
-              <Box
+              
+            </Stack> */}
+            <Box
                 component={"img"}
-                src="/foundation-img-1.png"
+                src="/foundation-img-2.png"
                 width={{
                   xs: "60%",
                   md: 0,
                 }}
                 maxWidth={"500px"}
-                minWidth={"250px"}
+                minWidth={"300px"}
                 sx={{
                   objectPosition: "center",
                   boxShadow: "0 0 15px 15px rgba(0, 0, 0, 0.5)",
                   opacity: 1,
                 }}
+
+                display={{
+                  xs: "flex",
+                  md: "none",
+                }}
               ></Box>
-            </Stack>
             <ButtonCustom
               sx={{
                 background: 'url("2.svg")',

@@ -11,7 +11,7 @@ const MaketingAndPromotionServices = () => {
       <Stack
         spacing={{
           xs: 5,
-          md: 10,
+          // md: 10,
         }}
         pt={{
           xs: 10,
@@ -55,7 +55,12 @@ const MaketingAndPromotionServices = () => {
             KOLS AND VIBRANT COMMUNITIES WITHIN THE WEB3 ECOSYSTEM.
           </Typography>
         </Stack>
-        <Stack alignItems={"center"} spacing={4}>
+        <Stack
+          alignItems={"center"}
+          spacing={4}
+          minHeight={"100vh"}
+          justifyContent={"center"}
+        >
           <Typography
             fontSize={{
               xs: 20,
@@ -85,7 +90,7 @@ const MaketingAndPromotionServices = () => {
             src="/mkt-2.png"
             width={{
               xs: "100%",
-              md: "50%",
+              md: "60%",
             }}
           ></Box>
         </Stack>
@@ -124,53 +129,53 @@ const MaketingAndPromotionServices = () => {
             width={"90%"}
           ></Box>
           <Stack
-              position={"absolute"}
-              top={"85%"}
-              direction={"row"}
-              width={"85%"}
-              display={{
-                xs: "none",
-                md: "flex",
-              }}
-            >
-              <Stack flex={2} alignItems={"center"}>
-                <ButtonCustom
-                  sx={{
-                    width: "160px",
-                    height: "42px",
-                    p: 0,
-                    ml: 5,
-                    backgroundPosition: "center",
-                  }}
-                  onClick={() =>
-                    window.open(
-                      "https://x.com/JocarterTheG/status/1818504584823996460",
-                      "_blank"
-                    )
-                  }
-                >
-                  VIEW EXAMPLE
-                </ButtonCustom>
-              </Stack>
-              <Stack flex={3} alignItems={"center"}>
-                <ButtonCustom
-                  sx={{
-                    width: "160px",
-                    height: "42px",
-                    p: 0,
-                    backgroundPosition: "center",
-                  }}
-                  onClick={() =>
-                    window.open(
-                      "https://www.youtube.com/@Web3NexusSpace",
-                      "_blank"
-                    )
-                  }
-                >
-                  VIEW EXAMPLE
-                </ButtonCustom>
-              </Stack>
+            position={"absolute"}
+            top={"85%"}
+            direction={"row"}
+            width={"85%"}
+            display={{
+              xs: "none",
+              md: "flex",
+            }}
+          >
+            <Stack flex={2} alignItems={"center"}>
+              <ButtonCustom
+                sx={{
+                  width: "160px",
+                  height: "42px",
+                  p: 0,
+                  ml: 5,
+                  backgroundPosition: "center",
+                }}
+                onClick={() =>
+                  window.open(
+                    "https://x.com/JocarterTheG/status/1818504584823996460",
+                    "_blank"
+                  )
+                }
+              >
+                VIEW EXAMPLE
+              </ButtonCustom>
             </Stack>
+            <Stack flex={3} alignItems={"center"}>
+              <ButtonCustom
+                sx={{
+                  width: "160px",
+                  height: "42px",
+                  p: 0,
+                  backgroundPosition: "center",
+                }}
+                onClick={() =>
+                  window.open(
+                    "https://www.youtube.com/@Web3NexusSpace",
+                    "_blank"
+                  )
+                }
+              >
+                VIEW EXAMPLE
+              </ButtonCustom>
+            </Stack>
+          </Stack>
           <Stack
             p={2}
             bgcolor={"rgb(23, 23, 23)"}
@@ -206,6 +211,8 @@ const MaketingAndPromotionServices = () => {
             xs: "column",
             md: "row",
           }}
+          minHeight={"100vh"}
+          justifyContent={"center"}
         >
           <Stack spacing={4}>
             <Typography
@@ -260,6 +267,8 @@ const MaketingAndPromotionServices = () => {
             xs: "column",
             md: "row",
           }}
+          minHeight={"100vh"}
+          justifyContent={"center"}
         >
           <Stack spacing={4}>
             <Typography
@@ -268,7 +277,10 @@ const MaketingAndPromotionServices = () => {
                 md: 32,
               }}
               fontWeight={700}
-              textAlign={"center"}
+              textAlign={{
+                xs: "center",
+                md: "start",
+              }}
             >
               AMA SESSIONS
             </Typography>
@@ -278,7 +290,10 @@ const MaketingAndPromotionServices = () => {
                 xs: 12,
                 md: 14,
               }}
-              textAlign={"center"}
+              textAlign={{
+                xs: "center",
+                md: "start",
+              }}
               color={"rgb(201, 201, 201)"}
             >
               WE ORGANIZE ASK ME ANYTHING (AMA) SESSIONS, ALLOWING PROJECT
@@ -290,7 +305,10 @@ const MaketingAndPromotionServices = () => {
                 xs: 12,
                 md: 14,
               }}
-              textAlign={"center"}
+              textAlign={{
+                xs: "center",
+                md: "start",
+              }}
               color={"rgb(201, 201, 201)"}
             >
               THESE SESSIONS, SUPPORTED BY WNS INFLUENTIAL CIRCLE, ENHANCE
@@ -304,7 +322,7 @@ const MaketingAndPromotionServices = () => {
             }}
             component={"img"}
             src="/mkt-5.png"
-            width={"40%"}
+            width={"60%"}
           ></Box>
           <Box
             display={{
@@ -316,7 +334,12 @@ const MaketingAndPromotionServices = () => {
             width={"100%"}
           ></Box>
         </Stack>
-        <Stack alignItems={"center"} spacing={4}>
+        <Stack
+          alignItems={"center"}
+          spacing={4}
+          minHeight={"100vh"}
+          justifyContent={"center"}
+        >
           <Typography
             fontSize={{
               xs: 20,
@@ -346,7 +369,7 @@ const MaketingAndPromotionServices = () => {
             src="/mkt-6.png"
             width={{
               xs: "100%",
-              md: "40%",
+              md: "50%",
             }}
           ></Box>
         </Stack>
@@ -357,6 +380,8 @@ const MaketingAndPromotionServices = () => {
             xs: "column",
             md: "row",
           }}
+          minHeight={'100vh'}
+          justifyContent={'center'}
         >
           <Stack spacing={4}>
             <Typography
@@ -404,11 +429,17 @@ const MaketingAndPromotionServices = () => {
             }}
           ></Box>
         </Stack>
-        <Stack alignItems={"center"} spacing={4}>
+        <Stack
+          alignItems={"center"}
+          spacing={{
+            xs: 4,
+            md: 10,
+          }}
+        >
           <Stack
             position={"sticky"}
             spacing={4}
-            top={60}
+            top={70}
             component={"div"}
             bgcolor={"black"}
             width={1}
@@ -557,7 +588,10 @@ const MaketingAndPromotionServices = () => {
 
           <ButtonCustom
             onClick={() =>
-              window.open("https://x.com/JocarterTheG/status/1812893212195103177", "_blank")
+              window.open(
+                "https://x.com/JocarterTheG/status/1812893212195103177",
+                "_blank"
+              )
             }
             sx={{
               display: {
@@ -734,7 +768,15 @@ const MaketingAndPromotionServices = () => {
               }}
             ></Box>
           </Stack>
-          <Stack spacing={4} p={"5%"} alignItems={"center"}>
+          <Stack
+            spacing={4}
+            p={"5%"}
+            alignItems={"center"}
+            display={{
+              xs: "flex",
+              md: "none",
+            }}
+          >
             <Typography
               fontSize={{
                 xs: 20,
@@ -835,10 +877,7 @@ const MaketingAndPromotionServices = () => {
                       fontSize: 10,
                     }}
                     onClick={() =>
-                      window.open(
-                        "https://t.me/Web3NexusSpace",
-                        "_blank"
-                      )
+                      window.open("https://t.me/Web3NexusSpace", "_blank")
                     }
                   >
                     VIEW EXAMPLE
@@ -1067,11 +1106,17 @@ const MaketingAndPromotionServices = () => {
           </Stack>
         </Stack>
 
-        <Stack alignItems={"center"} spacing={4}>
+        <Stack
+          alignItems={"center"}
+          spacing={{
+            xs: 4,
+            md: 20,
+          }}
+        >
           <Stack
             position={"sticky"}
             spacing={4}
-            top={60}
+            top={70}
             component={"div"}
             bgcolor={"black"}
             width={1}
@@ -1137,10 +1182,7 @@ const MaketingAndPromotionServices = () => {
                   backgroundPosition: "center",
                 }}
                 onClick={() =>
-                  window.open(
-                    "https://t.me/Web3NexusSpace/447",
-                    "_blank"
-                  )
+                  window.open("https://t.me/Web3NexusSpace/447", "_blank")
                 }
               >
                 VIEW EXAMPLE
@@ -1298,7 +1340,7 @@ const MaketingAndPromotionServices = () => {
           <Stack
             position={"sticky"}
             spacing={4}
-            top={170}
+            top={180}
             component={"div"}
             bgcolor={"black"}
             width={1}
@@ -1342,8 +1384,8 @@ const MaketingAndPromotionServices = () => {
                 ml: 5,
                 backgroundPosition: "center",
                 display: {
-                  md: 'none'
-                }
+                  md: "none",
+                },
               }}
               onClick={() =>
                 window.open(
@@ -1370,8 +1412,8 @@ const MaketingAndPromotionServices = () => {
                 ml: 5,
                 backgroundPosition: "center",
                 display: {
-                  md: 'none'
-                }
+                  md: "none",
+                },
               }}
               onClick={() =>
                 window.open(
@@ -1442,7 +1484,7 @@ const MaketingAndPromotionServices = () => {
             xs: "column",
             md: "row",
           }}
-          pb={20}
+          py={20}
         >
           <Stack
             spacing={4}
@@ -1456,6 +1498,10 @@ const MaketingAndPromotionServices = () => {
               md: 8,
             }}
             zIndex={1}
+            pt={{
+              xs: 0,
+              md: 10,
+            }}
           >
             <Typography
               fontSize={{
@@ -1464,6 +1510,7 @@ const MaketingAndPromotionServices = () => {
               }}
               fontWeight={700}
               textAlign={"center"}
+              color={"rgb(201, 201, 201)"}
             >
               WHY CHOOSE US?
             </Typography>
@@ -1474,6 +1521,7 @@ const MaketingAndPromotionServices = () => {
                 md: 14,
               }}
               textAlign={"center"}
+              color={"rgb(201, 201, 201)"}
             >
               BY INCORPORATING THE INFLUENCE AND REACH OF WNS INFLUENTIAL
               CIRCLE, OUR MARKETING AND PROMOTION SERVICES ARE UNIQUELY
@@ -1487,6 +1535,7 @@ const MaketingAndPromotionServices = () => {
                 md: 14,
               }}
               textAlign={"center"}
+              color={"rgb(201, 201, 201)"}
             >
               WE BUILD A SOLID FOUNDATION FOR YOUR PROJECT'S GROWTH AND SUCCESS
               WITHIN THE WEB3 ECOSYSTEM.
@@ -1498,6 +1547,7 @@ const MaketingAndPromotionServices = () => {
                 md: 14,
               }}
               textAlign={"center"}
+              color={"rgb(201, 201, 201)"}
               pt={5}
             >
               FOR MORE INFORMATION, VISIT WNS INFLUENTIAL CIRCLE:
@@ -1526,8 +1576,9 @@ const MaketingAndPromotionServices = () => {
               xs: "none",
               md: "flex",
             }}
+            right={0}
           >
-            <Box component={"img"} src="/mkt-15.png" width={"80%"}></Box>
+            <Box component={"img"} src="/mkt-15.png" width={"100%"}></Box>
           </Stack>
           <Box
             component={"img"}
@@ -1538,7 +1589,7 @@ const MaketingAndPromotionServices = () => {
             }}
           ></Box>
         </Stack>
-        <Stack width={"100vw"}>
+        <Stack width={"100vw"} pt={10}>
           <Footer></Footer>
         </Stack>
       </Stack>
