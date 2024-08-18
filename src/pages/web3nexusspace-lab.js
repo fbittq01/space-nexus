@@ -28,7 +28,10 @@ const Foundation = () => {
           <Box
             component={"img"}
             src="logo-lab.png"
-            height={"42px"}
+            height={{
+              xs: "42px",
+              md: '52px'
+            }}
             // width={"fit-content"}
           ></Box>
         </Stack>
@@ -112,35 +115,70 @@ const Foundation = () => {
             ECOSYSTEM ARE AT THE FOREFRONT OF ADOPTING NEW TECHNOLOGIES AND
             DEVELOPING CUTTING-EDGE SOLUTIONS.
           </Typography>
-          <ButtonCustom
-            sx={{
-              background: 'url("2.svg")',
-              width: {
-                xs: "100%",
-                md: 530,
-              },
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              display: {
-                md: "flex",
-              },
-              fontSize: {
-                xs: 10,
-                md: 14,
-              },
-            }}
-            endIcon={
-              <Box component={"img"} src="image-18.png" width={32}></Box>
-            }
-            onClick={() => {
-              window.location.href = `https://web3nexus.space/`;
-            }}
-          >
-            LEARN MORE ABOUT WEB3 NEXUS SPACE
-          </ButtonCustom>
+          <Stack direction={{
+            xs: 'column',
+            md: 'row'
+          }} spacing={2} width={1}>
+            <ButtonCustom
+              sx={{
+                background: 'url("2.svg")',
+                width: {
+                  xs: "100%",
+                  md: 530,
+                },
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                display: {
+                  md: "flex",
+                },
+                fontSize: {
+                  xs: 10,
+                  md: 14,
+                },
+              }}
+              endIcon={
+                <Box component={"img"} src="image-18.png" width={32}></Box>
+              }
+              onClick={() => {
+                window.open("https://web3nexus.space/", "_blank")
+              }}
+            >
+              LEARN MORE ABOUT WEB3 NEXUS SPACE
+            </ButtonCustom>
+            <ButtonCustom
+              sx={{
+                background: 'url("2.svg")',
+                width: {
+                  xs: "100%",
+                  md: 530,
+                },
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                display: {
+                  md: "flex",
+                },
+                fontSize: {
+                  xs: 10,
+                  md: 14,
+                },
+                textTransform: 'uppercase'
+              }}
+              endIcon={
+                <Box component={"img"} src="image-18.png" width={32}></Box>
+              }
+              onClick={() => {
+                window.open("https://jobs.polymer.co/wns-labs", "_blank")
+              }}
+            >
+              View open roles
+            </ButtonCustom>
+          </Stack>
         </Stack>
         <Stack width={1}>
-          <Typography color={"rgb(178, 178, 178)"} fontSize={12}>
+          <Typography color={"rgb(178, 178, 178)"} fontSize={{
+            xs: 12,
+            md: 16
+          }}>
             © 2024 WNS LABS • ALL RIGHTS RESERVED
           </Typography>
         </Stack>

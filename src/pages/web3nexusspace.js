@@ -34,7 +34,10 @@ const Foundation = () => {
           <Box
             component={"img"}
             src="logo-foundation.png"
-            height={"42px"}
+            height={{
+              xs: "42px",
+              md: "52px"
+            }}
             // width={"fit-content"}
           ></Box>
         </Stack>
@@ -136,12 +139,15 @@ const Foundation = () => {
                   xs: 10,
                   md: 14,
                 },
+                left: {
+                  md: '-20px'
+                }
               }}
               endIcon={
                 <Box component={"img"} src="image-18.png" width={32}></Box>
               }
               onClick={() => {
-                window.location.href = `https://web3nexus.space/`;
+                window.open("https://web3nexus.space/", "_blank")
               }}
             >
               LEARN MORE ABOUT WEB3 NEXUS SPACE
@@ -149,7 +155,10 @@ const Foundation = () => {
           </Stack>
         </Stack>
         <Stack width={1}>
-          <Typography color={"rgb(178, 178, 178)"} fontSize={12}>
+          <Typography color={"rgb(178, 178, 178)"} fontSize={{
+            xs: 12,
+            md: 16
+          }}>
             © 2024 WNS FOUNDATION • ALL RIGHTS RESERVED.
           </Typography>
         </Stack>
