@@ -51,7 +51,7 @@ const Foundation = () => {
             md: "flex-start",
           }}
           pt={{
-            xs: 15,
+            xs: 7,
             md: 0,
           }}
         >
@@ -135,6 +135,9 @@ const Foundation = () => {
                   xs: 10,
                   md: 14,
                 },
+                left: {
+                  md: '-20px'
+                }
               }}
               endIcon={
                 <Box component={"img"} src="image-18.png" width={32}></Box>

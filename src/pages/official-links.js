@@ -38,8 +38,15 @@ const OfficialLinks = () => {
           xs: 2,
           md: 20,
         }}
-        pt={20}
-        direction={"row"}
+        p={4}
+        pt={{
+          xs: 2,
+          md: 20
+        }}
+        direction={{
+          xs: 'column',
+          md: "row"
+        }}
         // alignItems={"center"}
         justifyContent={"center"}
         minHeight={"90vh"}
@@ -65,6 +72,10 @@ const OfficialLinks = () => {
             <Box component={"img"} src="x.png" height={20} width={22.05}></Box>
             <Typography
               color={"#999"}
+              fontSize={{
+                xs: 12,
+                md: 16
+              }}
               sx={{
                 textDecoration: "underline",
               }}
@@ -91,6 +102,10 @@ const OfficialLinks = () => {
             ></Box>
             <Typography
               color={"#999"}
+              fontSize={{
+                xs: 12,
+                md: 16
+              }}
               sx={{
                 textDecoration: "underline",
               }}
@@ -114,6 +129,10 @@ const OfficialLinks = () => {
             ></Box>
             <Typography
               color={"#999"}
+              fontSize={{
+                xs: 12,
+                md: 16
+              }}
               sx={{
                 textDecoration: "underline",
               }}
@@ -132,6 +151,10 @@ const OfficialLinks = () => {
             <Box component={"img"} src="tele.png" height={20} width={24}></Box>
             <Typography
               color={"#999"}
+              fontSize={{
+                xs: 12,
+                md: 16
+              }}
               sx={{
                 textDecoration: "underline",
               }}
@@ -150,6 +173,10 @@ const OfficialLinks = () => {
             <Box component={"img"} src="tele.png" height={20} width={24}></Box>
             <Typography
               color={"#999"}
+              fontSize={{
+                xs: 12,
+                md: 16
+              }}
               sx={{
                 textDecoration: "underline",
               }}
@@ -158,8 +185,14 @@ const OfficialLinks = () => {
             </Typography>
           </Stack>
         </Stack>
-        <Stack width={"40%"} alignItems={"center"} justifyContent={"center"}>
-          <Box component={"img"} src="official-links.png" width={"100%"}></Box>
+        <Stack width={{
+          xs: '100%',
+          md: "40%"
+        }} alignItems={"center"} justifyContent={"center"}>
+          <Box component={"img"} src="official-links.png" width={{
+            xs: '100%',
+            md: "100%"
+          }}></Box>
         </Stack>
       </Stack>
 
