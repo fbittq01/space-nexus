@@ -55,7 +55,7 @@ const OfficialLinks = () => {
           <Typography
             fontSize={{
               xs: 20,
-              md: 32,
+              md: 64,
             }}
             fontWeight={700}
           >
@@ -74,10 +74,11 @@ const OfficialLinks = () => {
               color={"#999"}
               fontSize={{
                 xs: 12,
-                md: 16
+                md: 18
               }}
               sx={{
                 textDecoration: "underline",
+                cursor: 'pointer'
               }}
             >
               https://web3nexus.space/
@@ -104,10 +105,11 @@ const OfficialLinks = () => {
               color={"#999"}
               fontSize={{
                 xs: 12,
-                md: 16
+                md: 18
               }}
               sx={{
                 textDecoration: "underline",
+                cursor: 'pointer'
               }}
             >
               https://discord.com/invite/web3nexusspace
@@ -131,10 +133,11 @@ const OfficialLinks = () => {
               color={"#999"}
               fontSize={{
                 xs: 12,
-                md: 16
+                md: 18
               }}
               sx={{
                 textDecoration: "underline",
+                cursor: 'pointer'
               }}
             >
               https://www.youtube.com/@Web3NexusSpace
@@ -153,10 +156,11 @@ const OfficialLinks = () => {
               color={"#999"}
               fontSize={{
                 xs: 12,
-                md: 16
+                md: 18
               }}
               sx={{
                 textDecoration: "underline",
+                cursor: 'pointer'
               }}
             >
               https://t.me/Web3NexusSpace
@@ -175,10 +179,11 @@ const OfficialLinks = () => {
               color={"#999"}
               fontSize={{
                 xs: 12,
-                md: 16
+                md: 18
               }}
               sx={{
                 textDecoration: "underline",
+                cursor: 'pointer'
               }}
             >
               https://t.me/WNSCom
