@@ -110,3 +110,16 @@ a {
   text-decoration: none;
 }
 
+@font-face {
+  font-family: 'Gramatika';
+  src: url('/fonts/Gramatika-Regular.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gramatika';
+  src: url('/fonts/Gramatika-Bold.otf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
