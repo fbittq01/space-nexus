@@ -93,6 +93,7 @@ body {
 
 html::-webkit-scrollbar { /* WebKit, Blink */
   display: none;
+  scroll-behavior: smooth;
 }
 
 body {

@@ -248,8 +248,6 @@ const InterConnect = () => {
         >
           <Stack
             sx={{
-              // backgroundImage:
-              //   "conic-gradient(from 64deg at 0% 80%, #000000, rgb(27, 27, 27))",
               backgroundImage: {
                 xs: 'url("submit-success.png")',
                 md: 'url("submit-success-1.png")'

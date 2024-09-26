@@ -27,11 +27,14 @@ const BrandAssets = () => {
             justifyContent={"center"}
             alignItems={{
               xs: "center",
+              md: 'unset'
             }}
           >
             <Stack
               spacing={2}
-              pr={4}
+              pr={{
+                md: 4
+              }}
               // width={300}
               sx={{
                 alignItems: {
@@ -101,16 +104,16 @@ const BrandAssets = () => {
                   xs: "45%",
                   md: "25%",
                 }}
-                height={"fit-content"}
+                height={"100%"}
               ></Box>
               <Box
                 component={"img"}
                 src="image-logo-13.png"
                 width={{
-                  xs: "50%",
+                  xs: "45%",
                   md: "25%",
                 }}
-                height={"fit-content"}
+                height={"100%"}
               ></Box>
             </Stack>
           </Stack>
