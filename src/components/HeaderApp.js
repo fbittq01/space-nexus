@@ -79,7 +79,7 @@ function HeaderApp() {
         {
           itemTitle: "Influential Circle",
           destination: () => {
-            window.open("https://wnsinfluentialcircle.notion.site/", "_blank");
+            window.open("https://web3nexus.space/wnsic", "_blank");
           },
         },
         {

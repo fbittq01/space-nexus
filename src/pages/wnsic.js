@@ -21,7 +21,7 @@ const Wnsic = () => {
         md: "row",
       }}
       sx={{
-        backgroundColor: 'rgb(255,255,255)',
+        backgroundColor: "rgb(255,255,255)",
         background:
           "linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 50%, rgba(30,30,30,1) 100%)",
       }}
@@ -65,7 +65,10 @@ const Wnsic = () => {
       <Stack
         spacing={2}
         alignItems={"center"}
-        justifyContent={"center"}
+        justifyContent={{
+          xs: 'flex-start',
+          md: "center"
+        }}
         maxWidth={{
           xs: "100%",
           md: "50%",
@@ -77,7 +80,7 @@ const Wnsic = () => {
         }}
         zIndex={1}
         pt={{
-          xs: 0,
+          xs: 30,
           md: 10,
         }}
       >
@@ -136,14 +139,23 @@ const Wnsic = () => {
       >
         <Box component={"img"} src="/mkt-15-1.png" width={"50%"}></Box>
       </Stack>
-      <Box
-        component={"img"}
-        src="/mkt-15-1.png"
-        width={"90%"}
+      <Stack
+        position={"absolute"}
         display={{
           md: "none",
         }}
-      ></Box>
+        bottom={0}
+        alignItems={'flex-end'}
+      >
+        <Box
+          component={"img"}
+          src="/mkt-15-1.png"
+          width={"90%"}
+          display={{
+            md: "none",
+          }}
+        ></Box>
+      </Stack>
     </Stack>
   );
 };

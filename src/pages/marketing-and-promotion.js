@@ -198,6 +198,9 @@ const MaketingAndPromotionServices = () => {
                 "_blank"
               )
             }
+            display={{
+              md: "none",
+            }}
           ></Box>
 
           <Box
@@ -207,6 +210,9 @@ const MaketingAndPromotionServices = () => {
             onClick={() =>
               window.open("https://www.youtube.com/@Web3NexusSpace", "_blank")
             }
+            display={{
+              md: "none",
+            }}
           ></Box>
         </Stack>
         <Stack
@@ -226,7 +232,10 @@ const MaketingAndPromotionServices = () => {
                 md: 32,
               }}
               fontWeight={700}
-              textAlign={"center"}
+              textAlign={{
+                xs: "center",
+                md: "start",
+              }}
             >
               SOCIAL MEDIA MANAGEMENT
             </Typography>
@@ -236,7 +245,10 @@ const MaketingAndPromotionServices = () => {
                 xs: 12,
                 md: 14,
               }}
-              textAlign={"center"}
+              textAlign={{
+                xs: "center",
+                md: "start",
+              }}
               color={"rgb(201, 201, 201)"}
             >
               WE MANAGE YOUR SOCIAL MEDIA ACCOUNTS, REGULARLY POSTING CONTENT
@@ -248,7 +260,10 @@ const MaketingAndPromotionServices = () => {
                 xs: 12,
                 md: 14,
               }}
-              textAlign={"center"}
+              textAlign={{
+                xs: "center",
+                md: "start",
+              }}
               color={"rgb(201, 201, 201)"}
             >
               LEVERAGING THE INFLUENCE OF WNS INFLUENTIAL CIRCLE, WE AMPLIFY
@@ -395,7 +410,10 @@ const MaketingAndPromotionServices = () => {
                 md: 32,
               }}
               fontWeight={700}
-              textAlign={"center"}
+              textAlign={{
+                xs: "center",
+                md: "start",
+              }}
             >
               EVENT PROMOTION
             </Typography>
@@ -405,7 +423,10 @@ const MaketingAndPromotionServices = () => {
                 xs: 12,
                 md: 14,
               }}
-              textAlign={"center"}
+              textAlign={{
+                xs: "center",
+                md: "start",
+              }}
               color={"rgb(201, 201, 201)"}
             >
               WE PROMOTE YOUR PROJECT'S SPECIAL EVENTS TO ATTRACT COMMUNITY
@@ -417,7 +438,10 @@ const MaketingAndPromotionServices = () => {
                 xs: 12,
                 md: 14,
               }}
-              textAlign={"center"}
+              textAlign={{
+                xs: "center",
+                md: "start",
+              }}
               color={"rgb(201, 201, 201)"}
             >
               BY LEVERAGING WNS INFLUENTIAL CIRCLE, WE MAXIMIZE THE VISIBILITY
@@ -1501,7 +1525,6 @@ const MaketingAndPromotionServices = () => {
             xs: "column",
             md: "row",
           }}
-          py={20}
         >
           <Stack
             spacing={2}
@@ -1649,7 +1672,7 @@ const MaketingAndPromotionServices = () => {
             }}
           ></Box>
         </Stack>
-        <Stack width={"100vw"} pt={10}>
+        <Stack width={"100vw"}>
           <Footer></Footer>
         </Stack>
       </Stack>
