@@ -26,7 +26,9 @@ const Foundation = () => {
       <Stack
         width={{
           xs: "100%",
-          md: "1400px",
+        }}
+        px={{
+          md: 10
         }}
         height={"100%"}
       >
